@@ -1,6 +1,7 @@
 ---
 title: JsonArray::remove()
 description: Removes an element from a JsonArray
+keywords: ArduinoJson,JsonArray,remove,erase,delete
 layout: api
 tags: api
 api-group: JsonArray

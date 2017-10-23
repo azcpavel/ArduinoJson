@@ -1,6 +1,7 @@
 ---
 title: ARDUINOJSON_USE_LONG_LONG
 description: Enables long long support
+keywords: ArduinoJson,long long,64
 layout: api
 tags: api
 api-group: Configuration

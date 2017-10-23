@@ -1,6 +1,7 @@
 ---
 title: How to compute the JSON length?
-description: JsonArray and JsonObject have a measureLength() method for that
+description: To compute JSON length, call measureLength()
+keywords: ArduinoJson,JSON,size,length,JsonArray,JsonObject
 layout: faq
 tags: faq
 faq-group: Serialization

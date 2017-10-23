@@ -1,6 +1,7 @@
 ---
 title: JsonBuffer::createObject()
 description: Creates a JsonObject
+keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer,createObject,JsonObject
 layout: api
 tags: api
 api-group: JsonBuffer

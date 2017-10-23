@@ -1,6 +1,7 @@
 ---
 title: "Warning: floating constant exceeds range of 'double'"
 description: The problem has been fixed in ArduinoJson 5.11.1
+keywords: ArduinoJson,warning,floatin,constant
 layout: faq
 tags: faq
 faq-group: Known problems

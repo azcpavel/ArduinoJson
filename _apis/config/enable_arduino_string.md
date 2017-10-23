@@ -1,6 +1,7 @@
 ---
 title: ARDUINOJSON_ENABLE_ARDUINO_STRING
 description: Enables String support
+keywords: ArduinoJson,String
 layout: api
 tags: api
 api-group: Configuration

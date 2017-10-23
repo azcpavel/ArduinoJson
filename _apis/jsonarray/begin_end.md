@@ -1,6 +1,7 @@
 ---
 title: JsonArray::begin() / JsonArray::end()
 description: Iterates through a JsonArray
+keywords: ArduinoJson,JsonArray,begin,end,iteration
 layout: api
 tags: api
 api-group: JsonArray

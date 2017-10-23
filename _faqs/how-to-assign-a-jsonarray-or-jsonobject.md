@@ -1,6 +1,7 @@
 ---
 title: How to assign a <code>JsonArray</code> or <code>JsonObject</code>?
 description: It's not possible to reassign a C++ reference. Instead use a pointer or a JsonVariant.
+keywords: ArduinoJson,JsonArray,JsonObject,reference
 layout: faq
 tags: faq
 faq-group: Common

@@ -1,6 +1,7 @@
 ---
 title: JsonArray::prettyPrintTo()
 description: Serializes a JsonArray to prettified JSON
+keywords: ArduinoJson,JsonArray,serialize,encode,generate
 layout: api
 tags: api
 api-group: JsonArray

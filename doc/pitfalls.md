@@ -2,6 +2,7 @@
 layout: doc
 title: Avoiding Pitfalls
 description: What are the common pitfalls of ArduinoJson
+keywords: ArduinoJson,pitfalls,caveats,mistakes,tips
 tags: doc
 ---
 

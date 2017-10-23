@@ -1,6 +1,7 @@
 ---
 title: JsonBuffer::parseObject()
 description: Parses a JSON object
+keywords: ArduinoJson,parse,JSON,object,JsonObject
 layout: api
 tags: api
 api-group: JsonBuffer

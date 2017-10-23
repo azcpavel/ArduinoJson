@@ -1,6 +1,7 @@
 ---
 title: JsonBuffer::parseArray()
 description: Parses a JSON array
+keywords: ArduinoJson,parse,JSON,array,JsonArray
 layout: api
 tags: api
 api-group: JsonBuffer

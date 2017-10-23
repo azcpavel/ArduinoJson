@@ -1,6 +1,7 @@
 ---
 title: Atmel Studio
 description: How to use ArduinoJson in Atmel Studio
+keywords: ArduinoJson,Atmel,Studio
 layout: faq
 tags: faq
 faq-group: Known problems

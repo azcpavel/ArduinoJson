@@ -1,6 +1,7 @@
 ---
 title: ARDUINOJSON_ENABLE_STD_STRING
 description: Enables std::string support
+keywords: ArduinoJson,string,stl
 layout: api
 tags: api
 api-group: Configuration

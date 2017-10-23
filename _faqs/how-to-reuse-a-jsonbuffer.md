@@ -1,6 +1,7 @@
 ---
 title: How to reuse a <code>JsonBuffer</code>?
 description: Do not reuse a JsonBuffer
+keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer,reuse,reset,clear
 layout: faq
 tags: faq
 faq-group: Common

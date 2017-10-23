@@ -1,6 +1,7 @@
 ---
 title: JsonObject::get()
 description: Gets a value in a JsonObject
+keywords: ArduinoJson,JsonObject,get,read
 layout: api
 tags: api
 api-group: JsonObject

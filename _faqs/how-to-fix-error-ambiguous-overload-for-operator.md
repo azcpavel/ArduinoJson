@@ -1,6 +1,7 @@
 ---
 title: "Error: Ambiguous overload for 'operator='"
 description: This is a limitation of ArduinoJson with String
+keywords: ArduinoJson,ambiguous,overload,operator,string
 layout: faq
 tags: faq
 faq-group: Known problems

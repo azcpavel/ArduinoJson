@@ -2,6 +2,7 @@
 layout: doc
 title: Installation
 description: How to install ArduinoJson
+keywords: ArduinoJson,install,download,Arduino,library,manager
 tags: doc
 ---
 

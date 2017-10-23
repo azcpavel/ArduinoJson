@@ -1,6 +1,7 @@
 ---
 title: JsonVariant::success()
 description: Tests if parsing of JsonVariant succeeded
+keywords: ArduinoJson,JsonVariant,parsing,valid
 layout: api
 tags: api
 api-group: JsonVariant

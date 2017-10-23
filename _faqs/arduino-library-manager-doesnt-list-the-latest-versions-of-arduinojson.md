@@ -1,6 +1,7 @@
 ---
 title: Arduino Library Manager doesn't list the latest versions of ArduinoJson
 description: How to fix Arduino Library Manager
+keywords: ArduinoJson,Arduino,Library,Manager
 layout: faq
 tags: faq
 faq-group: Known problems

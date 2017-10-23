@@ -1,6 +1,7 @@
 ---
 title: JsonUdpBeacon.ino
-description: Shows how to send UDP packets with a JSON payload.
+description: Shows how to send UDP packets with a JSON payload
+keywords: ArduinoJson,UDP,example
 tags: example
 layout: example
 ---

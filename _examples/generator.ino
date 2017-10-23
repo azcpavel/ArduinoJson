@@ -1,6 +1,7 @@
 ---
 title: JsonGeneratorExample.ino
-description: Shows how to encode JSON and write the result to the Serial port.
+description: Shows how to encode JSON and write the result to the Serial port
+keywords: ArduinoJson,serialize,encode,generate,example
 layout: example
 tags: example
 ---

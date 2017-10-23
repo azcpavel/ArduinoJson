@@ -1,6 +1,7 @@
 ---
 title: JsonArray::operator[]
 description: Gets or replaces a value in a JsonArray
+keywords: ArduinoJson,JsonArray,get,set,read,write
 layout: api
 tags: api
 api-group: JsonArray

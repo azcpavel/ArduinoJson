@@ -1,6 +1,7 @@
 ---
 title: JsonArray::set()
 description: Replaces a value in a JsonArray
+keywords: ArduinoJson,JsonArray,set,write,replace
 layout: api
 tags: api
 api-group: JsonArray

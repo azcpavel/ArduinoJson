@@ -1,6 +1,7 @@
 ---
 title: JsonVariant::as()
 description: Converts a JsonVariant
+keywords: ArduinoJson,JsonVariant,as,cast,type
 layout: api
 tags: api
 api-group: JsonVariant

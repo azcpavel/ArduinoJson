@@ -1,6 +1,7 @@
 ---
 title: JsonBuffer::strdup()
 description: Copies a string in a JsonBuffer
+keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer,strdup
 layout: api
 tags: api
 api-group: JsonBuffer

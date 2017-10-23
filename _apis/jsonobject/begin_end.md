@@ -1,6 +1,7 @@
 ---
 title: JsonObject::begin() / JsonObject::end()
 description: Iterates through a JsonObject
+keywords: ArduinoJson,JsonObject,begin,end,iteration
 layout: api
 tags: api
 api-group: JsonObject

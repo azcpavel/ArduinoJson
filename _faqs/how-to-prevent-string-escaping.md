@@ -1,6 +1,7 @@
 ---
 title: How to prevent string escaping?
 description: To present string escaping in JSON, wrap with type RawJson
+keywords: ArduinoJson,escape,string,backslash
 layout: faq
 tags: faq
 faq-group: Serialization

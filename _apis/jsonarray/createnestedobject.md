@@ -1,6 +1,7 @@
 ---
 title: JsonArray::createNestedObject()
 description: Adds a JsonObject in a JsonArray
+keywords: ArduinoJson,JsonArray,createNestedObject
 layout: api
 tags: api
 api-group: JsonArray

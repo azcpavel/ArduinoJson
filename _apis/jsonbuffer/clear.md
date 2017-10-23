@@ -1,6 +1,7 @@
 ---
 title: JsonBuffer::clear()
 description: Resets a JsonBuffer
+keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer,clear,reset
 layout: api
 tags: api
 api-group: JsonBuffer

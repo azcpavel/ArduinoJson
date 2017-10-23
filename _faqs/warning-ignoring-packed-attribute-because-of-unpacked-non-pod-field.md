@@ -1,6 +1,7 @@
 ---
 title: "Warning: ignoring packed attribute because of unpacked non-POD field"
 description: The compiler flag --fpack-struct is causing this warning. There is no solution.
+keywords: ArduinoJson,warning,non-POD
 layout: faq
 tags: faq
 faq-group: Known problems

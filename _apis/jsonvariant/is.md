@@ -1,6 +1,7 @@
 ---
 title: JsonVariant::is()
 description: Tests the type of a JsonVariant
+keywords: ArduinoJson,JsonVariant,is,cast,type
 layout: api
 tags: api
 api-group: JsonVariant

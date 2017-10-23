@@ -1,6 +1,7 @@
 ---
 title: JsonParserExample.ino
-description: Shows how to parse JSON and print the result to the Serial port.
+description: Shows how to parse JSON and print the result to the Serial port
+keywords: ArduinoJson,parse,decode,example,Serial
 tags: example
 layout: example
 ---

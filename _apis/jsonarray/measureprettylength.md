@@ -1,6 +1,7 @@
 ---
 title: JsonArray::measurePrettyLength()
 description: Computes prettified JSON length of a JsonArray
+keywords: ArduinoJson,JsonArray,JSON,size,length
 layout: api
 tags: api
 api-group: JsonArray

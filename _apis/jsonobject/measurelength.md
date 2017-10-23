@@ -1,6 +1,7 @@
 ---
 title: JsonObject::measureLength()
 description: Computes JSON length of a JsonObject
+keywords: ArduinoJson,JsonObject,measureLength,size,length
 layout: api
 tags: api
 api-group: JsonObject

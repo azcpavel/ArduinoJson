@@ -1,6 +1,7 @@
 ---
 title: JsonObject::size()
 description: Gets the number of element in a JsonObject
+keywords: ArduinoJson,JsonObject,size,length
 layout: api
 tags: api
 api-group: JsonObject

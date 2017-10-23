@@ -1,5 +1,6 @@
 ---
 title: JsonObject constructor
+keywords: ArduinoJson,JsonObject
 layout: api
 tags: api
 api-group: JsonObject

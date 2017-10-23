@@ -1,6 +1,7 @@
 ---
 title: JsonObject::measurePrettyLength()
 description: Computes prettified JSON length of a JsonObject
+keywords: ArduinoJson,JsonObject,measurePrettyLength,size,length
 layout: api
 tags: api
 api-group: JsonObject

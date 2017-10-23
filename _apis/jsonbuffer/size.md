@@ -1,6 +1,7 @@
 ---
 title: JsonBuffer::size()
 description: Gets memory usage of a JsonBuffer
+keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer,size,length
 layout: api
 tags: api
 api-group: JsonBuffer

@@ -1,11 +1,12 @@
 ---
 title: Why does my device crash or reboot?
 description: A StaticJsonBuffer that is too big for the stack will make the device crash
+keywords: ArduinoJson,crash,bug,reboot,exception
 layout: faq
 tags: faq
 faq-group: Common
 popularity: 187
-redirect_from: 
+redirect_from:
  - /faq/why-do-i-have-a-segmentation-fault/
 ---
 

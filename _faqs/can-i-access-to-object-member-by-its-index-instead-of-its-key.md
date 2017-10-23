@@ -1,6 +1,7 @@
 ---
 title: Can I access to object member by its index, instead of its key?
-description: It's not possible to get value by index, but it's possible to iterate.
+description: It's not possible to get value by index, but it's possible to iterate
+keywords: ArduinoJson,JsonObject
 layout: faq
 tags: faq
 faq-group: Deserialization

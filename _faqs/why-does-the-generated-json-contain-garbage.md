@@ -1,6 +1,7 @@
 ---
 title: Why does the generated JSON contain garbage?
 description: Garbage in the JSON is caused by a dangling pointer or reference
+keywords: ArduinoJson,error,garbage,gibberish
 layout: faq
 tags: faq
 faq-group: Serialization

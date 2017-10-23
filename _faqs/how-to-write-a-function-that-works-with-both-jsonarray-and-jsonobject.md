@@ -1,6 +1,7 @@
 ---
 title: How to write a function that works with both `JsonArray` and `JsonObject`?
 description: To work with both JsonArray and JsonObject, use a JsonVariant
+keywords: ArduinoJson,JsonArray,JsonObject
 layout: faq
 tags: faq
 faq-group: Common

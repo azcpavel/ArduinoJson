@@ -1,6 +1,7 @@
 ---
 title: Can I parse a JSON input that is too big to fit in memory?
 description: It's not possible to parse a JSON that doesn't fit in memory
+keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer
 layout: faq
 tags: faq
 faq-group: Deserialization

@@ -1,6 +1,7 @@
 ---
 title: JsonBuffer description
 description: DynamicJsonBuffer and StaticJsonBuffer are memory pools
+keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer
 layout: api
 tags: api
 api-group: JsonBuffer

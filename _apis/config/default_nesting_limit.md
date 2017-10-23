@@ -1,6 +1,7 @@
 ---
 title: ARDUINOJSON_DEFAULT_NESTING_LIMIT
 description: Changes the default nesting limit of the JSON parser
+keywords: ArduinoJson,parsing,nesting
 layout: api
 tags: api
 api-group: Configuration

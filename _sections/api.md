@@ -2,6 +2,7 @@
 layout: page
 title: API Reference
 description: This is the reference documentation for the ArduinoJson API
+keywords: ArduinoJson,api,reference
 tags: api
 section_tag: api
 popularity: 10

@@ -1,6 +1,7 @@
 ---
 title: ESP32
 description: Known problems with ESP32
+keywords: ArduinoJson,ESP32
 layout: faq
 tags: faq
 faq-group: Known problems

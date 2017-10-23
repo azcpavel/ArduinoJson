@@ -1,6 +1,7 @@
 ---
 title: JsonArray::size()
 description: Gets the number of element in a JsonArray
+keywords: ArduinoJson,JsonArray,size,length
 layout: api
 tags: api
 api-group: JsonArray

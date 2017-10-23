@@ -1,6 +1,7 @@
 ---
 title: JsonObject::printTo()
 description: Serializes a JsonObject to JSON
+keywords: ArduinoJson,JsonObject,serialize
 layout: api
 tags: api
 api-group: JsonObject

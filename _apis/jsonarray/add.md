@@ -1,6 +1,7 @@
 ---
 title: JsonArray::add()
 description: Adds a value to a JsonArray
+keywords: ArduinoJson,JsonArray,add
 layout: api
 tags: api
 api-group: JsonArray

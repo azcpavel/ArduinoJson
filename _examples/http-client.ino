@@ -1,6 +1,7 @@
 ---
 title: JsonHttpClient.ino
-description: Shows how to perform a HTTP request and parse the JSON response.
+description: Shows how to perform a HTTP request and parse the JSON response
+keywords: ArduinoJson,HTTP,parse,decode,example
 layout: example
 tags: example
 ---

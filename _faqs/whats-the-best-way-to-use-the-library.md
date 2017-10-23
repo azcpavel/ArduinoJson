@@ -1,6 +1,7 @@
 ---
 title: What's the best way to use the library?
 description: The best way to use ArduinoJson is to scope the usage of the library to functions dedicated to the serialization
+keywords: ArduinoJson,design,patter,style,recommendation,advice
 layout: faq
 tags: faq
 faq-group: Common

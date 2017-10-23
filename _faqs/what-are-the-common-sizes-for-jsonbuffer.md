@@ -1,6 +1,7 @@
 ---
 title: What are the common sizes for JsonBuffer?
 description: JsonBuffer size ranges from a few hundreds to a few thousand bytes
+keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer,size
 layout: faq
 tags: faq
 faq-group: Common

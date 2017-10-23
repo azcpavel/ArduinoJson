@@ -1,6 +1,7 @@
 ---
 title: The first serialization succeeds, why do the next ones fail?
 description: Serialization fails because the JsonBuffer is reused
+keywords: ArduinoJson,failure
 layout: faq
 tags: faq
 faq-group: Serialization

@@ -2,6 +2,7 @@
 layout: doc
 title: Memory Model
 description: How memory is handled in ArduinoJson. What are StaticJsonBuffer and DynamicJsonBuffer.
+keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer,memory
 tags: doc
 ---
 

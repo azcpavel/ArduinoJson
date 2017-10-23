@@ -1,6 +1,7 @@
 ---
 title: JsonArray::get()
-description: Gets a value in a JsonArray.
+description: Gets a value in a JsonArray
+keywords: ArduinoJson,JsonArray,get,read
 layout: api
 tags: api
 api-group: JsonArray

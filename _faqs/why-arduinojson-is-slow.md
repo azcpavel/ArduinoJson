@@ -1,6 +1,7 @@
 ---
 title: Why ArduinoJson is slow?
 description: You can speed up ArduinoJson by using a buffer.
+keywords: ArduinoJson,slow,speed,WifiClient,wifi,ESP8266
 layout: faq
 tags: faq
 faq-group: Serialization

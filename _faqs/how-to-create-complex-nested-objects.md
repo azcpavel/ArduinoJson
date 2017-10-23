@@ -1,6 +1,7 @@
 ---
 title: How to create complex nested objects?
-description: JsonArray and JsonObject have the methods createNestedArray() and createNestedObject() for that
+description: To create complex objects, call createNestedArray() and createNestedObject()
+keywords: ArduinoJson,createNestedArray,createNestedObject,JsonArray,JsonObject
 layout: faq
 tags: faq
 faq-group: Serialization

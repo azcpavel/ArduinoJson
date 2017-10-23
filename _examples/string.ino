@@ -1,6 +1,7 @@
 ---
 title: StringExample.ino
-description: Shows how to use the <code>String</code> class with ArduinoJson.
+description: "Shows how to use the <code>String</code> class with ArduinoJson"
+keywords: ArduinoJson,string,example
 tags: example
 layout: example
 ---

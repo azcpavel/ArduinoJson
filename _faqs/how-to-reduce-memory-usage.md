@@ -1,6 +1,7 @@
 ---
 title: How to reduce memory usage?
 description: To reduce memory usage, avoid useless duplications
+keywords: ArduinoJson,memory
 layout: faq
 tags: faq
 faq-group: Deserialization

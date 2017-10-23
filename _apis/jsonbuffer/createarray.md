@@ -1,6 +1,7 @@
 ---
 title: JsonBuffer::createArray()
 description: Creates a JsonArray
+keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer,createArray,JsonArray
 layout: api
 tags: api
 api-group: JsonBuffer

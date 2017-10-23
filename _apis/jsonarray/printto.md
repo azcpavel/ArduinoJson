@@ -1,6 +1,7 @@
 ---
 title: JsonArray::printTo()
 description: Serializes a JsonArray to JSON
+keywords: ArduinoJson,JsonArray,serialize,encode,generate
 layout: api
 tags: api
 api-group: JsonArray

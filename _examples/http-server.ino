@@ -1,6 +1,7 @@
 ---
 title: JsonServer.ino
-description: Shows how to implement a HTTP server that returns the status of analog and digital inputs in a JSON response.
+description: Shows how to implement a HTTP server that returns the status of analog and digital inputs in a JSON response
+keywords: ArduinoJson,HTTP,serialize,encode,generate,example
 tags: example
 layout: example
 ---

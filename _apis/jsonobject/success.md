@@ -1,6 +1,7 @@
 ---
 title: JsonObject::success()
 description: Tests if parsing of JsonObject succeeded
+keywords: ArduinoJson,JsonObject,parsing,valid
 layout: api
 tags: api
 api-group: JsonObject

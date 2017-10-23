@@ -1,6 +1,7 @@
 ---
 title: Parsing succeeds but I can't read the values!
 description: Use the ArduinoJson Assistant to help you write your program
+keywords: ArduinoJson,parsing,fails
 layout: faq
 tags: faq
 faq-group: Deserialization

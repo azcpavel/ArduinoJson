@@ -2,6 +2,7 @@
 layout: doc
 tags: doc
 title: Decoding JSON
+keywords: ArduinoJson,parse,decode
 description: How to parse JSON on Arduino with ArduinoJson
 ---
 

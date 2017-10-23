@@ -1,6 +1,7 @@
 ---
 title: JsonArray::success()
 description: Tests if parsing of JsonArray succeeded
+keywords: ArduinoJson,JsonArray,parsing,valid
 layout: api
 tags: api
 api-group: JsonArray

@@ -1,6 +1,7 @@
 ---
 title: JsonVariant description
 description: A JsonVariant can hold any JSON value
+keywords: ArduinoJson,JsonVariant
 layout: api
 tags: api
 api-group: JsonVariant

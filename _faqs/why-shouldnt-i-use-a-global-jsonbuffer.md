@@ -1,6 +1,7 @@
 ---
 title: Why shouldn't I use a global <code>JsonBuffer</code>?
 description: A JsonBuffer should not be reused. A global JsonBuffer wastes memory.
+keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer,global
 layout: faq
 tags: faq
 faq-group: Common

@@ -1,6 +1,7 @@
 ---
 title: Sloeber Arduino Eclipse Plugin
 description: Known problems with Sloeber Arduino Eclipse Plugin
+keywords: ArduinoJson,sloeber,eclipse
 layout: faq
 tags: faq
 faq-group: Known problems

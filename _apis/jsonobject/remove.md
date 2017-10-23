@@ -1,6 +1,7 @@
 ---
 title: JsonObject::remove()
 description: Removes an element from a JsonObject
+keywords: ArduinoJson,JsonObject,remove,delete,erase
 layout: api
 tags: api
 api-group: JsonObject

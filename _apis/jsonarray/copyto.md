@@ -1,6 +1,7 @@
 ---
 title: JsonArray::copyTo()
 description: Copies a JsonArray
+keywords: ArduinoJson,JsonArray,copyTo
 layout: api
 tags: api
 api-group: JsonArray

@@ -1,6 +1,7 @@
 ---
 title: JsonObject::prettyPrintTo()
 description: Serializes a JsonObject to prettified JSON
+keywords: ArduinoJson,JsonObject,serialize
 layout: api
 tags: api
 api-group: JsonObject

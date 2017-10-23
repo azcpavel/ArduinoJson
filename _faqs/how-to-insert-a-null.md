@@ -1,6 +1,7 @@
 ---
 title: How to insert a <code>null</code>?
 description: To insert a null in the JSON, add a NULL char*
+keywords: ArduinoJson,null
 layout: faq
 tags: faq
 faq-group: Serialization

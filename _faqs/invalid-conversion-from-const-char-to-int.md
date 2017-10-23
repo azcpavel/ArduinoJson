@@ -1,6 +1,7 @@
 ---
 title: "Error: <code>invalid conversion from 'const char*' to 'int' [-fpermissive]</code>"
 description: You cannot index a JsonObject with an integer
+keywords: ArduinoJson,invalid,conversion,char,int
 layout: faq
 tags: faq
 faq-group: Deserialization

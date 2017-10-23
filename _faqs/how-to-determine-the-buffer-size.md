@@ -1,6 +1,7 @@
 ---
 title: How to determine the buffer size?
 description: The AduinoJson Assistant will compute the right expression
+keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer,size
 layout: faq
 tags: faq
 faq-group: Common

@@ -1,6 +1,7 @@
 ---
 title: JsonObject::operator[]
 description: Gets or replaces a value in a JsonObject
+keywords: ArduinoJson,JsonObject,get,set,read,write
 layout: api
 tags: api
 api-group: JsonObject

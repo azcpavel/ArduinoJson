@@ -2,6 +2,7 @@
 layout: doc
 tags: doc
 title: Encoding JSON
+keywords: ArduinoJson,serialize,encode,generate
 description: How to generate JSON on Arduino with ArduinoJson
 ---
 

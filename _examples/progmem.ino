@@ -1,6 +1,7 @@
 ---
 title: ProgmemExample.ino
-description: Show how to use Flash strings with ArduinoJson.
+description: Show how to use Flash strings with ArduinoJson
+keywords: ArduinoJson,PROGMEM,Flash,example
 tags: example
 layout: example
 ---
