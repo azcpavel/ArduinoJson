@@ -1,5 +1,6 @@
 ---
 title: ARDUINOJSON_USE_DOUBLE
+description: Specifies storage size for floating-point values
 layout: api
 tags: api
 api-group: Configuration

@@ -1,5 +1,6 @@
 ---
-title: "Sloeber Arduino Eclipse Plugin"
+title: Sloeber Arduino Eclipse Plugin
+description: Known problems with Sloeber Arduino Eclipse Plugin
 layout: faq
 tags: faq
 faq-group: Known problems

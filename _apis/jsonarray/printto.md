@@ -1,5 +1,6 @@
 ---
 title: JsonArray::printTo()
+description: Serializes a JsonArray to JSON
 layout: api
 tags: api
 api-group: JsonArray

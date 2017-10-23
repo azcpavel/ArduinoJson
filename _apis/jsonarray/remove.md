@@ -1,5 +1,6 @@
 ---
 title: JsonArray::remove()
+description: Removes an element from a JsonArray
 layout: api
 tags: api
 api-group: JsonArray

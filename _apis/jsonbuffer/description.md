@@ -1,5 +1,6 @@
 ---
 title: JsonBuffer description
+description: DynamicJsonBuffer and StaticJsonBuffer are memory pools
 layout: api
 tags: api
 api-group: JsonBuffer

@@ -1,5 +1,6 @@
 ---
 title: JsonArray::set()
+description: Replaces a value in a JsonArray
 layout: api
 tags: api
 api-group: JsonArray

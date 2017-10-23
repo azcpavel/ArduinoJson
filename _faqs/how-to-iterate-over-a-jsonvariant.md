@@ -1,5 +1,6 @@
 ---
 title: How to iterate over a <code>JsonVariant</code>?
+description: To iterate througth a JsonVariant, you must cast it to JsonArray or JsonObject
 layout: faq
 tags: faq
 faq-group: Deserialization

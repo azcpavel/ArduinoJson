@@ -1,5 +1,6 @@
 ---
 title: JsonArray::add()
+description: Adds a value to a JsonArray
 layout: api
 tags: api
 api-group: JsonArray

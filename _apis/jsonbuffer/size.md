@@ -1,5 +1,6 @@
 ---
 title: JsonBuffer::size()
+description: Gets memory usage of a JsonBuffer
 layout: api
 tags: api
 api-group: JsonBuffer

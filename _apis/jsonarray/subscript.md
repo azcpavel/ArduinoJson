@@ -1,5 +1,6 @@
 ---
 title: JsonArray::operator[]
+description: Gets or replaces a value in a JsonArray
 layout: api
 tags: api
 api-group: JsonArray

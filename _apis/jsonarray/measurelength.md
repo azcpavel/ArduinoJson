@@ -1,5 +1,6 @@
 ---
 title: JsonArray::measureLength()
+description: Computes JSON length of a JsonArray
 layout: api
 tags: api
 api-group: JsonArray

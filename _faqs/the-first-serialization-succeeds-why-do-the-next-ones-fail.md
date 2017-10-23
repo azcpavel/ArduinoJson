@@ -1,5 +1,6 @@
 ---
 title: The first serialization succeeds, why do the next ones fail?
+description: Serialization fails because the JsonBuffer is reused
 layout: faq
 tags: faq
 faq-group: Serialization

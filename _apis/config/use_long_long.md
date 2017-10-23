@@ -1,5 +1,6 @@
 ---
 title: ARDUINOJSON_USE_LONG_LONG
+description: Enables long long support
 layout: api
 tags: api
 api-group: Configuration

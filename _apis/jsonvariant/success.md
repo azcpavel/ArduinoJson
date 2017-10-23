@@ -1,5 +1,6 @@
 ---
 title: JsonVariant::success()
+description: Tests if parsing of JsonVariant succeeded
 layout: api
 tags: api
 api-group: JsonVariant

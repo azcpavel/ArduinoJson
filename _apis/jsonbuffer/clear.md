@@ -1,5 +1,6 @@
 ---
 title: JsonBuffer::clear()
+description: Resets a JsonBuffer
 layout: api
 tags: api
 api-group: JsonBuffer

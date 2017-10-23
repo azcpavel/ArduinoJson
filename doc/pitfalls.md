@@ -1,6 +1,7 @@
 ---
 layout: doc
 title: Avoiding Pitfalls
+description: What are the common pitfalls of ArduinoJson
 tags: doc
 ---
 

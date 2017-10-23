@@ -1,5 +1,6 @@
 ---
-title: "ESP32"
+title: ESP32
+description: Known problems with ESP32
 layout: faq
 tags: faq
 faq-group: Known problems

@@ -1,5 +1,6 @@
 ---
 title: JsonVariant::is()
+description: Tests the type of a JsonVariant
 layout: api
 tags: api
 api-group: JsonVariant

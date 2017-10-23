@@ -1,12 +1,13 @@
 ---
 title: JsonObject::get()
+description: Gets a value in a JsonObject
 layout: api
 tags: api
 api-group: JsonObject
 ---
 
 ##### Description
-Gets the value at the specified index.
+Gets the value at the specified key.
 
 ##### Signature
 ```c++

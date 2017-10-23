@@ -1,5 +1,6 @@
 ---
 title: JsonArray::size()
+description: Gets the number of element in a JsonArray
 layout: api
 tags: api
 api-group: JsonArray

@@ -1,5 +1,6 @@
 ---
 title: How to prevent string escaping?
+description: To present string escaping in JSON, wrap with type RawJson
 layout: faq
 tags: faq
 faq-group: Serialization

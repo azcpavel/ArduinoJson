@@ -1,5 +1,6 @@
 ---
 title: How to determine the buffer size?
+description: The AduinoJson Assistant will compute the right expression
 layout: faq
 tags: faq
 faq-group: Common

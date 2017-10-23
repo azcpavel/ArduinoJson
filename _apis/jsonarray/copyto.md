@@ -1,5 +1,6 @@
 ---
 title: JsonArray::copyTo()
+description: Copies a JsonArray
 layout: api
 tags: api
 api-group: JsonArray

@@ -1,5 +1,6 @@
 ---
 title: JsonObject::printTo()
+description: Serializes a JsonObject to JSON
 layout: api
 tags: api
 api-group: JsonObject

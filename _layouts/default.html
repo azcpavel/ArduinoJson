@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 <title>{{ page.title | strip_html }}</title>
+{% if page.description %}
+<meta name="description" content="{{ page.description | strip_html }}">
+{% endif %}
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="ArduinoJson is a simple a efficient C++ JSON library for embedded system.">
 <meta name="keywords" content="JSON,C++,Arduino,IoT,embedded">
 {% include bootstrap.head.html %}
 {% include analytics.head.html %}

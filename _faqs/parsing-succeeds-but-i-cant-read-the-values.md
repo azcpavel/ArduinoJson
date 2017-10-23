@@ -1,5 +1,6 @@
 ---
 title: Parsing succeeds but I can't read the values!
+description: Use the ArduinoJson Assistant to help you write your program
 layout: faq
 tags: faq
 faq-group: Deserialization
@@ -70,7 +71,9 @@ JsonArray& root = jsonBuffer.parseArray(json);
 const char* world = root["hello"][0]["new"];
 ```
 
+The [ArduinoJson Assistant]({{site.baseurl}}/assistant/) can generate the program skeleton for you.
+
 See:
 
 * Issues [#187](https://github.com/bblanchon/ArduinoJson/issues/187), [#203](https://github.com/bblanchon/ArduinoJson/issues/203) and [#245](https://github.com/bblanchon/ArduinoJson/issues/245).
-* [ArduinoJson Assistant]({{ site.baseurl }}/assistant/)
+* [ArduinoJson Assistant]({{site.baseurl}}/assistant/)

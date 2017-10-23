@@ -1,5 +1,6 @@
 ---
 title: "Error: <code>invalid conversion from 'const char*' to 'int' [-fpermissive]</code>"
+description: You cannot index a JsonObject with an integer
 layout: faq
 tags: faq
 faq-group: Deserialization

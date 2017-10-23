@@ -1,5 +1,6 @@
 ---
 title: "Error: undefined reference to <code>__cxa_guard_acquire</code> and <code>__cxa_guard_release</code>"
+description: To fix the error add -fno-threadsafe-statics to the compiler command line
 layout: faq
 tags: faq
 faq-group: Known problems

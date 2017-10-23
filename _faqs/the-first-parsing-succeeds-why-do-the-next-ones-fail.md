@@ -1,5 +1,6 @@
 ---
 title: The first parsing succeeds, why do the next ones fail?
+description: Parsing fails because the JsonBuffer is reused
 layout: faq
 tags: faq
 faq-group: Deserialization

@@ -1,5 +1,6 @@
 ---
 title: JsonObject::success()
+description: Tests if parsing of JsonObject succeeded
 layout: api
 tags: api
 api-group: JsonObject

@@ -1,5 +1,6 @@
 ---
 title: JsonArray::get()
+description: Gets a value in a JsonArray.
 layout: api
 tags: api
 api-group: JsonArray

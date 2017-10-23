@@ -1,5 +1,6 @@
 ---
 title: JsonVariant::as()
+description: Converts a JsonVariant
 layout: api
 tags: api
 api-group: JsonVariant
@@ -7,7 +8,7 @@ api-group: JsonVariant
 
 ##### Description
 
-Get the value of the specified type.
+Converts the variant to the specified type.
 
 ##### Signatures
 

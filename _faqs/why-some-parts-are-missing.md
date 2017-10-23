@@ -1,5 +1,6 @@
 ---
 title: Why some parts are missing?
+description: The JSON is incomplete because the JsonBuffer is too small
 layout: faq
 tags: faq
 faq-group: Serialization
@@ -12,9 +13,10 @@ This is because the `StaticJsonBuffer` too small.
 
 Solution: Increase the size of the `StaticJsonBuffer` or switch to a `DynamicJsonBuffer`.
 
+The [ArduinoJson Assistant](https://bblanchon.github.io/ArduinoJson/assistant/) can compute the size for you.
+
 See also:
 
-* [What are the differences between StaticJsonBuffer and DynamicJsonBuffer?](#what-are-the-differences-between-staticjsonbuffer-and-dynamicjsonbuffer)
-* [How to determine the buffer size?](#how-to-determine-the-buffer-size)
+* [What are the differences between StaticJsonBuffer and DynamicJsonBuffer?]({{site.baseurl}}/faq/what-are-the-differences-between-staticjsonbuffer-and-dynamicjsonbuffer)
+* [How to determine the buffer size?]({{site.baseurl}}/faq/how-to-determine-the-buffer-size)
 * [ArduinoJson Assistant](https://bblanchon.github.io/ArduinoJson/assistant/)
-* Issues [#360](https://github.com/bblanchon/ArduinoJson/issues/360), [#372](https://github.com/bblanchon/ArduinoJson/issues/372), [#374](https://github.com/bblanchon/ArduinoJson/issues/374), [#380](https://github.com/bblanchon/ArduinoJson/issues/380) and [#438](https://github.com/bblanchon/ArduinoJson/issues/438)

@@ -1,5 +1,6 @@
 ---
 title: JsonBuffer::parseObject()
+description: Parses a JSON object
 layout: api
 tags: api
 api-group: JsonBuffer

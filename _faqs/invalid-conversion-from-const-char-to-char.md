@@ -1,5 +1,6 @@
 ---
 title: "Error: <code>invalid conversion from 'const char*' to 'char*' [-fpermissive]</code>"
+description: To fix the error, use a const char* instead of a char*
 layout: faq
 tags: faq
 faq-group: Deserialization

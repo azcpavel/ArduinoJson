@@ -1,5 +1,6 @@
 ---
 title: Can I parse data from a stream?
+description: It's possible to parse JSON from a Stream
 layout: faq
 tags: faq
 faq-group: Deserialization

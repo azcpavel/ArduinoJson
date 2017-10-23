@@ -1,5 +1,6 @@
 ---
 title: JsonObject::operator[]
+description: Gets or replaces a value in a JsonObject
 layout: api
 tags: api
 api-group: JsonObject

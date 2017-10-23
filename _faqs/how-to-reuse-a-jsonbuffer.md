@@ -1,5 +1,6 @@
 ---
 title: How to reuse a <code>JsonBuffer</code>?
+description: Do not reuse a JsonBuffer
 layout: faq
 tags: faq
 faq-group: Common

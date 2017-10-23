@@ -1,5 +1,6 @@
 ---
 title: JsonObject::prettyPrintTo()
+description: Serializes a JsonObject to prettified JSON
 layout: api
 tags: api
 api-group: JsonObject

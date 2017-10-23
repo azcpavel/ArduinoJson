@@ -1,5 +1,6 @@
 ---
-title: "Adafruit WICED Feather"
+title: Adafruit WICED Feather
+description: Known problems withy Adafruit WICED Feather
 layout: faq
 tags: faq
 faq-group: Known problems

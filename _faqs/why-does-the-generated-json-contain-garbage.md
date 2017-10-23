@@ -1,5 +1,6 @@
 ---
 title: Why does the generated JSON contain garbage?
+description: Garbage in the JSON is caused by a dangling pointer or reference
 layout: faq
 tags: faq
 faq-group: Serialization

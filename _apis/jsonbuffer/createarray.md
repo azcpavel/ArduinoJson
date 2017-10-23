@@ -1,5 +1,6 @@
 ---
 title: JsonBuffer::createArray()
+description: Creates a JsonArray
 layout: api
 tags: api
 api-group: JsonBuffer

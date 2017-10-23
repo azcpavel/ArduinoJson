@@ -1,5 +1,6 @@
 ---
 title: JsonObject::size()
+description: Gets the number of element in a JsonObject
 layout: api
 tags: api
 api-group: JsonObject

@@ -2,6 +2,7 @@
 layout: doc
 tags: doc
 title: Encoding JSON
+description: How to generate JSON on Arduino with ArduinoJson
 ---
 
 Before writing any code, don't forget to include the header:

@@ -1,5 +1,6 @@
 ---
 title: JsonObject::containsKey()
+description: Tests if a JsonObject contains a key
 layout: api
 tags: api
 api-group: JsonObject

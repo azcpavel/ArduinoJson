@@ -1,5 +1,6 @@
 ---
 title: How to know the type of a value?
+description: To test the type of a value, you must call JsonVariant::is()
 layout: faq
 tags: faq
 faq-group: Deserialization

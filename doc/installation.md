@@ -1,6 +1,7 @@
 ---
 layout: doc
 title: Installation
+description: How to install ArduinoJson
 tags: doc
 ---
 

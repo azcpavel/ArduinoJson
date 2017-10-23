@@ -1,5 +1,6 @@
 ---
 title: JsonArray::prettyPrintTo()
+description: Serializes a JsonArray to prettified JSON
 layout: api
 tags: api
 api-group: JsonArray

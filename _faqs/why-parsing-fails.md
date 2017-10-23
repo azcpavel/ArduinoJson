@@ -1,5 +1,6 @@
 ---
 title: Why parsing fails?
+description: JSON parsing fails because input is invalid, JsonBuffer is too small or nesting limit is too low
 layout: faq
 tags: faq
 faq-group: Deserialization

@@ -1,5 +1,6 @@
 ---
 title: JsonBuffer::parse()
+description: Parses any JSON input
 layout: api
 tags: api
 api-group: JsonBuffer

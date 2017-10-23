@@ -1,9 +1,12 @@
 ---
 title: Why does my device crash or reboot?
+description: A StaticJsonBuffer that is too big for the stack will make the device crash
 layout: faq
 tags: faq
 faq-group: Common
 popularity: 187
+redirect_from: 
+ - /faq/why-do-i-have-a-segmentation-fault/
 ---
 
 99.999% of the time, this is caused by a "stack overflow", i.e. you have too many variables in the "stack".

@@ -1,5 +1,6 @@
 ---
 title: Why is the input modified?
+description: ArduinoJson modifies the input array as part of the zero-copy feature
 layout: faq
 tags: faq
 faq-group: Deserialization

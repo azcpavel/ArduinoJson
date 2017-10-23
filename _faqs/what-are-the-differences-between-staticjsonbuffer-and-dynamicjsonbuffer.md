@@ -1,5 +1,6 @@
 ---
 title: What are the differences between <code>StaticJsonBuffer</code> and <code>DynamicJsonBuffer</code>?
+description: StaticJsonBuffer is allocated on the stack, DynamicJsonBuffer is allocated on the heap
 layout: faq
 tags: faq
 faq-group: Common

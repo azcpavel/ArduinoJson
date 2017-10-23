@@ -1,5 +1,6 @@
 ---
 title: JsonArray::measurePrettyLength()
+description: Computes prettified JSON length of a JsonArray
 layout: api
 tags: api
 api-group: JsonArray

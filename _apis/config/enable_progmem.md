@@ -1,5 +1,6 @@
 ---
 title: ARDUINOJSON_ENABLE_PROGMEM
+description: Enables PROGMEM support, ie variables in Flash memory
 layout: api
 tags: api
 api-group: Configuration

@@ -1,5 +1,6 @@
 ---
 title: JsonVariant description
+description: A JsonVariant can hold any JSON value
 layout: api
 tags: api
 api-group: JsonVariant

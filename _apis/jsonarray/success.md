@@ -1,5 +1,6 @@
 ---
 title: JsonArray::success()
+description: Tests if parsing of JsonArray succeeded
 layout: api
 tags: api
 api-group: JsonArray

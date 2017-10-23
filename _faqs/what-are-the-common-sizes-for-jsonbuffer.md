@@ -1,5 +1,6 @@
 ---
 title: What are the common sizes for JsonBuffer?
+description: JsonBuffer size ranges from a few hundreds to a few thousand bytes
 layout: faq
 tags: faq
 faq-group: Common

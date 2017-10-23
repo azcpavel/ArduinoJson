@@ -1,5 +1,6 @@
 ---
 title: JsonBuffer::strdup()
+description: Copies a string in a JsonBuffer
 layout: api
 tags: api
 api-group: JsonBuffer

@@ -1,5 +1,6 @@
 ---
 title: JsonObject::remove()
+description: Removes an element from a JsonObject
 layout: api
 tags: api
 api-group: JsonObject

@@ -1,5 +1,6 @@
 ---
 title: JsonArray::begin() / JsonArray::end()
+description: Iterates through a JsonArray
 layout: api
 tags: api
 api-group: JsonArray

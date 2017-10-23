@@ -1,5 +1,6 @@
 ---
-title: "Arduino Zero, mkr1000 and all boards based on SAMD21"
+title: Arduino Zero, mkr1000 and all boards based on SAMD21
+description: Known problems with Arduino Zero, mkr1000 and other SAMD21 boards
 layout: faq
 tags: faq
 popularity: 33

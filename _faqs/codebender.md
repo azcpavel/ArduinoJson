@@ -1,5 +1,6 @@
 ---
 title: CodeBender
+description: Known problems with CodeBender
 layout: faq
 tags: faq
 faq-group: Known problems

@@ -1,5 +1,6 @@
 ---
 title: JsonObject::measureLength()
+description: Computes JSON length of a JsonObject
 layout: api
 tags: api
 api-group: JsonObject

@@ -1,5 +1,6 @@
 ---
 title: I found a memory leak in the library!
+description: There is no memory leak in ArduinoJson, you are just using it improperly
 layout: faq
 tags: faq
 faq-group: Common

@@ -1,5 +1,6 @@
 ---
 title: JsonBuffer::parseArray()
+description: Parses a JSON array
 layout: api
 tags: api
 api-group: JsonBuffer

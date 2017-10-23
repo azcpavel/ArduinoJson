@@ -1,5 +1,6 @@
 ---
 title: JsonArray::createNestedObject()
+description: Adds a JsonObject in a JsonArray
 layout: api
 tags: api
 api-group: JsonArray

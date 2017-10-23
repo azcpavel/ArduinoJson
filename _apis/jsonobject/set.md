@@ -1,5 +1,6 @@
 ---
 title: JsonObject::set()
+description: Replaces a value in a JsonObject
 layout: api
 tags: api
 api-group: JsonObject

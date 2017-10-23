@@ -1,5 +1,6 @@
 ---
 title: How to create complex nested objects?
+description: JsonArray and JsonObject have the methods createNestedArray() and createNestedObject() for that
 layout: faq
 tags: faq
 faq-group: Serialization
@@ -41,10 +42,12 @@ will generate:
 }
 ```
 
+The [ArduinoJson Assistant]({{site.baseurl}}/assistant/) can generate the skeleton for you.
+
 See:
 
-* issues [#51](https://github.com/bblanchon/ArduinoJson/issues/51), [#252](https://github.com/bblanchon/ArduinoJson/issues/252) and [#264](https://github.com/bblanchon/ArduinoJson/issues/264)
-* [API Reference: JsonArray::createNestedArray()](https://github.com/bblanchon/ArduinoJson/wiki/API-Reference#jsonarraycreatenestedarray)
-* [API Reference: JsonArray::createNestedArray()](https://github.com/bblanchon/ArduinoJson/wiki/API-Reference#jsonarraycreatenestedarray)
-* [API Reference: JsonObject::createNestedArray()](https://github.com/bblanchon/ArduinoJson/wiki/API-Reference#jsonobjectcreatenestedarray)
-* [API Reference: JsonObject::createNestedObject()](https://github.com/bblanchon/ArduinoJson/wiki/API-Reference#jsonobjectcreatenestedobject)
+* [API Reference: JsonArray::createNestedArray()]({{site.baseurl}}/api/jsonarray/createnestedarray)
+* [API Reference: JsonArray::createNestedArray()]({{site.baseurl}}/api/jsonarray/createnestedarray)
+* [API Reference: JsonObject::createNestedArray()]({{site.baseurl}}/api/jsonobject/createnestedarray)
+* [API Reference: JsonObject::createNestedObject()]({{site.baseurl}}/api/jsonobject/createnestedobject)
+* [ArduinoJson Assistant]({{site.baseurl}}/assistant/)

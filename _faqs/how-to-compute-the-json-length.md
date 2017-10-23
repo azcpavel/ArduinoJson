@@ -1,5 +1,6 @@
 ---
 title: How to compute the JSON length?
+description: JsonArray and JsonObject have a measureLength() method for that
 layout: faq
 tags: faq
 faq-group: Serialization

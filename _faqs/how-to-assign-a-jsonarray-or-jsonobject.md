@@ -1,5 +1,6 @@
 ---
 title: How to assign a <code>JsonArray</code> or <code>JsonObject</code>?
+description: It's not possible to reassign a C++ reference. Instead use a pointer or a JsonVariant.
 layout: faq
 tags: faq
 faq-group: Common
@@ -26,7 +27,3 @@ You can also use a `JsonVariant` which will act as a wrapper around the pointer.
 ```c++
 JsonVariant myObject = root["myObject"];
 ```
-
-See:
-
-* Issues [#341](https://github.com/bblanchon/ArduinoJson/issues/341) and [#343](https://github.com/bblanchon/ArduinoJson/issues/343).

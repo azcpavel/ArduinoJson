@@ -1,11 +1,12 @@
 ---
 title: ARDUINOJSON_ENABLE_ARDUINO_STRING
+description: Enables String support
 layout: api
 tags: api
 api-group: Configuration
 ---
 
-Enables the support of the type `String` in the library.
+Enables support of the type `String` in the library.
 
 The default is `1` of `ARDUINO` is defined, `0` otherwise.
 In other words, `String` is supported as soon as you work in an Arduino-compatible environment
