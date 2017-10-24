@@ -48,4 +48,4 @@ collections:
     permalink: /example/:path/
   sections:
     output: true
-    permalink: /:path/index.html
+    permalink: /:path/
