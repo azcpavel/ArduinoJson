@@ -11,7 +11,6 @@ popularity: 10
 This is the detailed documentation of every class and function of the ArduinoJson library.
 Some parts have been simplified to be easier to understand, so if you look at the source code, you might see some differences.
 
-
 <ul>
 {% assign groups = site.apis | group_by: 'api-group' %}
 {% for group in groups %}
@@ -25,3 +24,14 @@ Some parts have been simplified to be easier to understand, so if you look at th
   </li>
 {% endfor %}
 </ul>
+
+
+## Where to go next?
+
+<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+
+Although it does not contain an exhaustive list of function like this page, the [ArduinoJson ebook](https://ebook.benoitblanchon.fr/) is a more convenient and more pleasant way to learn how to use the library.
+
+It contains step-by-step tutorials to learn how to serialize or parse JSON with ArduinoJson. It also explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
+
+If C++ is not your strength, you will appreciate the quick C++ course which will help you catch up with pointers, references, and other subtilities.

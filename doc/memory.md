@@ -109,22 +109,13 @@ Memory is released in `DynamicJsonBuffer`'s destructor, so you don't have to do 
 | JsonObject of N element | 8 + 32 * N |
 {: .table .table-bordered .table-responsive }
 
-#### Object size on x86 (tested on Visual Studio 2015)
+Use [ArduinoJson Assistant]({{ site.baseurl }}/assistant/) to compute the size required for your project.
 
-| Type                    | Size        |
-|-------------------------|-------------|
-| JsonVariant             | 16          |
-| JsonArray of N element  | 12 + 24 * N |
-| JsonObject of N element | 12 + 32 * N |
-{: .table .table-bordered .table-responsive }
+## Where to go next?
 
-#### Object size on x64 (tested on Visual Studio 2015)
+<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
 
-| Type                    | Size        |
-|-------------------------|-------------|
-| JsonVariant             | 16          |
-| JsonArray of N element  | 24 + 24 * N |
-| JsonObject of N element | 24 + 32 * N |
-{: .table .table-bordered .table-responsive }
+In the [ArduinoJson ebook](https://ebook.benoitblanchon.fr/), there is a whole chapter dedicated to the memory management in ArduinoJson. It explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
 
-Use [ArduinoJson Assistant]({{ site.baseurl }}/assistant/) to compute the size require for your project.
+The book also contains a quick C++ course to catch up with memory management in general. It explains the differences between "stack," "heap" and "global" memories.
+It also debunks wrong assumption that memory management is done by the developer.

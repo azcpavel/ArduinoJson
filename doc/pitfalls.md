@@ -167,3 +167,12 @@ JsonArray& array = buffer.parseArray(json);
 Depending on your platform, you may have an exception because the parser tries to write at a location that is read-only.
 In the first case `char json[]` declares an array of `char` initialized to the specified string.
 In the second case `char* json` declares a pointer to a read-only string, in fact it should be a `const char*` instead of a `char*`.
+
+
+## Where to go next?
+
+<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+
+In the [ArduinoJson ebook](https://ebook.benoitblanchon.fr/), the last chapter lists the common sources of pain with ArduinoJson.
+
+Most of the time, the problem comes from a poor understanding of basic C++ concepts such as pointers, references and object lifetime. That is why the book also contains a quick C++ course to catch up with those things.

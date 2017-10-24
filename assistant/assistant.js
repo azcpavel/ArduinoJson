@@ -3,6 +3,7 @@ function analyseInput() {
   error.style.visibility = 'hidden';
   $parserDiv.style.display = 'none';
   $serializerDiv.style.display = 'none';
+  $ebook.style.display = 'none';
 
   var parsedJson;
   try {
@@ -45,6 +46,8 @@ function analyseInput() {
   $serializerCode.innerHTML = serializer.toString();
   hljs.highlightBlock($serializerCode);
   $serializerDiv.style.display = 'block';
+
+  $ebook.style.display = 'block';
 }
 
 $input.addEventListener('input', analyseInput);

@@ -82,15 +82,12 @@ Now, to check if the parsing was successful, you can call `JsonObject::success()
 ```c++
 if (!root.success())
 {
-    // Parsing fail
+    // Parsing failed
 }
 ```
 
-The result can be `false` for three reasons:
-
-1. the JSON string is invalid,
-2. the JSON string doesn't represent an object,
-3. the `StaticJsonBuffer` is too small.
+There are a few reason why parsing can fail.
+Please read [Why parsing fails?]({{site.baseurl}}/faq/why-parsing-fails/) to learn more.
 
 We just saw how to parse an object, there is nothing more to say for arrays, the procedure is exactly the same.
 
@@ -165,18 +162,19 @@ if (root["extra"].is<JsonArray&>())
 You can also iterate through the key-value pairs of the object:
 
 ```c++
-for (JsonObject::iterator it=root.begin(); it!=root.end(); ++it)
+for (JsonPair& pair : someObject)
 {
-  Serial.println(it->key);
-  Serial.println(it->value.asString());
+  Serial.println(pair.key);
+  Serial.println(pair.value.as<char*>());
 }
 ```
 
-Or if you want to iterate through a nested array:
+## Where to go next?
 
-```c++
-JsonObject& data =  variables["data"];
-for (auto dataobj : data){
-    Serial.println(dataobj.key);
-}
-```
+<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+
+In the [ArduinoJson ebook](https://ebook.benoitblanchon.fr/), there is a step-by-step tutorial to learn how to parse JSON with the library.
+
+The book also covers the details of memory management. It explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
+
+If you're not familiar with C++ references, the book also contains a quick C++ course to catch up with those things. For example, this chapter also explains the differences between a `char[]`, a `char*` or a `String`.

@@ -44,8 +44,20 @@ For example, if someone adds values in the JSON settings that are not actually u
 One could even get to a situation where the program is unable to run because all the memory will be consumed by the settings.
 
 
-#### The `.data` segment anti-pattern
+### The `.data` segment anti-pattern
 
 One might think that a legitimate usage of a global buffer is to have a `StaticJsonBuffer` in the `.data` segment so that the compiler will issue an error if there is not enough memory.
 
 While this seems like a good idea, it wastes a lot of RAM as it reserves memory that is used only a fraction of the time.
+
+## Where to go next?
+
+<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+
+The [ArduinoJson ebook](https://ebook.benoitblanchon.fr/) explains the compromises made to allow JSON serialization in deeply embedded systems.
+
+There is an entire chapter dedicated to `StaticJsonBuffer` and `DynamicJsonBuffer`.
+It explains why a global `JsonBuffer` makes poor sense and how you can easily avoid it.
+
+The book begins with a quick C++ course as the global `JsonBuffer` obsession is mostly attributed to developers used to other programming languages and paradigms.
+

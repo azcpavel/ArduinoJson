@@ -45,3 +45,13 @@ void serialize(const SensorData& data, char* json, size_t maxSize)
 As you can see the `StaticJsonBuffer` is kept in memory as short as possible, so that the remain of your program is unaffected by the JSON serialization.
 
 Also you can see that neither `JsonArray` nor `JsonObject` leak out of the serialization code. This maintain a good isolation and reduce the coupling with the library.
+
+### Where to go next?
+
+<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+
+If you are interested in writing good code and make the best possible use of the library, be sure to check the [ArduinoJson ebook](https://ebook.benoitblanchon.fr/).
+
+By understanding how the library is made, you will certainly make a better use of it. In particular, it is essential to prevent useless duplication, as time and memory is precious in an embedded environment.
+
+The book also contains a quick C++ course to catch up with pointers, references, and memory management. Indeed, the most common source of pain with ArduinoJson is a lake of understanding of basic C++ concepts.

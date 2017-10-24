@@ -172,3 +172,13 @@ int len = array.measureLength();
 ```
 
 That comes in handy when you need to calculate the `Content-Length` when posting JSON data over HTTP.
+
+## Where to go next?
+
+<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+
+In the [ArduinoJson ebook](https://ebook.benoitblanchon.fr/), there is a step-by-step tutorial to learn how to serialize JSON with the library.
+
+The book also covers the details of memory management. It explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
+
+If you're not familiar with C++ references, the book also contains a quick C++ course to catch up with those things. For example, this chapter also explains the differences between a `char[]`, a `char*` or a `String`.

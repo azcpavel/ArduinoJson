@@ -97,3 +97,12 @@ for (int i=0; i<10; i++) {
     }
 }
 ```
+
+
+### Where to go next?
+
+<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+
+In the [ArduinoJson ebook](https://ebook.benoitblanchon.fr/), there is a whole chapter dedicated `StaticJsonBuffer` and `DynamicJsonBuffer`. Once you understand how they are made, you will certainly not want to reuse them.
+
+The book begins with a quick C++ course as reusing a `JsonBuffer` is most requested by developers who are not familiar with C++. It is an excellent opportunity to review common patterns and practices, especially when it comes to memory management.

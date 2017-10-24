@@ -101,3 +101,11 @@ You can solve this in two ways:
 
 1. You can pass an additional argument to [`parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject) to specify the new limit.
 2. You can define [`ARDUINOJSON_DEFAULT_NESTING_LIMIT`]({{site.baseurl}}/api/config/default_nesting_limit) which is the default for this argument
+
+## Where to go next?
+
+<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+
+The [ArduinoJson ebook](https://ebook.benoitblanchon.fr/) has a complete chapter on `StaticJsonBuffer` and `DynamicJsonBuffer`. Indeed, the most common source of error is related to the memory management; it is essential to understand what "stack," "heap" and "global" memories are.
+
+It reviews the examples in detail and explains how to apply the proper patterns and practices to your project. In particular, it shows how to prevent useless memory duplication, as it often causes parsing to fail.

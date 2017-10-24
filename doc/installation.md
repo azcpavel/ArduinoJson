@@ -40,7 +40,12 @@ In Arduino IDE, click `File` / `Example` / `ArduinoJson`.
 
 ![Screen capture of Arduino IDE](http://i.imgur.com/g5UwkVh.png)
 
-## What's next?
+## Where to go next?
 
-1. [Decoding JSON]({{site.baseurl}}/doc/decoding/)
-2. [Generating JSON]({{site.baseurl}}/doc/encoding/)
+<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+
+The [ArduinoJson ebook](https://ebook.benoitblanchon.fr/) is the best way to learn how to use the library.
+
+It explains how to install the library and then provides step-by-step tutorials to learn how to serialize or parse JSON with ArduinoJson.
+
+If C++ is not your main strength, you'll appreciate the quick C++ course which will help you catch up with pointers, references, and other subtilities.

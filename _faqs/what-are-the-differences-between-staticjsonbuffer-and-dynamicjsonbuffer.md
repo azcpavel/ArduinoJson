@@ -26,3 +26,12 @@ popularity: 386
 <sup>(3)</sup> A `DynamicJsonBuffer` calls `malloc()` to allocate its memory, and it may have to do this several times if it needs to grow. However, you can specify an initial size to the constructor, so as to make sure that the buffer is big enough and that no further allocation will be needed.
 
 :information_source: As a general rule, if your `StaticJsonBuffer` is bigger than 2KB, then it may be a good time to switch to a `DynamicJsonBuffer`.
+
+
+## Where to go next?
+
+<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+
+The [ArduinoJson ebook](https://ebook.benoitblanchon.fr/) has a complete chapter on memory management. It covers `StaticJsonBuffer` and `DynamicJsonBuffer` in detail and gives guidelines for choosing between one or the other.
+
+The book also explains the difference between "stack," "heap" and "global" memories. These concepts are often overlooked by programmers coming from other languages, but it is the most common source of failure with ArduinoJson.

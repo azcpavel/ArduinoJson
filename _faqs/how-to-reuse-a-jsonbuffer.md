@@ -92,13 +92,13 @@ void sendAll()
   root[F("slew")] = dsp.volumeSlewData;
   rs485.send(jsonAck, jsonBuffer);
 
- // Send mux
- // Clear or delete JSON buffer here
+  // Send mux
+  // Clear or delete JSON buffer here
   root[F("cmd")] = F("mux");
   root[F("muxdata")] = dsp.muxdata;
   rs485.send(jsonAck, jsonBuffer);
 
-//..
+  // ...
 }
 ```
 
@@ -137,3 +137,11 @@ void sendMux()
 * [Avoiding pitfalls: Don't reuse the same JsonBuffer]({{site.baseurl}}/doc/pitfalls/#4-dont-reuse-the-same-jsonbuffer/)
 * [FAQ: Why shouldn't I use a global `JsonBuffer`?]({{site.baseurl}}/faq/why-shouldnt-i-use-a-global-jsonbuffer/).
 * [FAQ: What's the best way to use the library?]({{site.baseurl}}/faq/whats-the-best-way-to-use-the-library/)
+
+### Where to go next?
+
+<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+
+In the [ArduinoJson ebook](https://ebook.benoitblanchon.fr/), there is a whole chapter dedicated `StaticJsonBuffer` and `DynamicJsonBuffer`. Once you understand how they are made, it becomes obvious why they cannot be reused.
+
+The book also contains a quick C++ course to catch up with pointers, references, and how they cause failures. It describes the concept of RAII (Resource Acquisition Is Initialization) which is the foundation for proper memory management in C++.
