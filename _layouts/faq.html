@@ -6,6 +6,7 @@ layout: default
 	<div class="jumbotron">
 		<h1>ArduinoJson: F.A.Q</h1>
 		<h2>{{ page.title }}</h2>
+		<div class="date text-right">{% if page.date %}(updated on {{page.date | date_to_long_string }}){% endif %}</div>
 	</div>
  	<div class="clearfix">
  		{{ content }}
