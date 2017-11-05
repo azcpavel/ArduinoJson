@@ -6,9 +6,9 @@ keywords: ArduinoJson,pitfalls,caveats,mistakes,tips
 tags: doc
 ---
 
-As `StaticJsonBuffer` is the corner stone of this library, you'll see that every pitfall listed here is related to a wrong understanding of the memory model.
+As [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is the corner stone of this library, you'll see that every pitfall listed here is related to a wrong understanding of the memory model.
 
-Make sure you read [Arduino JSON memory model]({{ site.baseurl }}/doc/memory/) before going further.
+Make sure you read [Arduino JSON memory model]({{site.baseurl}}/doc/memory/) before going further.
 
 #### 1. Make `StaticJsonBuffer` big enough
 
@@ -21,14 +21,20 @@ There are basically two reasons why they may fail:
 
 So, if you are sure the JSON string is correct and you still can't parse it, you should try to increase the size of the `StaticJsonBuffer`.
 
-You can use the [ArduinoJson Assistant]({{ site.baseurl }}/assistant/) to compute the required size.
+You can use the [ArduinoJson Assistant]({{site.baseurl}}/assistant/) to compute the required size.
+
+See:
+
+* [FAQ: Why parsing fails?]({{site.baseurl}}/faq/why-parsing-fails/)
+* [FAQ: How to determine the buffer size?]({{site.baseurl}}/faq/how-to-determine-the-buffer-size/)
+
 
 #### 2. Make sure everything fits in memory
 
 You may go into unpredictable trouble if you allocate more memory than your processor really has.
 It's a very common issue in embedded development.
 
-To diagnose this, look at every big objects in you code and sum their size to check that they fit in RAM.
+To diagnose this, look at every big objects in your code and sum their size to check that they fit in RAM.
 
 For example, don't do this:
 
@@ -41,10 +47,16 @@ because it may be too big for a processor with only 2 KB: you need free memory t
 
 That is why an 8-bit processor is not able to parse long and complex JSON strings.
 
+See:
+
+* [FAQ: Can I parse a JSON input that is too big to fit in memory?]({{site.baseurl}}/faq/can-i-parse-a-json-input-that-is-too-big-to-fit-in-memory/)
+* [FAQ: Why does my device crash or reboot?]({{site.baseurl}}/faq/why-does-my-device-crash-or-reboot/)
+
+
 #### 3. Keep the `StaticJsonBuffer` in memory long enough
 
-Remember that `StaticJsonBuffer`'s function return references.
-References don't contain data, they are just pointer to the actual.
+Remember that `JsonBuffer`'s functions return references.
+References don't contain data, they are just pointers to the actual.
 So they can only work if the actual data is in memory.
 
 For example, don't do this:
@@ -53,21 +65,25 @@ For example, don't do this:
 JsonArray& getArray(char* json)
 {
     StaticJsonBuffer<200> buffer;
-    return buffer.parseArray(json); 
+    return buffer.parseArray(json);
 }
 ```
 
-because the local variable `buffer` will be *removed* from memory when the function `parseArray()` returns, and the `JsonArray&` will point to an invalid location.
+because the local variable `buffer` will be *removed* from memory when the function [`parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/) returns, and the `JsonArray&` will point to an invalid location.
 
 #### 4. Don't reuse the same `JsonBuffer`
 
-During is lifetime a `JsonBuffer` growth until it's discarded. If you try to reuse the same instance several time, it will rapidly get full. This is true for both `DynamicJsonBuffer` and `StaticJsonBuffer`.
+During is lifetime a `JsonBuffer` growth until it's discarded. If you try to reuse the same instance several times, it will rapidly get full. This is true for both `DynamicJsonBuffer` and `StaticJsonBuffer`.
 
 For this reason, **you should not use a global variable** for your `JsonBuffer`. I don't think there is any scenario in which a global `JsonBuffer` would be a valid option.
 
 The best practice is to **declare it in a local scope**, so that it's discarded as soon as possible. My advice is to declare it in a function whose unique role is to handle the JSON serialization.
 
-See [FAQ: The first parsing succeeds, why does the next ones fail?]({{ site.baseurl }}/faq/the-first-parsing-succeeds-why-do-the-next-ones-fail)
+See:
+
+* [FAQ: The first parsing succeeds, why does the next ones fail?]({{site.baseurl}}/faq/the-first-parsing-succeeds-why-do-the-next-ones-fail)
+* [FAQ: The first serialization succeeds, why do the next ones fail?]({{site.baseurl}}/faq/the-first-serialization-succeeds-why-do-the-next-ones-fail/)
+* [FAQ: How to reuse a JsonBuffer?]({{site.baseurl}}/faq/how-to-reuse-a-jsonbuffer/)
 
 #### 5. Keep the JSON string in memory long enough
 
@@ -90,61 +106,25 @@ So this will only work if `json` is still in memory.
 
 #### 6. Do not assume that strings are copied
 
-By default, ArduinoJson doesn't make copies of strings.
-This allows it to work with full static memory allocation and ensure an efficient use of CPU cycles.
+By default, ArduinoJson doesn't make copies of strings, it only stores pointers.
+So, if you declare a `char[]` in a loop, the same pointer will be added several times.
+As a workaround, you can use [`JsonBuffer::strdup()`]({{site.baseurl}}/api/jsonbuffer/strdup/) to make a copy.
 
-But this can have subtle consequences...
+See:
 
-For instance the following code will not work as expected:
+* [FAQ: Using a loop, why are values all the same?]({{site.baseurl}}/faq/using-a-loop-why-are-values-all-the-same/)
 
-```c++
-JsonArray& array = jsonBuffer.createArray();
-for (int i=0; i<3; i++) {
-    char buffer[16];
-    sprintf(buffer, "iteration %d", i);
-    array.add(buffer);
-}
-array.printTo(Serial);
-```
+#### 7. Avoid read-only string for input
 
-One will probably expect the following result:
+ArduinoJson has two parsing modes depending on the type of input
 
-```json
-["iteration 0","iteration 1","iteration 2"]
-```
+1. If the input is read-only, the parser copies the input
+2. If the input is writeable, the parser modifies the input and doesn't make copies.
 
-but the actual result would be:
-
-```json
-["iteration 2","iteration 2","iteration 2"]
-```
-
-because the same memory area has been reuse for each iteration.
-
-The simplest solution is to explicitly duplicate the strings in the `JsonBuffer`:
-
-```c++
-JsonArray& array = jsonBuffer.createArray();
-for (int i=0; i<3; i++) {
-    char buffer[16];
-    sprintf(buffer, "iteration %d", 0);
-    array.add(jsonBuffer.strdup(buffer));
-}
-array.printTo(Serial);
-```
-
-The same principle applies to key and values of `JsonObject`.
-
-Note: If you use `String` instead of a `const char*`, ArduinoJson calls `JsonBuffer::strdup()` implicitly.
-
-#### 7. Make sure the string isn't read-only
-
-If you read carefully the previous section, you may have come to the conclusion that the JSON parser modifies the JSON string.
-
-Indeed, the parser modifies the string for two reasons:
+In the "zero-copy" mode, the parser modifies the string for two reasons:
 
 1. it inserts `\0` to terminate substrings,
-2. it translate escaped characters like `\n` or `\t`.
+2. it translates escaped characters like `\n` or `\t`.
 
 Most of the time this wont be an issue, but there are some corner cases that can be problematic.
 
@@ -167,6 +147,10 @@ JsonArray& array = buffer.parseArray(json);
 Depending on your platform, you may have an exception because the parser tries to write at a location that is read-only.
 In the first case `char json[]` declares an array of `char` initialized to the specified string.
 In the second case `char* json` declares a pointer to a read-only string, in fact it should be a `const char*` instead of a `char*`.
+
+See:
+
+* [FAQ: How to reduce memory usage]({{site.baseurl}}/faq/how-to-reduce-memory-usage/)
 
 
 ## Where to go next?
