@@ -34,3 +34,7 @@ array.copyTo(values);
 ```
 
 now `values` contais `1`, `2` and `3`.
+
+##### See also
+
+* [JsonArray::copyFrom()]({{site.baseurl}}/api/jsonarray/copyfrom/)

@@ -6,9 +6,10 @@ tags: api
 api-group: JsonArray
 ---
 
-The constructor is private, you cannot instantiate a `JsonArray` directly, you have to use a `JsonBuffer`.
+The constructor is private, you cannot instantiate a `JsonArray` directly.
+Instead, you must use  [`JsonBuffer::createArray()`]({{site.baseurl}}/api/jsonbuffer/createarray/).
 
-Because the memory of a `JsonArray` is located a `JsonBuffer`, you always manipulate it through reference and you cannot copy it.
+Because the memory of a `JsonArray` is located a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/), you always manipulate it through reference and you cannot copy it.
 
 ##### Example
 
@@ -22,3 +23,8 @@ JsonArray& array1 = jsonBuffer.createArray();
 char json[] = "[1,2,3]";
 JsonArray& array2 = jsonBuffer.parseArray(json);
 ```
+
+##### See also
+
+* [`JsonBuffer::createArray()`]({{site.baseurl}}/api/jsonbuffer/createarray/)
+* [`JsonBuffer::parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/)
