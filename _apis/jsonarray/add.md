@@ -28,6 +28,7 @@ bool add(unsigned short value);
 bool add(const char *value);
 bool add(const String &value); // see Remarks
 bool add(const std::string &value); // see Remarks
+bool add(const __FlashStringHelper *value); // see Remarks
 bool add(JsonArray &array);
 bool add(JsonObject &object);
 bool add(const JsonVariant &variant);
@@ -41,13 +42,20 @@ bool add(const JsonVariant &variant);
 
 `true` if the value was successfully added.
 
-`false` if there was not enough memory in the `JsonBuffer`.
+`false` if there was not enough memory in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
 
 ##### Remarks
 
-When you call `add(const String&)` or `add(const std::string&)`, a copy of the string is made, causing the `JsonBuffer` to grow.
-The memory allocated for the copy will only be freed when the whole `JsonBuffer` is discarded.
-To avoid this behavior, use `add(const char*)` instead.
+A copy of the string is made when you call this function with one of the following types:
+
+* `String`
+* `std::string`
+* Flash string (`PROGMEM`)
+
+This duplication causes the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) to grow.
+The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is discarded.
+
+To avoid this behavior, use `const char*` to pass the string.
 
 ##### Example
 
@@ -55,12 +63,16 @@ To avoid this behavior, use `add(const char*)` instead.
 StaticJsonBuffer<200> jsonBuffer;
 JsonArray& array = jsonBuffer.createArray();
 array.add("hello");
-array.add(3.14156, 4);
+array.add(3.14156);
 array.printTo(Serial);
 ```
 
 will write
 
 ```json
-["hello",3.1416]
+["hello",3.14156]
 ```
+
+##### See also
+
+* [`JsonArray::set()`]({{site.baseurl}}/api/jsonarray/set/)
