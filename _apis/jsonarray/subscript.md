@@ -9,7 +9,7 @@ api-group: JsonArray
 
 ##### Description
 
-A shortcut for `JsonArray::get()` and `JsonArray::set()`, with an array-like syntax.
+A shortcut for [`JsonArray::get()`]({{site.baseurl}}/api/jsonarray/get/) and [`JsonArray::set()`]({{site.baseurl}}/api/jsonarray/set/), with an array-like syntax.
 
 ##### Signatures
 
@@ -24,7 +24,7 @@ const JsonVariant& operator[](size_t index) const;
 
 ##### Return value
 
-A reference to the `JsonVariant` in the array.
+A reference to the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description/) in the array.
 
 ##### Example
 
@@ -34,3 +34,9 @@ array.add(42);
 int value = array[0];
 array[0] = 666;
 ```
+
+##### See also
+
+* [`JsonArray::get()`]({{site.baseurl}}/api/jsonarray/get/)
+* [`JsonArray::set()`]({{site.baseurl}}/api/jsonarray/set/)
+* [`JsonObject::operator[]`]({{site.baseurl}}/api/jsonobject/subscript/)
