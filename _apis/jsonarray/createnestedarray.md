@@ -20,7 +20,7 @@ JsonArray& createNestedArray();
 ##### Return value
 
 A reference to the new `JsonArray`.
-You can check `JsonArray::success()` to verify that the allocation succeeded.
+You can check [`JsonArray::success()`]({{site.baseurl}}/api/jsonarray/success/) to verify that the allocation succeeded.
 
 ##### Example
 
@@ -38,3 +38,9 @@ will write
 ```json
 ["hello",["world"]]
 ```
+
+##### See also
+
+* [`JsonArray::createNestedObject()`]({{site.baseurl}}/api/jsonarray/createnestedobject/)
+* [`JsonBuffer::createArray()`]({{site.baseurl}}/api/jsonbuffer/createarray/)
+* [`JsonArray::add()`]({{site.baseurl}}/api/jsonarray/add/)
