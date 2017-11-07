@@ -17,4 +17,10 @@ It implements a speed efficient memory pool and comes in two flavors:
 `JsonBuffer` is optimized of fast allocation, but doesn't allow to free the allocated memory block.
 To free a `JsonBuffer`, you must discard the entire object.
 
-This is the source of a lot of question, please read the [FAQ in the wiki](https://github.com/bblanchon/ArduinoJson/wiki/FAQ) for clarifications.
+This is the source of a lot of question, please read the [FAQ]({{site.baseurl}}/faq/) for clarifications:
+
+* [How to reuse a JsonBuffer?]({{site.baseurl}}/faq/how-to-reuse-a-jsonbuffer/)
+* [What are the differences between StaticJsonBuffer and DynamicJsonBuffer?]({{site.baseurl}}/faq/what-are-the-differences-between-staticjsonbuffer-and-dynamicjsonbuffer/)
+* [How to determine the buffer size?]({{site.baseurl}}/faq/how-to-determine-the-buffer-size/)
+* [Why shouldn't I use a global JsonBuffer?]({{site.baseurl}}/faq/why-shouldnt-i-use-a-global-jsonbuffer/)
+* [What are the common sizes for JsonBuffer?]({{site.baseurl}}/faq/what-are-the-common-sizes-for-jsonbuffer/)
