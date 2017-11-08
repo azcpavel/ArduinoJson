@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: ArduinoJson
 description: C++ JSON library for IoT. Simple and efficient.
-baseurl: "/"
+baseurl: ""
 url: "http://arduinojson.org"
 repository: bblanchon.github.io/ArduinoJson
 permalink: pretty
