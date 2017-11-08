@@ -11,7 +11,7 @@ api-group: JsonArray
 
 Serialize the array to an indented JSON string.
 
-This will create a "prettified" JSON, if you want a compact JSON without space or line break, use `JsonArray::print()`
+This will create a "prettified" JSON, if you want a compact JSON without space or line break, use [`JsonArray::printTo()`]({{site.baseurl}}/api/jsonarray/printto/)
 
 ##### Signatures
 
@@ -55,3 +55,9 @@ will write the following string to the serial output:
   "world"
 ]
 ```
+
+##### See also
+
+* [`JsonArray::printTo()`]({{site.baseurl}}/api/jsonarray/printto/)
+* [`JsonArray::measurePrettyLength()`]({{site.baseurl}}/api/jsonarray/measureprettylength/)
+* [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/)

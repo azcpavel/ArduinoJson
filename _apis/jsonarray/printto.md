@@ -11,7 +11,7 @@ api-group: JsonArray
 
 Serialize the array to a JSON string.
 
-This will create a compact JSON, if you want a pretty JSON with spaces and line breaks, use `JsonArray::prettyPrint()`
+This will create a compact JSON, if you want a pretty JSON with spaces and line breaks, use [`JsonArray::prettyPrintTo()`]({{site.baseurl}}/api/jsonarray/prettyprintto/)
 
 ##### Signatures
 
@@ -52,3 +52,9 @@ will write the following string to the serial output:
 ```json
 ["hello","world"]
 ```
+
+##### See also
+
+* [`JsonArray::prettyPrintTo()`]({{site.baseurl}}/api/jsonarray/prettyprintto/)
+* [`JsonArray::measureLength()`]({{site.baseurl}}/api/jsonarray/measurelength/)
+* [`JsonObject::printTo()`]({{site.baseurl}}/api/jsonobject/printto/)
