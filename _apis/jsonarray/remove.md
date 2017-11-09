@@ -50,5 +50,6 @@ will print the following string to the serial output:
 > Don't try to keep the state of your application in a `JsonArray`, instead use custom structures.
 {: .alert .alert-danger}
 
->This function use to be named `removeAt()` in version older than 5.9.0
->{: .alert .alert-info }
+##### See also
+
+* [`JsonObject::remove()`]({{site.baseurl}}/api/jsonobject/remove/)

@@ -8,13 +8,15 @@ api-group: JsonBuffer
 ---
 
 ##### Description
-Allocates and populate a JsonObject from a JSON string.
+
+Allocates and populate a `JsonObject` from a JSON string.
 
 By design, the parser needs to alter the string to insert null-terminators and replace escaped chars.
-If the JSON string is read-only, it will have to duplicate the input string, this consume more space in the `JsonBuffer`.
+If the JSON string is read-only, it will have to duplicate the input string, this consume more space in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
 Therefore, it's recommended to have a JSON input in a `char[]` or a `char*`.
 
 ##### Signatures
+
 ```c++
 // The first overload, which accepts a modifiable array of chars, is the most efficient
 // since it allows the zero-copy feature.
@@ -42,7 +44,8 @@ And bigger values will allow more level of nesting.
 The purpose of this feature is to prevent stack overflow that could lead to a security risk.
 
 ##### Return value
-Returns a reference to the new JsonObject or JsonObject::invalid() if the allocation fails.
+
+Returns a reference to the new `JsonObject` or `JsonObject::invalid()`` if the allocation fails.
 
 ##### Example
 
@@ -52,3 +55,8 @@ StaticJsonBuffer<200> jsonBuffer;
 JsonObject& object = jsonBuffer.parseObject(json);
 const char* world = object["hello"];
 ```
+
+##### See also
+
+* [`JsonBuffer::parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/)
+* [`JsonBuffer::parse()`]({{site.baseurl}}/api/jsonbuffer/parse/)

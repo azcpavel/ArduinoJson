@@ -8,15 +8,17 @@ api-group: JsonBuffer
 ---
 
 ##### Description
-Parses a JSON input and returns a `JsonVariant` which can contain an array or an object.
+
+Parses a JSON input and returns a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description/) which can contain an array or an object.
 
 Use this function when you cannot know the type of input at compile-time; otherwise prefer [`JsonBuffer::parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/) and [`JsonBuffer::parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/).
 
 By design, the parser needs to alter the string to insert null-terminators and replace escaped chars.
-If the JSON string is read-only, it will have to duplicate the input string, this consume more space in the `JsonBuffer`.
+If the JSON string is read-only, it will have to duplicate the input string, this consume more space in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
 Therefore, it's recommended to have a JSON input in a `char[]` or a `char*`.
 
 ##### Signatures
+
 ```c++
 // The first overload, which accepts a modifiable array of chars, is the most efficient
 // since it allows the zero-copy feature.
@@ -44,7 +46,8 @@ And bigger values will allow more level of nesting.
 The purpose of this feature is to prevent stack overflow that could lead to a security risk.
 
 ##### Return value
-Returns a `JsonVariant` which contains a reference `JsonArray` or to a `JsonObject`.
+
+Returns a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description/) which contains a reference `JsonArray` or to a `JsonObject`.
 
 Use [`JsonVariant::is<T>()`]({{site.baseurl}}/api/jsonvariant/is/) to check the type of the value.
 
@@ -64,3 +67,8 @@ if (variant.is<JsonArray>()) // true in this example
 
 }
 ```
+
+##### See also
+
+* [`JsonBuffer::parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/)
+* [`JsonBuffer::parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/)

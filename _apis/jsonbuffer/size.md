@@ -9,9 +9,9 @@ api-group: JsonBuffer
 
 ##### Description
 
-Gets the current size (ie the number of bytes used).
+Gets the current size (i.e. the number of bytes used) of the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
 
-This should not be confused with the capacity of the `JsonBuffer`, which is the total number of bytes that the buffer can hold.
+This should not be confused with the capacity of the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/), which is the total number of bytes that the buffer can hold.
 
 ##### Signatures
 
@@ -42,4 +42,7 @@ would print this on an 8-bit AVR:
 8
 ```
 
+##### See also
 
+* [`JsonArray::size()`]({{site.baseurl}}/api/jsonarray/size/)
+* [`JsonObject::size()`]({{site.baseurl}}/api/jsonobject/size/)

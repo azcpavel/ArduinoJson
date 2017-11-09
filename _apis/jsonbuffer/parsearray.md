@@ -8,13 +8,15 @@ api-group: JsonBuffer
 ---
 
 ##### Description
-Allocates and populate a JsonArray from a JSON string.
+
+Allocates and populate a `JsonArray` from a JSON string.
 
 By design, the parser needs to alter the string to insert null-terminators and replace escaped chars.
-If the JSON string is read-only, it will have to duplicate the input string, this consume more space in the `JsonBuffer`.
+If the JSON string is read-only, it will have to duplicate the input string, this consume more space in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
 Therefore, it's recommended to have a JSON input in a `char[]` or a `char*`.
 
 ##### Signatures
+
 ```c++
 // The first overload, which accepts a modifiable array of chars, is the most efficient
 // since it allows the zero-copy feature.
@@ -42,7 +44,8 @@ And bigger values will allow more level of nesting.
 The purpose of this feature is to prevent stack overflow that could lead to a security risk.
 
 ##### Return value
-Returns a reference to the new JsonArray or JsonArray::invalid() if the allocation fails.
+
+Returns a reference to the new `JsonArray` or `JsonArray::invalid() if the allocation fails.
 
 ##### Example
 
@@ -53,3 +56,8 @@ JsonArray& array = jsonBuffer.parseArray(json);
 const char* hello = array[0];
 const char* world = array[1];
 ```
+
+##### See also
+
+* [`JsonBuffer::parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/)
+* [`JsonBuffer::parse()`]({{site.baseurl}}/api/jsonbuffer/parse/)

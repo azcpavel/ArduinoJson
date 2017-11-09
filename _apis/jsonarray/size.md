@@ -29,3 +29,7 @@ array.add("hello");
 array.add("world");
 Serial.println(array.size()); // 2
 ```
+
+##### See also
+
+* [`JsonObject::size()`]({{site.baseurl}}/api/jsonobject/size/)

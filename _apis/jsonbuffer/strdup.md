@@ -9,7 +9,9 @@ api-group: JsonBuffer
 
 ##### Description
 
-Make a copy of the specified string.
+Make a copy of the specified string in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
+
+The memory is released when the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is destructed.
 
 ##### Signatures
 
@@ -37,5 +39,10 @@ strcpy(orig, "world");
 Serial.println(dupl); // world
 Serial.println(orig); // hello
 ```
+
+##### See also
+
+* [`JsonBuffer::createArray()`]({{site.baseurl}}/api/jsonbuffer/createarray/)
+* [`JsonBuffer::createObject()`]({{site.baseurl}}/api/jsonbuffer/createobject/)
 
 
