@@ -1,5 +1,5 @@
 ---
-title: "Error: 'equals' is not a member of 'ArduinoJson::Internals::StringTraits<const int&, void>'"
+title: "Error: 'equals' is not a member of 'ArduinoJson::Internals::StringTraits&lt;const int&, void&gt;'"
 description: This error happens because an integer has been used instead of a string.
 keywords: ArduinoJson,error
 layout: faq
