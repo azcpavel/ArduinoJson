@@ -32,4 +32,7 @@ for(JsonObject::iterator it=object.begin(); it!=object.end(); ++it)
 }
 ```
 
-See issue [#278](https://github.com/bblanchon/ArduinoJson/issues/278).
+See:
+
+* [`JsonObject::operator[]`]({{site.baseurl}}/api/jsonobject/subscript/)
+* [`JsonObject::begin() / end()`]({{site.baseurl}}/api/jsonobject/begin_end/)
