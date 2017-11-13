@@ -8,9 +8,11 @@ api-group: JsonObject
 ---
 
 ##### Description
+
 Gets the value at the specified key.
 
-##### Signature
+##### Signatures
+
 ```c++
 bool            get<bool>           (TString key) const;
 const char*     get<const char*>    (TString key) const;
@@ -47,3 +49,9 @@ JsonObject& object = jsonBuffer.parseObject(json);
 float pi = object.get<float>("pi"); // template version of get()
 const char* value2 = object.get<const char*>("toto"); // returns NULL
 ```
+
+##### See also
+
+* [`JsonObject::set()`]({{site.baseurl}}/api/jsonobject/set/)
+* [`JsonObject::operator[]`]({{site.baseurl}}/api/jsonobject/subscript/)
+* [`JsonArray::get()`]({{site.baseurl}}/api/jsonarray/get/)

@@ -8,6 +8,7 @@ api-group: JsonObject
 ---
 
 ##### Description
+
 Creates a `JsonArray` as a child of the current object.
 
 ##### Signatures
@@ -23,14 +24,14 @@ JsonArray& createNestedArray(const String& key) const; // <- duplicates key
 
 ##### Remarks
 
-When you add a value using a `String` for key, a copy of the string is made, causing the `JsonBuffer` to grow.
-The memory allocated for the copy will only be freed when the whole `JsonBuffer` is discarded.
+When you add a value using a `String` for key, a copy of the string is made, causing the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) to grow.
+The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is discarded.
 To avoid this behavior, use a `const char*` key instead.
 
 ##### Return value
 
 A reference to the new `JsonArray`.
-You can check `JsonArray::success()` to verify that the allocatio succeeded.
+You can check `JsonArray::success()` to verify that the allocation succeeded.
 
 ##### Example
 
@@ -55,3 +56,8 @@ will print
   ]
 }
 ```
+
+##### See also
+
+* [`JsonObject::createNestedObject()`]({{site.baseurl}}/api/jsonobject/createnestedobject/)
+* [`JsonArray::createNestedArray()`]({{site.baseurl}}/api/jsonarray/createnestedarray/)

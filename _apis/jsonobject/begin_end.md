@@ -8,6 +8,7 @@ api-group: JsonObject
 ---
 
 ##### Description
+
 Returns an iterator that can be used to get all key-value pairs in the object.
 
 ##### Signatures
@@ -20,6 +21,7 @@ JsonObject::const_iterator end() const;
 ```
 
 ##### Return value
+
 A forward iterator pointing to a `JsonPair`, which itself contains two members `key` and `value`.
 
 ##### Example
@@ -50,3 +52,7 @@ hello
 second
 world
 ```
+
+##### See also
+
+* [`JsonArray::begin()` / `JsonArray::end()`]({{site.baseurl}}/api/jsonarray/begin_end/)

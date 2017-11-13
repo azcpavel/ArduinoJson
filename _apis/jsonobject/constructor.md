@@ -8,9 +8,9 @@ api-group: JsonObject
 
 ### Constructor
 
-The constructor is private, you cannot instanciate a `JsonObject` directly, you have to use a `JsonBuffer`.
+The constructor is private, you cannot instantiate a `JsonObject` directly, you have to use a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
 
-Because the memory of a `JsonObject` is located a `JsonBuffer`, you always manipulate it through reference and you cannot copy it.
+Because the memory of a `JsonObject` is located a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/), you always manipulate it through reference and you cannot copy it.
 
 ##### Example
 
@@ -25,3 +25,8 @@ object1["hello"] = "world";
 char json[] = "{\"hello\":\"world\"}";
 JsonObject& object2 = jsonBuffer.parseObject(json);
 ```
+
+##### See also
+
+* [`JsonBuffer::createObject()`]({{site.baseurl}}/api/jsonbuffer/createobject/)
+* [`JsonBuffer::parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/)

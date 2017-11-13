@@ -8,6 +8,7 @@ api-group: JsonObject
 ---
 
 ##### Description
+
 Tests if a key exists in the `JsonObject`.
 
 ##### Signature

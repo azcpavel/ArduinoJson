@@ -11,7 +11,7 @@ api-group: JsonObject
 
 Serialize the object to a JSON string.
 
-This will create a compact JSON, if you want a pretty JSON with spaces and line breaks, use `JsonObject::prettyPrint()`
+This will create a compact JSON, if you want a pretty JSON with spaces and line breaks, use [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/).
 
 ##### Signatures
 
@@ -51,3 +51,9 @@ will write the following string to the serial output:
 ```json
 {"hello":"world"}
 ```
+
+##### See also
+
+* [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/)
+* [`JsonObject::measureLength()`]({{site.baseurl}}/api/jsonobject/measurelength/)
+* [`JsonArray::printTo()`]({{site.baseurl}}/api/jsonarray/printto/)
