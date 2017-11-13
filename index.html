@@ -32,7 +32,7 @@ tags: home no-ad
     {% for feature in features %}
     <div class="col-12 col-lg-6 p-2">
       <div class="card m-4">
-        <div class="card-block">
+        <div class="card-body">
           <h4 class="card-title">{{ feature.title }}</h4>
           <p class="card-text">
             {{ feature.output }}
@@ -48,11 +48,11 @@ tags: home no-ad
     {% for testimonial in site.data.testimonials %}
     <div class="col-12 col-lg-6 p-2">
       <div class="card m-4">
-        <div class="card-block">
+        <div class="card-body">
           {%if testimonial.avatar %}
           <img src="{{testimonial.avatar}}" class="img-thumbnail float-right" style="width: 100px; height: 100px">
           {% endif %}
-          <blockquote class="card-blockquote">
+          <blockquote class="card-bodyquote">
             <i>{{ testimonial.text }}</i>
           </blockquote>
         </div>
