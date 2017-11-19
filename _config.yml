@@ -16,7 +16,7 @@
 title: ArduinoJson
 description: C++ JSON library for IoT. Simple and efficient.
 baseurl: ""
-url: "http://arduinojson.org"
+url: "https://arduinojson.org"
 repository: bblanchon.github.io/ArduinoJson
 permalink: pretty
 
