@@ -15,8 +15,9 @@ Creates a `JsonObject` as a child of the current object.
 
 ```c++
 JsonObject& createNestedObject(const char* key) const;
-JsonObject& createNestedObject(const String& key) const; // <- duplicates key
-JsonObject& createNestedObject(const std::string& key) const; // <- duplicates key
+JsonObject& createNestedObject(const String& key) const; // duplicates key
+JsonObject& createNestedObject(const std::string& key) const; // duplicates key
+JsonObject& createNestedObject(const __FlashStringHelper* key) const; // duplicates key
 ```
 
 ##### Arguments

@@ -24,11 +24,12 @@ Therefore, it's recommended to have a JSON input in a `char[]` or a `char*`.
 // since it allows the zero-copy feature.
 JsonVariant parse(char* json, uint8_t nestingLimit=10);
 
-// The three following overloads, which accept read-only strings, require a bigger JsonBuffer
+// The following overloads, which accept read-only strings, require a bigger JsonBuffer
 // because parts of the JSON input has to be copied.
 JsonVariant parse(const char* json, uint8_t nestingLimit=10);
 JsonVariant parse(const String& json, uint8_t nestingLimit=10);
 JsonVariant parse(const std::string& json, uint8_t nestingLimit=10);
+JsonVariant parse(const __FlashStringHelper* json, uint8_t nestingLimit=10);
 
 // The two last overloads, which accept input streams, make copy of the input too.
 JsonVariant parse(Stream& json, uint8_t nestingLimit=10);

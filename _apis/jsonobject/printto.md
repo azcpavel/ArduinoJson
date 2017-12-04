@@ -11,7 +11,8 @@ api-group: JsonObject
 
 Serialize the object to a JSON string.
 
-This will create a compact JSON, if you want a pretty JSON with spaces and line breaks, use [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/).
+This function will create a "minified" JSON document.
+If you want a "prettified" JSON document, use [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/).
 
 ##### Signatures
 
@@ -25,17 +26,16 @@ size_t printTo(std::string &) const;
 
 ##### Arguments
 
-The destination of the JSON string.
+The destination where the JSON document should be written.
+It can be either:
 
-Can be either:
-
-* a `buffer` with specified `size` (this includes the zero-terminator)
-* an implementation of `Print` (like `Serial`, `EthernetClient`...)
-* a `String` or an `std::string`
+* a `buffer` with specified `size` (this includes the zero-terminator),
+* an implementation of `Print` (like `Serial`, `EthernetClient`...),
+* a `String` or an `std::string`.
 
 ##### Return value
 
-The number of bytes written
+The number of bytes written.
 
 ##### Example
 

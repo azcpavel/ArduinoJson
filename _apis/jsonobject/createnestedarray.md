@@ -15,7 +15,9 @@ Creates a `JsonArray` as a child of the current object.
 
 ```c++
 JsonArray& createNestedArray(const char* key) const;
-JsonArray& createNestedArray(const String& key) const; // <- duplicates key
+JsonArray& createNestedArray(const String& key) const; // duplicates key
+JsonArray& createNestedArray(const std::string& key) const; // duplicates key
+JsonArray& createNestedArray(const __FlashStringHelper* key) const; // duplicates key
 ```
 
 ##### Arguments

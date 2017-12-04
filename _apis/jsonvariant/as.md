@@ -64,3 +64,8 @@ int i = variant.as<int>(); // <- i == 42
 double d = variant.as<double>(); // <- d == 42.0
 const char* s = variant.as<char*>(); // <- s == NULL
 ```
+
+##### See also
+
+* [`JsonArray::get()`]({{site.baseurl}}/api/jsonarray/get/)
+* [`JsonObject::get()`]({{site.baseurl}}/api/jsonobject/get/)

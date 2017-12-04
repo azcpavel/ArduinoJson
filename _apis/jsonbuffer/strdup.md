@@ -19,6 +19,7 @@ The memory is released when the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/d
 char* strdup(const char* str);
 char* strdup(const String& str);
 char* strdup(const std::string& str);
+char* strdup(const __FlashStringHelper* str);
 ```
 
 ##### Arguments

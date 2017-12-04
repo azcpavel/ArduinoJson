@@ -56,3 +56,7 @@ bool i = variant.is<int>(); // <- i == true
 bool d = variant.is<double>(); // <- d == false
 bool s = variant.is<char*>(); // <- s == false
 ```
+
+##### See also
+
+* [`JsonVariant::as()`]({{site.baseurl}}/api/jsonvariant/as/)

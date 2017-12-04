@@ -58,3 +58,7 @@ StaticJsonBuffer<1> jsonBuffer;
 JsonObject& object = jsonBuffer.createObject();
 Serial.println(object.success()); // false
 ```
+
+##### See also
+
+* [`JsonArray::success()`]({{site.baseurl}}/api/jsonarray/success/)

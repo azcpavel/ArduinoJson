@@ -9,7 +9,8 @@ api-group: JsonObject
 
 ##### Description
 
-A shortcut for `JsonObject::get()` and `JsonObject::set()`, with a map-like syntax.
+A shortcut for [`JsonObject::get()`]({{site.baseurl}}/api/jsonobject/get/) and
+[`JsonObject::set()`]({{site.baseurl}}/api/jsonobject/set/), with a map-like syntax.
 
 ##### Signatures
 
@@ -17,9 +18,12 @@ A shortcut for `JsonObject::get()` and `JsonObject::set()`, with a map-like synt
 JsonVariant& operator[](const char* key);
 JsonVariant& operator[](const String& key);
 JsonVariant& operator[](const std::string& key);
+JsonVariant& operator[](const __FlashStringHelper* key);
+
 const JsonVariant& operator[](const char* key) const;
 const JsonVariant& operator[](const String& key) const;
 const JsonVariant& operator[](const std::string& key) const;
+const JsonVariant& operator[](const __FlashStringHelper* key) const;
 ```
 
 ##### Arguments
@@ -28,12 +32,15 @@ const JsonVariant& operator[](const std::string& key) const;
 
 ##### Return value
 
-A reference to the `JsonVariant` in the object.
+A reference to the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description/) in the object.
 
 ##### Remarks
 
-When you add a value using a `String` or an `std::string` for key, a copy of the string is made, causing the `JsonBuffer` to grow.
-The memory allocated for the copy will only be freed when the whole `JsonBuffer` is discarded.
+When you add a value using a `String`, an `std::string` or a
+`const __FlashStringHelper*` for key, a copy of the string is made, causing the
+[`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) to grow.
+The memory allocated for the copy will only be freed when the whole
+[`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is discarded.
 To avoid this behavior, use a `const char*` key instead.
 
 ##### Example
@@ -43,3 +50,9 @@ JsonObject& object = jsonBuffer::createObject();
 object["hello"] = "world";
 const char* world = object["hello"];
 ```
+
+##### See also
+
+* [`JsonObject::get()`]({{site.baseurl}}/api/jsonobject/get/)
+* [`JsonObject::get()`]({{site.baseurl}}/api/jsonobject/get/)
+* [`JsonArray::operator[]`]({{site.baseurl}}/api/jsonarray/subscript/)

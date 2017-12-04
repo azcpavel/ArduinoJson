@@ -33,7 +33,12 @@ unsigned short  get<unsigned short> (TString key) const;
 
 ##### Arguments
 
-`key`: the key of the value in the object, can be a `const char*`, a `String` or an `std::string`.
+`key`: the key of the value in the object, can be a:
+
+* `const char*`,
+* `String`,
+* `std::string`, or
+* `const __FlashStringHelper*`.
 
 ##### Return value
 

@@ -17,6 +17,7 @@ Removes the element at the specified key.
 void remove(const char* key);
 void remove(const String& key);
 void remove(const std::string& key);
+void remove(const __FlashStringHelper* key);
 ```
 
 ##### Arguments
@@ -40,13 +41,17 @@ will print the following string to the serial output:
 {"A":1,"C":3}
 ```
 
+##### See also
+
+* [`JsonArray::remove()`]({{site.baseurl}}/api/jsonarray/remove/)
+
 > ##### Causes memory leaks :warning:
 >
-> This function doesn't free the memory allocated to the element in the `JsonBuffer`.
+> This function doesn't free the memory allocated to the element in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
 >
-> This is a conscious design decision made to keep the `JsonBuffer` fast and small, which is a fundamental principle of the library.
+> This is a conscious design decision made to keep the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) fast and small, which is a fundamental principle of the library.
 >
-> As a consequence, you cannot remove and add elements in a loop, otherwise the `JsonBuffer` will overflow.
+> As a consequence, you cannot remove and add elements in a loop, otherwise the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) will overflow.
 >
 > Don't try to keep the state of your application in a `JsonObject`, instead use custom structures.
 {: .alert .alert-danger}

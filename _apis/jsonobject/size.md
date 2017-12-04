@@ -28,3 +28,7 @@ JsonObject& object = jsonBuffer.createObject();
 object["hello"] = "world";
 Serial.println(object.size()); // 1
 ```
+
+##### See also
+
+* [`JsonArray::size()`]({{site.baseurl}}/api/jsonarray/size/)

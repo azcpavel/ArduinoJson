@@ -30,3 +30,8 @@ bool beforeAssign = variant.success(); // false
 variant = 42;
 bool afterAssign = variant.success(); // true
 ```
+
+##### See also
+
+* [`JsonArray::success()`]({{site.baseurl}}/api/jsonarray/success/)
+* [`JsonObject::success()`]({{site.baseurl}}/api/jsonobject/success/)

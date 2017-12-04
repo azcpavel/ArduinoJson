@@ -17,6 +17,7 @@ Tests if a key exists in the `JsonObject`.
 bool containsKey(const char* key) const;
 bool containsKey(const String& key) const;
 bool containsKey(const std::string& key) const;
+bool containsKey(const __FlashStringHelper& key) const;
 ```
 
 ##### Arguments
