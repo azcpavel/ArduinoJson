@@ -171,9 +171,9 @@ for (JsonPair& pair : someObject)
 
 ## Where to go next?
 
-<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
 
-In the [ArduinoJson ebook](https://ebook.benoitblanchon.fr/), there is a step-by-step tutorial to learn how to parse JSON with the library.
+In the [ArduinoJson ebook](https://leanpub.com/arduinojson/), there is a step-by-step tutorial to learn how to parse JSON with the library.
 
 The book also covers the details of memory management. It explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
 

@@ -140,8 +140,8 @@ void sendMux()
 
 ### Where to go next?
 
-<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
 
-In the [ArduinoJson ebook](https://ebook.benoitblanchon.fr/), there is a whole chapter dedicated `StaticJsonBuffer` and `DynamicJsonBuffer`. Once you understand how they are made, it becomes obvious why they cannot be reused.
+In the [ArduinoJson ebook](https://leanpub.com/arduinojson/), explains extensively how `StaticJsonBuffer` and `DynamicJsonBuffer` works. Once you understand how they are made, it becomes obvious why they cannot be reused.
 
 The book also contains a quick C++ course to catch up with pointers, references, and how they cause failures. It describes the concept of RAII (Resource Acquisition Is Initialization) which is the foundation for proper memory management in C++.

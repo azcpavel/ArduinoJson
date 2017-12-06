@@ -175,10 +175,10 @@ That comes in handy when you need to calculate the `Content-Length` when posting
 
 ## Where to go next?
 
-<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
 
-In the [ArduinoJson ebook](https://ebook.benoitblanchon.fr/), there is a step-by-step tutorial to learn how to serialize JSON with the library.
+In the [ArduinoJson ebook](https://leanpub.com/arduinojson/), there is a step-by-step tutorial to learn how to serialize JSON with the library.
 
-The book also covers the details of memory management. It explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
+The book contains a brand new tutorial on JSON serialization.
 
 If you're not familiar with C++ references, the book also contains a quick C++ course to catch up with those things. For example, this chapter also explains the differences between a `char[]`, a `char*` or a `String`.

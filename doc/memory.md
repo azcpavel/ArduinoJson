@@ -86,7 +86,7 @@ Memory is released in `DynamicJsonBuffer`'s destructor, so you don't have to do 
 #### Object size for 8-bit AVR
 
 | Type                    | Size       |
-|-------------------------|------------|
+|:------------------------|:-----------|
 | JsonArray of N element  | 4 + 8 * N  |
 | JsonObject of N element | 4 + 10 * N |
 {: .table .table-bordered .table-responsive }
@@ -94,7 +94,7 @@ Memory is released in `DynamicJsonBuffer`'s destructor, so you don't have to do 
 #### Object size on ESP8266
 
 | Type                    | Size       |
-|-------------------------|------------|
+|:------------------------|:-----------|
 | JsonVariant             | 8          |
 | JsonArray of N element  | 8 + 12 * N |
 | JsonObject of N element | 8 + 16 * N |
@@ -103,7 +103,7 @@ Memory is released in `DynamicJsonBuffer`'s destructor, so you don't have to do 
 #### Object size on ESP8266 if `JsonFloat` is changed to `double`
 
 | Type                    | Size       |
-|-------------------------|------------|
+|:------------------------|:-----------|
 | JsonVariant             | 16         |
 | JsonArray of N element  | 8 + 24 * N |
 | JsonObject of N element | 8 + 32 * N |
@@ -113,9 +113,9 @@ Use [ArduinoJson Assistant]({{ site.baseurl }}/assistant/) to compute the size r
 
 ## Where to go next?
 
-<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
 
-In the [ArduinoJson ebook](https://ebook.benoitblanchon.fr/), there is a whole chapter dedicated to the memory management in ArduinoJson. It explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
+In the [ArduinoJson ebook](https://leanpub.com/arduinojson/), the chapter "Inside ArduinoJson" explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
 
 The book also contains a quick C++ course to catch up with memory management in general. It explains the differences between "stack," "heap" and "global" memories.
 It also debunks wrong assumption that memory management is done by the developer.

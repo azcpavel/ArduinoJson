@@ -20,9 +20,9 @@ The following examples are also available in Arduino's "Examples" menu.
 
 ---
 
-<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
 
-The [ArduinoJson ebook](https://ebook.benoitblanchon.fr/) contains an in-depth analysis of these examples. It is a more convenient and more pleasant way to learn how to use the library.
+The [ArduinoJson ebook](https://leanpub.com/arduinojson/) contains new examples and a complete chapter is dedicated to the study of these examples.
 
 In particular, it teaches how ArduinoJson manages the memory and what `StaticJsonBuffer` and `DynamicJsonBuffer` are. It shows how to make the best use of the library by avoiding memory allocation and duplications.
 

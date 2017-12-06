@@ -42,9 +42,9 @@ In Arduino IDE, click `File` / `Example` / `ArduinoJson`.
 
 ## Where to go next?
 
-<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
 
-The [ArduinoJson ebook](https://ebook.benoitblanchon.fr/) is the best way to learn how to use the library.
+The [ArduinoJson ebook](https://leanpub.com/arduinojson/) is the best way to learn how to use the library.
 
 It explains how to install the library and then provides step-by-step tutorials to learn how to serialize or parse JSON with ArduinoJson.
 

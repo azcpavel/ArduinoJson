@@ -53,9 +53,9 @@ While this seems like a good idea, it wastes a lot of RAM as it reserves memory 
 
 ## Where to go next?
 
-<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
 
-The [ArduinoJson ebook](https://ebook.benoitblanchon.fr/) explains the compromises made to allow JSON serialization in deeply embedded systems.
+The [ArduinoJson ebook](https://leanpub.com/arduinojson/) explains the compromises made to allow JSON serialization in deeply embedded systems.
 
 There is an entire chapter dedicated to `StaticJsonBuffer` and `DynamicJsonBuffer`.
 It explains why they behave that way and why it doesn't make sense to reuse it.

@@ -30,8 +30,11 @@ popularity: 386
 
 ## Where to go next?
 
-<a href="https://ebook.benoitblanchon.fr/"><img src="https://ebook.benoitblanchon.fr/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
 
-The [ArduinoJson ebook](https://ebook.benoitblanchon.fr/) has a complete chapter on memory management. It covers `StaticJsonBuffer` and `DynamicJsonBuffer` in detail and gives guidelines for choosing between one or the other.
+The [ArduinoJson ebook](https://leanpub.com/arduinojson/) describes `StaticJsonBuffer` and `DynamicJsonBuffer` in detail and gives guidelines for choosing between one or the other.
+
+It begin with two complete tutorials, one on deserialization, the other on serialization.
+The last chapter shows the best practices in several sample projects.
 
 The book also explains the difference between "stack," "heap" and "global" memories. These concepts are often overlooked by programmers coming from other languages, but it is the most common source of failure with ArduinoJson.
