@@ -14,21 +14,27 @@ Tests if the value at specified index has the type `T`.
 ##### Signature
 
 ```c++
-bool is<bool>           (size_t index) const;
-bool is<const char*>    (size_t index) const;
-bool is<char*>          (size_t index) const;
-bool is<double>         (size_t index) const;
-bool is<float>          (size_t index) const;
-bool is<signed char>    (size_t index) const;
-bool is<signed int>     (size_t index) const;
-bool is<signed long>    (size_t index) const;
-bool is<signed short>   (size_t index) const;
-bool is<unsigned char>  (size_t index) const;
-bool is<unsigned int>   (size_t index) const;
-bool is<unsigned long>  (size_t index) const;
-bool is<unsigned short> (size_t index) const;
-bool is<JsonArray>      (size_t index) const;
-bool is<JsonObject>     (size_t index) const;
+bool is<bool>              (size_t index) const;
+
+bool is<const char*>       (size_t index) const;
+bool is<char*>             (size_t index) const;
+
+bool is<double>            (size_t index) const;
+bool is<float>             (size_t index) const;
+
+bool is<signed char>       (size_t index) const;
+bool is<signed int>        (size_t index) const;
+bool is<signed long>       (size_t index) const;
+bool is<signed short>      (size_t index) const;
+bool is<unsigned char>     (size_t index) const;
+bool is<unsigned int>      (size_t index) const;
+bool is<unsigned long>     (size_t index) const;
+bool is<unsigned short>    (size_t index) const;
+bool is<signed long long>  (size_t index) const;   // <- may require ARDUINOJSON_USE_LONG_LONG
+bool is<unsigned long long>(size_t index) const;   // <- may require ARDUINOJSON_USE_LONG_LONG
+
+bool is<JsonArray>         (size_t index) const;
+bool is<JsonObject>        (size_t index) const;
 ```
 
 ##### Arguments
@@ -39,7 +45,8 @@ bool is<JsonObject>     (size_t index) const;
 
 ##### Return value
 
-`true` if the value at specified index matches the type `T`; `false` otherwise.
+* `true` if value at specified index matches the type `T`,
+* `false` if not
 
 ##### Remarks
 
@@ -78,3 +85,4 @@ secondIsFloat = array[1].is<float>(); // <- true
 
 * [`JsonVariant::is<T>()`]({{site.baseurl}}/api/jsonvariant/is/)
 * [`JsonObject::is<T>()`]({{site.baseurl}}/api/jsonobject/is/)
+* [`JsonArray::get<T>()`]({{site.baseurl}}/api/jsonarray/get/)
