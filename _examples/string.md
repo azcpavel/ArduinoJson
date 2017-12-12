@@ -1,23 +1,25 @@
 ---
 title: StringExample.ino
-description: "Shows how to use the <code>String</code> class with ArduinoJson"
+description: "This example shows the different ways you can use String objects with ArduinoJson."
 keywords: ArduinoJson,string,example
 tags: example
 layout: example
 ---
 
+## Description
+
+This example shows the different ways you can use `String` with ArduinoJson.
+
+Use `String` objects sparingly, because ArduinoJson duplicates them in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/). Prefer plain old `char[]`, as they are more efficient in term of code size, speed, and memory usage.
+
+## Source code
+
+```c++
 // ArduinoJson - arduinojson.org
 // Copyright Benoit Blanchon 2014-2017
 // MIT License
 
 #include <ArduinoJson.h>
-
-// About
-// -----
-// This example shows the different ways you can use String with ArduinoJson.
-// Please don't see this as an invitation to use String.
-// On the contrary, you should always use char[] when possible, it's much more
-// efficient in term of code size, speed and memory usage.
 
 void setup() {
   DynamicJsonBuffer jsonBuffer;
@@ -66,3 +68,14 @@ void setup() {
 void loop() {
   // not used in this example
 }
+```
+
+## Where to go next?
+
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+
+The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson, and it's only 15 bucks!
+
+It begins with a quick C++ course that explains how your microcontroller stores strings in memory, so you can perfectly understand what happens behind the scenes.
+
+The chapter "Inside ArduinoJson" explains what a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is and why it is essential for the performance of the library. This chapter also describes how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.

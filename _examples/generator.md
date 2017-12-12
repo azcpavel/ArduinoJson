@@ -1,11 +1,18 @@
 ---
 title: JsonGeneratorExample.ino
-description: Shows how to encode JSON and write the result to the Serial port
+description: This example shows how to generate a JSON document with the ArduinoJson library.
 keywords: ArduinoJson,serialize,encode,generate,example
 layout: example
 tags: example
 ---
 
+## Description
+
+This example shows how to generate a JSON document with ArduinoJson.
+
+## Source code
+
+```c++
 // ArduinoJson - arduinojson.org
 // Copyright Benoit Blanchon 2014-2017
 // MIT License
@@ -13,16 +20,15 @@ tags: example
 #include <ArduinoJson.h>
 
 void setup() {
+  // Initialize Serial port
   Serial.begin(9600);
-  while (!Serial) {
-    // wait serial port initialization
-  }
+  while (!Serial) continue;
 
   // Memory pool for JSON object tree.
   //
   // Inside the brackets, 200 is the size of the pool in bytes.
-  // If the JSON object is more complex, you need to increase that value.
-  // See http://arduinojson.org/assistant/
+  // Don't forget to change this value to match your JSON document.
+  // Use arduinojson.org/assistant to compute the capacity.
   StaticJsonBuffer<200> jsonBuffer;
 
   // StaticJsonBuffer allocates memory on the stack, it can be
@@ -73,3 +79,12 @@ void setup() {
 void loop() {
   // not used in this example
 }
+```
+
+## Where to go next?
+
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+
+The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson, and it's only 15 bucks!
+
+The chapter "Serialize with ArduinoJson" is a tutorial to learn how to generate JSON documents with the library. It begins with a simple example, like the one above, and then adds more features like serializing directly to a file or an HTTP request.

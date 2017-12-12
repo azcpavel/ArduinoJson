@@ -1,11 +1,18 @@
 ---
 title: JsonParserExample.ino
-description: Shows how to parse JSON and print the result to the Serial port
+description: This example shows how to deserialize a JSON document with ArduinoJson.
 keywords: ArduinoJson,parse,decode,example,Serial
 tags: example
 layout: example
 ---
 
+## Description
+
+This example shows how to deserialize a JSON document with ArduinoJson.
+
+## Source code
+
+```c++
 // ArduinoJson - arduinojson.org
 // Copyright Benoit Blanchon 2014-2017
 // MIT License
@@ -13,16 +20,15 @@ layout: example
 #include <ArduinoJson.h>
 
 void setup() {
+  // Initialize serial port
   Serial.begin(9600);
-  while (!Serial) {
-    // wait serial port initialization
-  }
+  while (!Serial) continue;
 
   // Memory pool for JSON object tree.
   //
-  // Inside the brackets, 200 is the size of the pool in bytes,
-  // If the JSON object is more complex, you need to increase that value.
-  // See http://arduinojson.org/assistant/
+  // Inside the brackets, 200 is the size of the pool in bytes.
+  // Don't forget to change this value to match your JSON document.
+  // Use arduinojson.org/assistant to compute the capacity.
   StaticJsonBuffer<200> jsonBuffer;
 
   // StaticJsonBuffer allocates memory on the stack, it can be
@@ -70,3 +76,14 @@ void setup() {
 void loop() {
   // not used in this example
 }
+```
+
+## Where to go next?
+
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+
+The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson, and it's only 15 bucks!
+
+The chapter "Deserialize ArduinoJson" is a tutorial on deserialization, it shows how to parse the response from Yahoo Weather. This chapter is in the book sample, so you can download it for free!
+
+The chapter "Case Studies" dissects several projects that implement the best practices.
