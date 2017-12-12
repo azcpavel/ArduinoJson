@@ -140,7 +140,7 @@ void sendMux()
 
 ### Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
 In the [ArduinoJson ebook](https://leanpub.com/arduinojson/), explains extensively how `StaticJsonBuffer` and `DynamicJsonBuffer` works. Once you understand how they are made, it becomes obvious why they cannot be reused.
 

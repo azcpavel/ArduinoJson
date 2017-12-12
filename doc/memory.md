@@ -113,7 +113,7 @@ Use [ArduinoJson Assistant]({{ site.baseurl }}/assistant/) to compute the size r
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
 In the [ArduinoJson ebook](https://leanpub.com/arduinojson/), the chapter "Inside ArduinoJson" explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
 

@@ -57,7 +57,7 @@ The solution here is to determine how much memory is available, or in other word
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
 The [ArduinoJson ebook](https://leanpub.com/arduinojson/) details how `JsonArray` and `JsonObject` are represented in memory, and therefore how the computation of the size is done.
 

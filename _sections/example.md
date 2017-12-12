@@ -20,7 +20,7 @@ The following examples are also available in Arduino's "Examples" menu.
 
 ---
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
 The [ArduinoJson ebook](https://leanpub.com/arduinojson/) contains new examples and a complete chapter is dedicated to the study of these examples.
 

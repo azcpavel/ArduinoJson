@@ -53,7 +53,7 @@ While this seems like a good idea, it wastes a lot of RAM as it reserves memory 
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
 The [ArduinoJson ebook](https://leanpub.com/arduinojson/) explains the compromises made to allow JSON serialization in deeply embedded systems.
 

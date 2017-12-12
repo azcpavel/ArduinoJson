@@ -42,7 +42,7 @@ In Arduino IDE, click `File` / `Example` / `ArduinoJson`.
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
 The [ArduinoJson ebook](https://leanpub.com/arduinojson/) is the best way to learn how to use the library.
 

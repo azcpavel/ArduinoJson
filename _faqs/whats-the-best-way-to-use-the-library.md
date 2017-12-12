@@ -48,7 +48,7 @@ Also you can see that neither `JsonArray` nor `JsonObject` leak out of the seria
 
 ### Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
 If you are interested in writing good code and make the best possible use of the library, be sure to check the [ArduinoJson ebook](https://leanpub.com/arduinojson/).
 

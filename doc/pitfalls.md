@@ -155,7 +155,7 @@ See:
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right"></a>
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
 The [ArduinoJson ebook](https://leanpub.com/arduinojson/), contains two complete tutorials on serialization and deserialization. It shows every pitfalls on the way. It finishes with an analysis of the best practices in several sample projects.
 
