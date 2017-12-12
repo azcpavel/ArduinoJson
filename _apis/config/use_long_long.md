@@ -1,19 +1,19 @@
 ---
 title: ARDUINOJSON_USE_LONG_LONG
-description: Enables long long support
+description: ARDUINOJSON_USE_LONG_LONG changes the type used to store integer values in `JsonVariant`.
 keywords: ArduinoJson,long long,64
 layout: api
 tags: api
 api-group: Configuration
 ---
 
-Determines the type used to store integer values in `JsonVariant`.
+Determines the type used to store integer values in [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description/).
 
-* If `ARDUINOJSON_USE_LONG_LONG == 0`, then `JsonVariant` stores a `long`
-* If `ARDUINOJSON_USE_LONG_LONG == 1`, then `JsonVariant` stores a `long long`
+* If `ARDUINOJSON_USE_LONG_LONG == 0`, then [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description/) stores a `long`
+* If `ARDUINOJSON_USE_LONG_LONG == 1`, then [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description/) stores a `long long`
 
 The default is `0` when `ARDUINO` is defined, `1` otherwise.
-In other words, the it's `long` on embedded systems, but `long long` on computers.
+In other words, it's `long` on embedded systems, but `long long` on computers.
 
 To override the default value, you need to `#define` the value before including `ArduinoJson.h`, like this:
 
@@ -22,4 +22,6 @@ To override the default value, you need to `#define` the value before including 
 #include <ArduinoJson.h>
 ```
 
-:warning: Caution: the memory consumption will be higher, and the results given by the [ArduinoJson Assistant]({{ site.baseurl }}/assistant/) will be wrong.
+:warning: Caution: the memory consumption will be higher, and the results from the [ArduinoJson Assistant]({{site.baseurl}}/assistant/) will be wrong.
+
+:warning: Caution: make sure you use the same value for each compilation unit, i.e., for each `.ino` and `.cpp` in your project.
