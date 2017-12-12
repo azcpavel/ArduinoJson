@@ -86,6 +86,6 @@ will write
 ##### See also
 
 * [`JsonArray::add()`]({{site.baseurl}}/api/jsonarray/add/)
-* [`JsonArray::get()`]({{site.baseurl}}/api/jsonarray/get/)
+* [`JsonArray::get<T>()`]({{site.baseurl}}/api/jsonarray/get/)
 * [`JsonArray::operator[]`]({{site.baseurl}}/api/jsonarray/subscript/)
 * [`JsonObject::set()`]({{site.baseurl}}/api/jsonobject/get/)

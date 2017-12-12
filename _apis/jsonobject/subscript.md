@@ -53,6 +53,6 @@ const char* world = object["hello"];
 
 ##### See also
 
-* [`JsonObject::get()`]({{site.baseurl}}/api/jsonobject/get/)
-* [`JsonObject::get()`]({{site.baseurl}}/api/jsonobject/get/)
+* [`JsonObject::get<T>()`]({{site.baseurl}}/api/jsonobject/get/)
+* [`JsonObject::set()`]({{site.baseurl}}/api/jsonobject/set/)
 * [`JsonArray::operator[]`]({{site.baseurl}}/api/jsonarray/subscript/)

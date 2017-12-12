@@ -1,6 +1,6 @@
 ---
-title: JsonObject::get()
-description: Gets a value in a JsonObject
+title: JsonObject::get&lt;T&gt;()
+description: The function JsonObject::get&lt;T&gt;() returns the value at specified key.
 keywords: ArduinoJson,JsonObject,get,read
 layout: api
 tags: api
@@ -59,4 +59,4 @@ const char* value2 = object.get<const char*>("toto"); // returns NULL
 
 * [`JsonObject::set()`]({{site.baseurl}}/api/jsonobject/set/)
 * [`JsonObject::operator[]`]({{site.baseurl}}/api/jsonobject/subscript/)
-* [`JsonArray::get()`]({{site.baseurl}}/api/jsonarray/get/)
+* [`JsonArray::get<T>()`]({{site.baseurl}}/api/jsonarray/get/)

@@ -37,6 +37,6 @@ array[0] = 666;
 
 ##### See also
 
-* [`JsonArray::get()`]({{site.baseurl}}/api/jsonarray/get/)
+* [`JsonArray::get<T>()`]({{site.baseurl}}/api/jsonarray/get/)
 * [`JsonArray::set()`]({{site.baseurl}}/api/jsonarray/set/)
 * [`JsonObject::operator[]`]({{site.baseurl}}/api/jsonobject/subscript/)

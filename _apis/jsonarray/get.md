@@ -1,6 +1,6 @@
 ---
-title: JsonArray::get()
-description: Gets a value in a JsonArray
+title: JsonArray::get&lt;T&gt;()
+description: The function JsonArray::get&lt;T&gt;() returns the value at specified index.
 keywords: ArduinoJson,JsonArray,get,read
 layout: api
 tags: api
@@ -66,4 +66,4 @@ const char* value2 = array.get(2); // returns NULL
 
 * [`JsonArray::operator[]`]({{site.baseurl}}/api/jsonarray/subscript/)
 * [`JsonArray::set()`]({{site.baseurl}}/api/jsonarray/set/)
-* [`JsonObject::get()`]({{site.baseurl}}/api/jsonobject/get/)
+* [`JsonObject::get<T>()`]({{site.baseurl}}/api/jsonobject/get/)

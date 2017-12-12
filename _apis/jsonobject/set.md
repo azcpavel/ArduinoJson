@@ -76,6 +76,6 @@ will print the following string to the serial output:
 
 ##### See also
 
-* [`JsonObject::get()`]({{site.baseurl}}/api/jsonobject/get/)
+* [`JsonObject::get<T>()`]({{site.baseurl}}/api/jsonobject/get/)
 * [`JsonObject::operator[]`]({{site.baseurl}}/api/jsonobject/subscript/)
 * [`JsonArray::set()`]({{site.baseurl}}/api/jsonarray/set/)

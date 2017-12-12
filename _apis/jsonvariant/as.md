@@ -1,6 +1,6 @@
 ---
-title: JsonVariant::as()
-description: Converts a JsonVariant
+title: JsonVariant::as&lt;T&gt;()
+description: The function JsonVariant::as&lt;T&gt;() converts the value to the type T
 keywords: ArduinoJson,JsonVariant,as,cast,type
 layout: api
 tags: api
@@ -67,5 +67,5 @@ const char* s = variant.as<char*>(); // <- s == NULL
 
 ##### See also
 
-* [`JsonArray::get()`]({{site.baseurl}}/api/jsonarray/get/)
-* [`JsonObject::get()`]({{site.baseurl}}/api/jsonobject/get/)
+* [`JsonArray::get<T>()`]({{site.baseurl}}/api/jsonarray/get/)
+* [`JsonObject::get<T>()`]({{site.baseurl}}/api/jsonobject/get/)
