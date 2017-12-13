@@ -1,6 +1,6 @@
 ---
 title: JsonArray::printTo()
-description: Serializes a JsonArray to JSON
+description: The function JsonArray::printTo() serializes the JsonArray to create a minified JSON document.
 keywords: ArduinoJson,JsonArray,serialize,encode,generate
 layout: api
 tags: api
@@ -9,9 +9,9 @@ api-group: JsonArray
 
 ##### Description
 
-Serialize the array to a JSON string.
+Serializes the `JsonArray` to create a *minified* JSON document.
 
-This will create a compact JSON, if you want a pretty JSON with spaces and line breaks, use [`JsonArray::prettyPrintTo()`]({{site.baseurl}}/api/jsonarray/prettyprintto/)
+If you want a pretty JSON with spaces and line breaks, use [`JsonArray::prettyPrintTo()`]({{site.baseurl}}/api/jsonarray/prettyprintto/)
 
 ##### Signatures
 
@@ -25,17 +25,16 @@ size_t printTo(std::string &) const;
 
 ##### Arguments
 
-The destination of the JSON string.
+The destination where the JSON document should be written.
+It can be either:
 
-Can be either:
-
-* a `buffer` with specified `size` (this includes the zero-terminator)
-* an implementation of `Print` (like `Serial`, `EthernetClient`...)
-* a `String` or `std::string`
+* a `buffer` with specified `size` (the size includes the zero-terminator),
+* an implementation of `Print` (like `Serial`, `EthernetClient`...),
+* a `String` or `std::string`.
 
 ##### Return value
 
-The number of bytes written
+The number of bytes written.
 
 ##### Example
 
@@ -47,7 +46,7 @@ array.add("world");
 array.printTo(Serial);
 ```
 
-will write the following string to the serial output:
+will write the following string to the serial port:
 
 ```json
 ["hello","world"]
@@ -58,3 +57,4 @@ will write the following string to the serial output:
 * [`JsonArray::prettyPrintTo()`]({{site.baseurl}}/api/jsonarray/prettyprintto/)
 * [`JsonArray::measureLength()`]({{site.baseurl}}/api/jsonarray/measurelength/)
 * [`JsonObject::printTo()`]({{site.baseurl}}/api/jsonobject/printto/)
+* [`JsonVariant::printTo()`]({{site.baseurl}}/api/jsonvariant/printto/)

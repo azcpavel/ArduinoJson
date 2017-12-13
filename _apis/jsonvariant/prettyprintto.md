@@ -1,17 +1,17 @@
 ---
-title: JsonObject::prettyPrintTo()
-description: The function JsonObject::prettyPrintTo() serializes the JsonObject to create a prettified JSON document.
-keywords: ArduinoJson,JsonObject,serialize
+title: JsonVariant::prettyPrintTo()
+description: The function JsonVariant::prettyPrintTo() serializes the JsonVariant to create a prettified JSON document.
+keywords: ArduinoJson,JsonVariant,serialize
 layout: api
 tags: api
-api-group: JsonObject
+api-group: JsonVariant
 ---
 
 ##### Description
 
-Serializes the `JsonObject` to create a prettified JSON document.
+Serializes the `JsonVariant` to create a prettified JSON document.
 
-If you want a "minified" JSON document, use [`JsonObject::printTo()`]({{site.baseurl}}/api/jsonobject/printto/)
+If you want a "minified" JSON document, use [`JsonVariant::printTo()`]({{site.baseurl}}/api/jsonvariant/printto/)
 
 ##### Signatures
 
@@ -42,7 +42,9 @@ The number of bytes written.
 StaticJsonBuffer<200> jsonBuffer;
 JsonObject& object = jsonBuffer.createObject();
 object["hello"] = "world";
-object.prettyPrintTo(Serial);
+
+JsonVariant variant = object;
+variant.prettyPrintTo(Serial);
 ```
 
 will write the following string to the serial output:
@@ -55,7 +57,7 @@ will write the following string to the serial output:
 
 ##### See also
 
-* [`JsonObject::printTo()`]({{site.baseurl}}/api/jsonobject/printto/)
-* [`JsonObject::measurePrettyLength()`]({{site.baseurl}}/api/jsonobject/measureprettylength/)
+* [`JsonVariant::printTo()`]({{site.baseurl}}/api/jsonvariant/printto/)
+* [`JsonVariant::measurePrettyLength()`]({{site.baseurl}}/api/jsonvariant/measureprettylength/)
 * [`JsonArray::prettyPrintTo()`]({{site.baseurl}}/api/jsonarray/prettyprintto/)
-* [`JsonVariant::prettyPrintTo()`]({{site.baseurl}}/api/jsonvariant/prettyprintto/)
+* [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/)

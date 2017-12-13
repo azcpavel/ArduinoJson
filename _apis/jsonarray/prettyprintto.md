@@ -1,6 +1,6 @@
 ---
 title: JsonArray::prettyPrintTo()
-description: Serializes a JsonArray to prettified JSON
+description: The function JsonArray::prettyPrintTo() serializes the JsonArray:to create a prettified JSON document.
 keywords: ArduinoJson,JsonArray,serialize,encode,generate
 layout: api
 tags: api
@@ -9,9 +9,9 @@ api-group: JsonArray
 
 ##### Description
 
-Serialize the array to an indented JSON string.
+Serializes the `JsonArray` to create a prettified JSON document.
 
-This will create a "prettified" JSON, if you want a compact JSON without space or line break, use [`JsonArray::printTo()`]({{site.baseurl}}/api/jsonarray/printto/)
+If you want a compact JSON without space or line break, use [`JsonArray::printTo()`]({{site.baseurl}}/api/jsonarray/printto/)
 
 ##### Signatures
 
@@ -25,17 +25,16 @@ size_t prettyPrintTo(std::string &) const;
 
 ##### Arguments
 
-The destination of the JSON string.
+The destination where the JSON document should be written.
+It can be either:
 
-Can be either:
-
-* a `buffer` with specified `size` (this includes the zero-terminator)
-* an implementation of `Print` (like `Serial`, `EthernetClient`...)
-* a `String` or `std::string`
+* a `buffer` with specified `size` (the size includes the zero-terminator),
+* an implementation of `Print` (like `Serial`, `EthernetClient`...),
+* a `String` or an `std::string`.
 
 ##### Return value
 
-The number of bytes written
+The number of bytes written.
 
 ##### Example
 
@@ -61,3 +60,4 @@ will write the following string to the serial output:
 * [`JsonArray::printTo()`]({{site.baseurl}}/api/jsonarray/printto/)
 * [`JsonArray::measurePrettyLength()`]({{site.baseurl}}/api/jsonarray/measureprettylength/)
 * [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/)
+* [`JsonVariant::prettyPrintTo()`]({{site.baseurl}}/api/jsonvariant/prettyprintto/)

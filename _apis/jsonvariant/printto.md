@@ -1,17 +1,17 @@
 ---
-title: JsonObject::printTo()
-description: The function JsonObject::printTo() serializes the JsonObject to create a minified JSON document.
-keywords: ArduinoJson,JsonObject,serialize,minified
+title: JsonVariant::printTo()
+description: The function JsonVariant::printTo() serializes the JsonVariant to create a minified JSON document.
+keywords: ArduinoJson,JsonVariant,serialize,encode,generate
 layout: api
 tags: api
-api-group: JsonObject
+api-group: JsonVariant
 ---
 
 ##### Description
 
-Serializes the `JsonObject` to create a *minified* JSON document.
+Serializes the `JsonVariant` to create a *minified* JSON document.
 
-If you want a *prettified* JSON document, use [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/).
+If you want a pretty JSON with spaces and line breaks, use [`JsonVariant::prettyPrintTo()`]({{site.baseurl}}/api/jsonvariant/prettyprintto/)
 
 ##### Signatures
 
@@ -30,7 +30,7 @@ It can be either:
 
 * a `buffer` with specified `size` (the size includes the zero-terminator),
 * an implementation of `Print` (like `Serial`, `EthernetClient`...),
-* a `String` or an `std::string`.
+* a `String` or `std::string`.
 
 ##### Return value
 
@@ -42,7 +42,9 @@ The number of bytes written.
 StaticJsonBuffer<200> jsonBuffer;
 JsonObject& object = jsonBuffer.createObject();
 object["hello"] = "world";
-object.printTo(Serial);
+
+JsonVariant variant = object;
+variant.printTo(Serial);
 ```
 
 will write the following string to the serial port:
@@ -53,7 +55,7 @@ will write the following string to the serial port:
 
 ##### See also
 
-* [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/)
-* [`JsonObject::measureLength()`]({{site.baseurl}}/api/jsonobject/measurelength/)
+* [`JsonVariant::prettyPrintTo()`]({{site.baseurl}}/api/jsonvariant/prettyprintto/)
+* [`JsonVariant::measureLength()`]({{site.baseurl}}/api/jsonvariant/measurelength/)
 * [`JsonArray::printTo()`]({{site.baseurl}}/api/jsonarray/printto/)
-* [`JsonVariant::printTo()`]({{site.baseurl}}/api/jsonvariant/printto/)
+* [`JsonObject::printTo()`]({{site.baseurl}}/api/jsonobject/printto/)
