@@ -1,0 +1,64 @@
+---
+title: ArduinoJson 5.12.0 is out!
+description: The new version of ArduinoJson is out! It introduces a new syntax to change the default values.
+layout: post
+---
+
+### A new syntax
+
+This version adds [`JsonVariant::operator|`]({{site.baseurl}}/api/jsonvariant/or/) that specifies the value to return if the variant is undefined or incompatible.
+In other words, it changes the default values.
+
+Here is an example of a program that would benefit using the new syntax:
+
+```c++
+// Variables to store the configuration
+char hostname[32];
+int port;
+
+// Parse a config file
+JsonObject& config = js.parseObject(configFile);
+
+// Extract the hostname
+const char* configHostname = config["hostname"];
+if (configHostname != nullptr )
+  strlcpy(hostname, configHostname, sizeof(hostname));
+else
+  strcpy(hostname, "example.com", sizeof(hostname));
+
+// Extract the port
+int configPort = config["port"];
+if (configPort != 0)
+  port = configPort;
+else
+  port = 80;
+```
+
+We can now write the same program like that:
+
+```c++
+// Variables to store the configuration
+char hostname[32];
+int port;
+
+// Parse a config file
+JsonObject& config = js.parseObject(configFile);
+
+// Extract the hostname
+strlcpy(hostname, config["hostname"] | "example.com", sizeof(hostname));
+
+// Extract the port
+port = config["port"] | 80;
+```
+
+### A new example
+
+ArduinoJson 5.12.0 also ships with [a new example]({{site.baseurl}}/example/config/) that shows how to load and save a JSON configuration file. It uses the [SD library](https://www.arduino.cc/en/Reference/SD) but can be easily modified for any other file-system, like [SPIFFS](http://arduino-esp8266.readthedocs.io/en/latest/filesystem.html).
+
+### How to get ArduinoJson 5.12.0?
+
+You can download this new version from the [Arduino Library Manager](https://www.arduino.cc/en/Guide/Libraries).
+
+If you don't use the Arduino IDE, you can download [the single header version](https://github.com/bblanchon/ArduinoJson/releases/download/v5.12.0/ArduinoJson-v5.12.0.h).
+
+As usual, you can try the library on `wandbox.org`: [JsonGeneratorExample](https://wandbox.org/permlink/PKYazoEsGP9ucnYy) and [JsonParserExample](https://wandbox.org/permlink/qKrAnaA9B4zgfI2a).
