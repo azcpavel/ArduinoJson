@@ -16,6 +16,6 @@ layout: default
 	<ol class="breadcrumb">
 		<li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Home</a></li>
 		<li class="breadcrumb-item"><a href="{{ site.baseurl }}/news/">News</a></li>
-		<li class="breadcrumb-item active">{{ page.title }}</li>
+		<li class="breadcrumb-item active">{{ page.date | date: "%Y-%m-%d" }} - {{ page.title }}</li>
 	</ol>
 </div>
