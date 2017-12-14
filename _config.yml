@@ -18,6 +18,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jekyll-seo-tag
+  - jekyll-feed
 
 exclude:
   - Gemfile

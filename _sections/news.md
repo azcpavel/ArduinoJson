@@ -14,3 +14,8 @@ popularity: 0
     <dd>{{post.description}}</dd>
   {% endfor %}
 </dl>
+
+> #### Do you want to receive updates from ArduinoJson?
+> 
+> You can [subscribe to the Atom feed (similar to RSS)]({{site.baseurl}}/feed.xml).
+{: .alert .alert-info}
