@@ -30,11 +30,11 @@ Many Arduino users lack some of the fundamental principles of C++, that is why t
 
 This book is not a compilation of resource already available online. All the content is new, and nothing was recycled from existing documents.
 
-It contains many new code samples and original illustrations. 
+It contains many new code samples and original illustrations.
 
 Contrary to the documentation on arduinojson.org, which grew organically from the GitHub wiki, this book is the result of several months of continuous work, starting from scratch. The result is a coherent and complete learning material.
 
-Table of content
+Table of content:
 
 1. Introduction *(included in the free sample)*
     1. About this book
@@ -111,4 +111,4 @@ By buying this book, you encourage the development of high-quality libraries. By
 
 The current version of the book covers ArduinoJson 5.12, but you will have access to newer revisions as soon as they exist. You only have to buy this book once, you won't have to pay for upgrades.
 
-**Interested? Go to [leanpub.com/arduinojson](https://leanpub.com/arduinojson)**
+**Interested? Go to [leanpub.com/arduinojson](https://leanpub.com/arduinojson) and download the free sample**
