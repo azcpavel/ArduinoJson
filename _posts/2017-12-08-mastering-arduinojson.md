@@ -2,6 +2,7 @@
 title: The book "Mastering ArduinoJson" out!
 description: The long awaited book on ArduinoJson is finally out. Let's wee what's inside!
 layout: post
+categories: news
 ---
 
 I announced a ebook on ArduinoJson in October, before it was even completed.

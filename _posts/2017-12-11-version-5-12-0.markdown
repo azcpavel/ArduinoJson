@@ -2,6 +2,7 @@
 title: ArduinoJson 5.12.0 is out!
 description: The new version of ArduinoJson is out! It introduces a new syntax to change the default values.
 layout: post
+categories: news
 ---
 
 ### A new syntax
