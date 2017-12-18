@@ -6,7 +6,7 @@ layout: example
 tags: example
 ---
 
-## Description
+### Description
 
 This example shows how to parse a JSON document in an HTTP response.
 
@@ -27,7 +27,7 @@ Here is the expected response:
 }
 ```
 
-## Source code
+### Source code
 
 ```c++
 // ArduinoJson - arduinojson.org
@@ -116,12 +116,23 @@ void loop() {
 }
 ```
 
-## Where to go next?
+### Classes used in this example
+
+* [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/)
+* [`JsonObject`]({{site.baseurl}}/api/jsonobject/)
+
+### Functions used in this example
+
+* [`JsonBuffer::parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/)
+* [`JsonObject::operator[]`]({{site.baseurl}}/api/jsonobject/subscript/)
+* [`JsonVariant::as<T>()`]({{site.baseurl}}/api/jsonvariant/as/)
+
+### Keep learning
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
 The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson, and it's only 15 bucks!
 
-The chapter "Deserialize ArduinoJson" is a tutorial on deserialization, it shows how to parse the response from [Yahoo Weather](https://developer.yahoo.com/weather/). This chapter is in the book sample, so you can download it for free!
+The chapter "Deserialize ArduinoJson" is a tutorial on deserialization, it shows how to parse the response from [Yahoo Weather](https://developer.yahoo.com/weather/).
 
 The chapter "Case Studies" shows how to parse the huge JSON documents from [OpenWeatherMap](https://openweathermap.org/) and [Weather Underground](https://www.wunderground.com/).
