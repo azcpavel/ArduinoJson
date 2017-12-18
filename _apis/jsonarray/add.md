@@ -9,7 +9,7 @@ api-group: JsonArray
 
 ##### Description
 
-Adds a value to the end of the array.
+Adds a value to the [`JsonArray`]({{site.baseurl}}/api/jsonarray/).
 
 ##### Signatures
 

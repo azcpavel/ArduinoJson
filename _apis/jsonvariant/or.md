@@ -9,7 +9,7 @@ api-group: JsonVariant
 
 ##### Description
 
-Changes the value return when the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description) is undefined or incompatible.
+Changes the value return when the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) is undefined or incompatible.
 
 In other words, it changes the default value.
 
@@ -42,7 +42,7 @@ std::string        operator|(const std::string& defaultValue) const;
 
 ##### Arguments
 
-`defaultValue`: the value to return is the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description) is undefined or incompatible.
+`defaultValue`: the value to return is the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) is undefined or incompatible.
 
 ##### Return value
 

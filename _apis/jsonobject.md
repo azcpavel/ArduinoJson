@@ -29,7 +29,11 @@ char json[] = "{\"hello\":\"world\"}";
 JsonObject& object2 = jsonBuffer.parseObject(json);
 ```
 
-##### See also
+##### Member functions
 
-* [`JsonBuffer::createObject()`]({{site.baseurl}}/api/jsonbuffer/createobject/)
-* [`JsonBuffer::parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/)
+<ul>
+{% assign methods = site.apis | where:"api-group",page.title %}
+{% for method in methods %}
+  <li><a href="{{ site.baseurl }}{{ method.url }}"><code>{{ method.title }}</code></a></li>
+{% endfor %}
+</ul>

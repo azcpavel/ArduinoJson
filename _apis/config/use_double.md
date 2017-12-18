@@ -7,10 +7,10 @@ tags: api
 api-group: Configuration
 ---
 
-`ARDUINOJSON_USE_DOUBLE` determines the type used to store floating point values in [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description):
+`ARDUINOJSON_USE_DOUBLE` determines the type used to store floating point values in [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/):
 
-* If `ARDUINOJSON_USE_DOUBLE == 0`, then [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description) stores a `float`
-* If `ARDUINOJSON_USE_DOUBLE == 1`, then [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description) stores a `double`
+* If `ARDUINOJSON_USE_DOUBLE == 0`, then [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) stores a `float`
+* If `ARDUINOJSON_USE_DOUBLE == 1`, then [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) stores a `double`
 
 The default is `0` on embedded systems, `1` otherwise.
 

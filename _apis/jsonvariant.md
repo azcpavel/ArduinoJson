@@ -18,3 +18,12 @@ A variable that can hold different type of values:
 
 A `JsonVariant` can be any of theses types at a time, but can only hold one value.
 Its type can change at run time.
+
+##### Member functions
+
+<ul>
+{% assign methods = site.apis | where:"api-group",page.title %}
+{% for method in methods %}
+  <li><a href="{{ site.baseurl }}{{ method.url }}"><code>{{ method.title }}</code></a></li>
+{% endfor %}
+</ul>

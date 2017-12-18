@@ -29,8 +29,13 @@ char json[] = "[1,2,3]";
 JsonArray& array2 = jsonBuffer.parseArray(json);
 ```
 
-##### See also
+##### Member functions
 
-* [`JsonBuffer::createArray()`]({{site.baseurl}}/api/jsonbuffer/createarray/)
-* [`JsonBuffer::parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/)
+<ul>
+{% assign methods = site.apis | where:"api-group",page.title %}
+{% for method in methods %}
+  <li><a href="{{ site.baseurl }}{{ method.url }}"><code>{{ method.title }}</code></a></li>
+{% endfor %}
+</ul>
+
 

@@ -7,6 +7,8 @@ tags: api
 api-group: class
 ---
 
+##### Description
+
 `JsonBuffer` is the entry point for using the library: it handles the memory management and calls the parser.
 
 It implements a speed efficient memory pool and comes in two flavors:
@@ -24,3 +26,12 @@ This is the source of a lot of question, please read the [FAQ]({{site.baseurl}}/
 * [How to determine the buffer size?]({{site.baseurl}}/faq/how-to-determine-the-buffer-size/)
 * [Why shouldn't I use a global JsonBuffer?]({{site.baseurl}}/faq/why-shouldnt-i-use-a-global-jsonbuffer/)
 * [What are the common sizes for JsonBuffer?]({{site.baseurl}}/faq/what-are-the-common-sizes-for-jsonbuffer/)
+
+##### Member functions
+
+<ul>
+{% assign methods = site.apis | where:"api-group",page.title %}
+{% for method in methods %}
+  <li><a href="{{ site.baseurl }}{{ method.url }}"><code>{{ method.title }}</code></a></li>
+{% endfor %}
+</ul>
