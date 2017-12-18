@@ -12,7 +12,7 @@ api-group: JsonBuffer
 Allocates and populate a `JsonArray` from a JSON string.
 
 By design, the parser needs to alter the string to insert null-terminators and replace escaped chars.
-If the JSON string is read-only, it will have to duplicate the input string, this consume more space in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
+If the JSON string is read-only, it will have to duplicate the input string, this consume more space in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 Therefore, it's recommended to have a JSON input in a `char[]` or a `char*`.
 
 ##### Signatures

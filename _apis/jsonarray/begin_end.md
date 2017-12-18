@@ -20,7 +20,7 @@ JsonArray::const_iterator end() const;
 ```
 
 ##### Return value
-A forward iterator pointing to a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description/).
+A forward iterator pointing to a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/).
 
 ##### Example
 

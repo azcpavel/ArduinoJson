@@ -24,7 +24,7 @@ const JsonVariant& operator[](size_t index) const;
 
 ##### Return value
 
-A reference to the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description/) in the array.
+A reference to the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) in the array.
 
 ##### Example
 

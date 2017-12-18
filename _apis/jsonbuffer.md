@@ -1,10 +1,10 @@
 ---
-title: JsonBuffer description
+title: JsonBuffer
 description: DynamicJsonBuffer and StaticJsonBuffer are memory pools
 keywords: ArduinoJson,StaticJsonBuffer,DynamicJsonBuffer
 layout: api
 tags: api
-api-group: JsonBuffer
+api-group: class
 ---
 
 `JsonBuffer` is the entry point for using the library: it handles the memory management and calls the parser.

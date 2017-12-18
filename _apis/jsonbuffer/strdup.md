@@ -9,9 +9,9 @@ api-group: JsonBuffer
 
 ##### Description
 
-Make a copy of the specified string in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
+Make a copy of the specified string in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
-The memory is released when the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is destructed.
+The memory is released when the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is destructed.
 
 ##### Signatures
 

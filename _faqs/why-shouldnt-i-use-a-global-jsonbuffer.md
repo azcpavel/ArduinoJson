@@ -13,14 +13,14 @@ popularity: 244
 `StaticJsonBuffer` and `DynamicJsonBuffer` are ultra-fast memory pools.
 But the drawback is that they are throwaways; they are not intended to be reused.
 They can allocate memory, but not to release it; they always grow, but they never shrink.
-The only way to release the memory is to destroy the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
+The only way to release the memory is to destroy the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
-That's why using a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is always a bad idea!
+That's why using a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is always a bad idea!
 
 ### Why such a terrible limitation?
 
 ArduinoJson is designed to do one thing and to do it well: **the JSON serialization**.
-So before trying to use a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/), ask yourself first:
+So before trying to use a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), ask yourself first:
 *"Am I using ArduinoJson for serialization, or am I pushing it beyond its initial intent?"*
 
 In particular, you should not use `JsonObject` and `JsonArray` to store the internal state of your program as this would be terribly inefficient. Instead, write your own data structure and use ArduinoJson only in serialization functions, as shown in [What's the best way to use the library?]({{site.baseurl}}/faq/whats-the-best-way-to-use-the-library/)
@@ -29,8 +29,8 @@ In particular, you should not use `JsonObject` and `JsonArray` to store the inte
 
 Many projects use a JSON file to store their configuration: the file is read at startup, and the content is kept in memory during the execution of the program.
 
-In that situation, it's tempting to use a global `JsonObject` attached to a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
-In theory, it's OK to use a global read-only `JsonObject`, because the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) won't grow.
+In that situation, it's tempting to use a global `JsonObject` attached to a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
+In theory, it's OK to use a global read-only `JsonObject`, because the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) won't grow.
 But in practice, it's a huge waste of memory and processor time.
 The best way to deal with this is to use custom data structures as suggested in [What's the best way to use the library?]({{site.baseurl}}/faq/whats-the-best-way-to-use-the-library/).
 
@@ -61,7 +61,7 @@ There is an entire chapter dedicated to `StaticJsonBuffer` and `DynamicJsonBuffe
 It explains why they behave that way and why it doesn't make sense to reuse it.
 
 The "Case Studies" chapter contains an example of a global configuration object stored in a file.
-As you'll see, no global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is required.
+As you'll see, no global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is required.
 
-The book begins with a quick C++ course as the global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) obsession is mostly attributed to developers used to other programming languages and paradigms.
+The book begins with a quick C++ course as the global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) obsession is mostly attributed to developers used to other programming languages and paradigms.
 

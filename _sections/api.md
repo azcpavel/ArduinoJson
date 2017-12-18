@@ -11,6 +11,7 @@ popularity: 10
 This is the detailed documentation of every class and function of the ArduinoJson library.
 Some parts have been simplified to be easier to understand, so if you look at the source code, you might see some differences.
 
+<!--
 <ul>
 {% assign groups = site.apis | group_by: 'api-group' %}
 {% for group in groups %}
@@ -23,8 +24,29 @@ Some parts have been simplified to be easier to understand, so if you look at th
     </ul>
   </li>
 {% endfor %}
-</ul>
+</ul> -->
 
+<ul>
+{% assign classes = site.apis | where:"api-group","class" %}
+{% for class in classes %}
+  <li><a href="{{ site.baseurl }}{{ class.url }}"><code>{{ class.title }}</code></a>
+    <ul>
+    {% assign methods = site.apis | where:"api-group",class.title %}
+    {% for method in methods %}
+      <li><a href="{{ site.baseurl }}{{ method.url }}"><code>{{ method.title }}</code></a></li>
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+  <li>Compile time configuration
+    <ul>
+    {% assign methods = site.apis | where:"api-group","Configuration" %}
+    {% for method in methods %}
+      <li><a href="{{ site.baseurl }}{{ method.url }}"><code>{{ method.title }}</code></a></li>
+    {% endfor %}
+    </ul>
+  </li>
+</ul>
 
 ## Where to go next?
 

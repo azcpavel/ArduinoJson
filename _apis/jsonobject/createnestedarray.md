@@ -26,8 +26,8 @@ JsonArray& createNestedArray(const __FlashStringHelper* key) const; // duplicate
 
 ##### Remarks
 
-When you add a value using a `String` for key, a copy of the string is made, causing the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) to grow.
-The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is discarded.
+When you add a value using a `String` for key, a copy of the string is made, causing the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) to grow.
+The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is discarded.
 To avoid this behavior, use a `const char*` key instead.
 
 ##### Return value

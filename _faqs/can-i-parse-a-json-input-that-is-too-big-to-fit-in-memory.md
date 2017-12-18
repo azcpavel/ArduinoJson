@@ -18,7 +18,7 @@ By design, ArduinoJson stores the complete representation of the JSON object tre
 
 If you use the zero-copy mode (mutable input), the whole JSON input must stay in memory.
 
-If the input is read-only (like a [`Stream`](https://www.arduino.cc/en/Reference/Stream)), the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) needs to make copies of the input, so the result is almost the same (except for spaces and punctuation).
+If the input is read-only (like a [`Stream`](https://www.arduino.cc/en/Reference/Stream)), the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) needs to make copies of the input, so the result is almost the same (except for spaces and punctuation).
 
 ### How to solve?
 
@@ -28,7 +28,7 @@ One cool feature of ArduinoJson is that, when it parses an object from a [`Strea
 
 This feature allows to parse streams in chunks, you just need to call [`JsonBuffer::parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/) in a loop.
 Of course, don't forget to skip the commas (`,`) between the objects.
-As usual, don't reuse the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/), declare it inside the loop.
+As usual, don't reuse the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), declare it inside the loop.
 
 For example, if you want to parse the huge response of a 10-day forecast of Weather Underground, you can skip the beginning until `"forecastday": [` is found (use [`Stream::find()`](https://www.arduino.cc/en/Reference/StreamFind)), and then parse the objects for each day one after the other.
 

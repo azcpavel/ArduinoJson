@@ -6,7 +6,7 @@ keywords: ArduinoJson,pitfalls,caveats,mistakes,tips
 tags: doc
 ---
 
-As [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is the corner stone of this library, you'll see that every pitfall listed here is related to a wrong understanding of the memory model.
+As [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is the corner stone of this library, you'll see that every pitfall listed here is related to a wrong understanding of the memory model.
 
 Make sure you read [Arduino JSON memory model]({{site.baseurl}}/doc/memory/) before going further.
 

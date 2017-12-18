@@ -10,7 +10,7 @@ layout: example
 
 This example shows the different ways you can use Flash strings with ArduinoJson.
 
-Use Flash strings sparingly, because ArduinoJson duplicates them in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
+Use Flash strings sparingly, because ArduinoJson duplicates them in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 Prefer plain old `char*`, as they are more efficient in term of code size, speed, and memory usage.
 
 ## Source code
@@ -66,4 +66,4 @@ The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best
 
 It begins with a quick C++ course that explains how your microcontroller stores strings in memory, so you can perfectly understand what happens behind the scenes.
 
-The chapter "Inside ArduinoJson" explains what a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is and why it is essential for the performance of the library. This chapter also describes how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
+The chapter "Inside ArduinoJson" explains what a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is and why it is essential for the performance of the library. This chapter also describes how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.

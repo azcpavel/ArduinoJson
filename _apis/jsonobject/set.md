@@ -49,13 +49,13 @@ bool set(TString key, const JsonVariant &value);
 
 `true` if allocation succeeded.
 
-`false` if there was not enough space left in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
+`false` if there was not enough space left in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
 ##### Remarks
 
 When you use a `String`, an `std::string`, or a `const __FlashStringHelper*`, a
-copy of the string is made, causing the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) to grow.
-The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is discarded.
+copy of the string is made, causing the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) to grow.
+The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is discarded.
 This is true for both `key` and `value`.
 To avoid this behavior, use `const char*` keys and values instead.
 

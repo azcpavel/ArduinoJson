@@ -1,11 +1,13 @@
 ---
-title: JsonVariant description
-description: A JsonVariant can hold any JSON value
+title: JsonVariant
+description: A JsonVariant can hold any JSON value; it can be a string, a number, a boolean, an array or an object.
 keywords: ArduinoJson,JsonVariant
 layout: api
 tags: api
-api-group: JsonVariant
+api-group: class
 ---
+
+##### Description
 
 A variable that can hold different type of values:
 

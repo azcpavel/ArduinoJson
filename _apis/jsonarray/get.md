@@ -40,7 +40,7 @@ String          get<String>         (size_t index) const;
 
 ##### Return value
 
-The value at the specified index. This can be a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description/) or a value of type T.
+The value at the specified index. This can be a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) or a value of type T.
 
 Returns a value whose type matches the template parameter `T`.
 

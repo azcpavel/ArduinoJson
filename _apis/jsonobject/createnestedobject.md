@@ -26,8 +26,8 @@ JsonObject& createNestedObject(const __FlashStringHelper* key) const; // duplica
 
 ##### Remarks
 
-When you add a value using a `String` or a `std::string` for key, a copy of the string is made, causing the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) to grow.
-The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is discarded.
+When you add a value using a `String` or a `std::string` for key, a copy of the string is made, causing the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) to grow.
+The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is discarded.
 To avoid this behavior, use a `const char*` key instead.
 
 ##### Return value

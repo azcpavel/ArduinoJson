@@ -42,7 +42,7 @@ bool add(const JsonVariant &variant);
 
 `true` if the value was successfully added.
 
-`false` if there was not enough memory in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/).
+`false` if there was not enough memory in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
 ##### Remarks
 
@@ -52,8 +52,8 @@ A copy of the string is made when you call this function with one of the followi
 * `std::string`
 * Flash string (`PROGMEM`)
 
-This duplication causes the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) to grow.
-The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is discarded.
+This duplication causes the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) to grow.
+The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is discarded.
 
 To avoid this behavior, use `const char*` to pass the string.
 

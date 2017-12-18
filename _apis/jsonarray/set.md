@@ -44,7 +44,7 @@ bool set(size_t index, const JsonVariant &value);
 
 `true` if allocation succeeded.
 
-`false` if there was not enough space left in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/), this can only happen when `value` needs to be copied (see below).
+`false` if there was not enough space left in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), this can only happen when `value` needs to be copied (see below).
 
 ##### Remarks
 
@@ -54,8 +54,8 @@ A copy of the string is made when you call this function with one of the followi
 * `std::string`
 * Flash string (`PROGMEM`)
 
-This duplication causes the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) to grow.
-The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is discarded.
+This duplication causes the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) to grow.
+The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is discarded.
 
 To avoid this behavior, use `const char*` to pass the string.
 

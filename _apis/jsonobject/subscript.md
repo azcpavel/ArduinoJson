@@ -32,15 +32,15 @@ const JsonVariant& operator[](const __FlashStringHelper* key) const;
 
 ##### Return value
 
-A reference to the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/description/) in the object.
+A reference to the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) in the object.
 
 ##### Remarks
 
 When you add a value using a `String`, an `std::string` or a
 `const __FlashStringHelper*` for key, a copy of the string is made, causing the
-[`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) to grow.
+[`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) to grow.
 The memory allocated for the copy will only be freed when the whole
-[`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/description/) is discarded.
+[`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is discarded.
 To avoid this behavior, use a `const char*` key instead.
 
 ##### Example
