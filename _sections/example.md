@@ -17,3 +17,7 @@ Here are the eight official examples of ArduinoJson. They are available in the "
   <dd>{{ example.description }}</dd>
 {% endfor %}
 </dl>
+
+In Arduino IDE, click `File` / `Example` / `ArduinoJson`.
+
+![Screen capture of Arduino IDE](http://i.imgur.com/g5UwkVh.png)
