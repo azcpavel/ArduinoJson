@@ -7,13 +7,13 @@ tags: api
 api-group: JsonArray
 ---
 
-##### Description
+### Description
 
 Serializes the `JsonArray` to create a prettified JSON document.
 
 If you want a compact JSON without space or line break, use [`JsonArray::printTo()`]({{site.baseurl}}/api/jsonarray/printto/)
 
-##### Signatures
+### Signatures
 
 ```c++
 size_t prettyPrintTo(char* buffer, size_t size) const;
@@ -23,7 +23,7 @@ size_t prettyPrintTo(String &) const;
 size_t prettyPrintTo(std::string &) const;
 ```
 
-##### Arguments
+### Arguments
 
 The destination where the JSON document should be written.
 It can be either:
@@ -32,11 +32,11 @@ It can be either:
 * an implementation of `Print` (like `Serial`, `EthernetClient`...),
 * a `String` or an `std::string`.
 
-##### Return value
+### Return value
 
 The number of bytes written.
 
-##### Example
+### Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -55,7 +55,7 @@ will write the following string to the serial output:
 ]
 ```
 
-##### See also
+### See also
 
 * [`JsonArray::printTo()`]({{site.baseurl}}/api/jsonarray/printto/)
 * [`JsonArray::measurePrettyLength()`]({{site.baseurl}}/api/jsonarray/measureprettylength/)

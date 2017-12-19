@@ -7,11 +7,11 @@ tags: api
 api-group: JsonObject
 ---
 
-##### Description
+### Description
 
 Tests if a key exists in the `JsonObject`.
 
-##### Signature
+### Signature
 
 ```c++
 bool containsKey(const char* key) const;
@@ -20,15 +20,15 @@ bool containsKey(const std::string& key) const;
 bool containsKey(const __FlashStringHelper& key) const;
 ```
 
-##### Arguments
+### Arguments
 
 `key`: the key to test.
 
-##### Return value
+### Return value
 
 `true` if the key is present is the `JsonObject`; `false` if not.
 
-##### Example
+### Example
 
 ```c++
 StaticJsonBuffer<256> jsonBuffer;

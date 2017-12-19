@@ -7,11 +7,11 @@ tags: api
 api-group: JsonArray
 ---
 
-##### Description
+### Description
 
 Gets the value at the specified index.
 
-##### Signature
+### Signature
 
 ```c++
 bool            get<bool>           (size_t index) const;
@@ -32,13 +32,13 @@ std::string     get<std::string>    (size_t index) const;
 String          get<String>         (size_t index) const;
 ```
 
-##### Arguments
+### Arguments
 
 `index`: the index of the value in the array.
 
 `T`: the type of the value.
 
-##### Return value
+### Return value
 
 The value at the specified index. This can be a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) or a value of type T.
 
@@ -51,7 +51,7 @@ In the case of an error (index out of range or incompatible type), the default v
 * `NULL` for a `char*`
 * etc.
 
-##### Example
+### Example
 
 ```c++
 char json[] = "[1,3.14]";
@@ -62,7 +62,7 @@ float value1 = array.get<float>(1); // template version of get()
 const char* value2 = array.get(2); // returns NULL
 ```
 
-##### See also
+### See also
 
 * [`JsonArray::operator[]`]({{site.baseurl}}/api/jsonarray/subscript/)
 * [`JsonArray::set()`]({{site.baseurl}}/api/jsonarray/set/)

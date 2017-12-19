@@ -7,11 +7,11 @@ tags: api
 api-group: JsonVariant
 ---
 
-##### Description
+### Description
 
 Converts the variant to the specified type.
 
-##### Signatures
+### Signatures
 
 ```c++
 bool               as<bool>() const;
@@ -45,7 +45,7 @@ JsonObject&        as<JsonObject&>() const;
 JsonObject&        as<const JsonObject&>() const;
 ```
 
-##### Return value
+### Return value
 
 The value of the specified type or a default value if the `JsonVariant` is not compatible with the specified type.
 
@@ -56,7 +56,7 @@ The default value is:
 * `JsonArray::invalid()` for `JsonArray&`
 * `JsonObject::invalid()` for `JsonObject&`
 
-##### Example
+### Example
 
 ```c++
 JsonVariant variant = 42;
@@ -65,7 +65,7 @@ double d = variant.as<double>(); // <- d == 42.0
 const char* s = variant.as<char*>(); // <- s == NULL
 ```
 
-##### See also
+### See also
 
 * [`JsonArray::get<T>()`]({{site.baseurl}}/api/jsonarray/get/)
 * [`JsonObject::get<T>()`]({{site.baseurl}}/api/jsonobject/get/)

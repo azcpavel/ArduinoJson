@@ -7,7 +7,7 @@ tags: api
 api-group: JsonBuffer
 ---
 
-##### Description
+### Description
 
 Allocates and populate a `JsonArray` from a JSON string.
 
@@ -15,7 +15,7 @@ By design, the parser needs to alter the string to insert null-terminators and r
 If the JSON string is read-only, it will have to duplicate the input string, this consume more space in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 Therefore, it's recommended to have a JSON input in a `char[]` or a `char*`.
 
-##### Signatures
+### Signatures
 
 ```c++
 // The first overload, which accepts a modifiable array of chars, is the most efficient
@@ -34,7 +34,7 @@ JsonArray& parseArray(Stream& json, uint8_t nestingLimit=10);
 JsonArray& parseArray(std::istream& json, uint8_t nestingLimit=10);
 ```
 
-##### Arguments
+### Arguments
 
 `json` is the input string to be parsed.
 
@@ -44,11 +44,11 @@ If set to `1`, the array can contain nested arrays or objects but only 1 level d
 And bigger values will allow more level of nesting.
 The purpose of this feature is to prevent stack overflow that could lead to a security risk.
 
-##### Return value
+### Return value
 
 Returns a reference to the new `JsonArray` or `JsonArray::invalid() if the allocation fails.
 
-##### Example
+### Example
 
 ```c++
 char json[] = "[\"hello\",\"world\"]";
@@ -58,7 +58,7 @@ const char* hello = array[0];
 const char* world = array[1];
 ```
 
-##### See also
+### See also
 
 * [`JsonBuffer::parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/)
 * [`JsonBuffer::parse()`]({{site.baseurl}}/api/jsonbuffer/parse/)

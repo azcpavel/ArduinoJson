@@ -7,11 +7,11 @@ tags: api
 api-group: JsonObject
 ---
 
-##### Description
+### Description
 
 Sets the value at specified key.
 
-##### Signatures
+### Signatures
 
 ```c++
 bool set(TString key, bool value);
@@ -34,7 +34,7 @@ bool set(TString key, JsonObject &object);
 bool set(TString key, const JsonVariant &value);
 ```
 
-##### Arguments
+### Arguments
 
 `key`: the key to attach the value to, can be a:
 
@@ -45,13 +45,13 @@ bool set(TString key, const JsonVariant &value);
 
 `value`: the value to attach to the key.
 
-##### Return value
+### Return value
 
 `true` if allocation succeeded.
 
 `false` if there was not enough space left in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
-##### Remarks
+### Remarks
 
 When you use a `String`, an `std::string`, or a `const __FlashStringHelper*`, a
 copy of the string is made, causing the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) to grow.
@@ -59,7 +59,7 @@ The memory allocated for the copy will only be freed when the whole [`JsonBuffer
 This is true for both `key` and `value`.
 To avoid this behavior, use `const char*` keys and values instead.
 
-##### Example
+### Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -74,7 +74,7 @@ will print the following string to the serial output:
 {"hello":"world"}
 ```
 
-##### See also
+### See also
 
 * [`JsonObject::get<T>()`]({{site.baseurl}}/api/jsonobject/get/)
 * [`JsonObject::operator[]`]({{site.baseurl}}/api/jsonobject/subscript/)

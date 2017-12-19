@@ -7,11 +7,11 @@ tags: api
 api-group: JsonArray
 ---
 
-##### Description
+### Description
 
 Adds a value to the [`JsonArray`]({{site.baseurl}}/api/jsonarray/).
 
-##### Signatures
+### Signatures
 
 ```c++
 bool add(bool value);
@@ -34,17 +34,17 @@ bool add(JsonObject &object);
 bool add(const JsonVariant &variant);
 ```
 
-##### Arguments
+### Arguments
 
 `value`: the value to add to the array.
 
-##### Return value
+### Return value
 
 `true` if the value was successfully added.
 
 `false` if there was not enough memory in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
-##### Remarks
+### Remarks
 
 A copy of the string is made when you call this function with one of the following types:
 
@@ -57,7 +57,7 @@ The memory allocated for the copy will only be freed when the whole [`JsonBuffer
 
 To avoid this behavior, use `const char*` to pass the string.
 
-##### Example
+### Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -73,6 +73,6 @@ will write
 ["hello",3.14156]
 ```
 
-##### See also
+### See also
 
 * [`JsonArray::set()`]({{site.baseurl}}/api/jsonarray/set/)

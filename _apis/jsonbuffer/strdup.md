@@ -7,13 +7,13 @@ tags: api
 api-group: JsonBuffer
 ---
 
-##### Description
+### Description
 
 Make a copy of the specified string in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
 The memory is released when the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is destructed.
 
-##### Signatures
+### Signatures
 
 ```c++
 char* strdup(const char* str);
@@ -22,15 +22,15 @@ char* strdup(const std::string& str);
 char* strdup(const __FlashStringHelper* str);
 ```
 
-##### Arguments
+### Arguments
 
 `str`, the string to duplicate.
 
-##### Return value
+### Return value
 
 A newly allocate string, filled with a copy of `str`.
 
-##### Example
+### Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -41,7 +41,7 @@ Serial.println(dupl); // world
 Serial.println(orig); // hello
 ```
 
-##### See also
+### See also
 
 * [`JsonBuffer::createArray()`]({{site.baseurl}}/api/jsonbuffer/createarray/)
 * [`JsonBuffer::createObject()`]({{site.baseurl}}/api/jsonbuffer/createobject/)

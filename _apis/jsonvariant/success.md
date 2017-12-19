@@ -7,22 +7,22 @@ tags: api
 api-group: JsonVariant
 ---
 
-##### Description
+### Description
 
 Tells whether the variant contains a value.
 
-##### Signature
+### Signature
 
 ```c++
 bool success() const;
 ```
 
-##### Return value
+### Return value
 
 * `true` if the variant contains a value,
 * `false` if the variant is empty or invalid.
 
-##### Example
+### Example
 
 ```c++
 JsonVariant variant;
@@ -31,7 +31,7 @@ variant = 42;
 bool afterAssign = variant.success(); // true
 ```
 
-##### See also
+### See also
 
 * [`JsonArray::success()`]({{site.baseurl}}/api/jsonarray/success/)
 * [`JsonObject::success()`]({{site.baseurl}}/api/jsonobject/success/)

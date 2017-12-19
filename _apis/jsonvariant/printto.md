@@ -7,13 +7,13 @@ tags: api
 api-group: JsonVariant
 ---
 
-##### Description
+### Description
 
 Serializes the `JsonVariant` to create a *minified* JSON document.
 
 If you want a pretty JSON with spaces and line breaks, use [`JsonVariant::prettyPrintTo()`]({{site.baseurl}}/api/jsonvariant/prettyprintto/)
 
-##### Signatures
+### Signatures
 
 ```c++
 size_t printTo(char* buffer, size_t size) const;
@@ -23,7 +23,7 @@ size_t printTo(String &) const;
 size_t printTo(std::string &) const;
 ```
 
-##### Arguments
+### Arguments
 
 The destination where the JSON document should be written.
 It can be either:
@@ -32,11 +32,11 @@ It can be either:
 * an implementation of `Print` (like `Serial`, `EthernetClient`...),
 * a `String` or `std::string`.
 
-##### Return value
+### Return value
 
 The number of bytes written.
 
-##### Example
+### Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -53,7 +53,7 @@ will write the following string to the serial port:
 {"hello":"world"}
 ```
 
-##### See also
+### See also
 
 * [`JsonVariant::prettyPrintTo()`]({{site.baseurl}}/api/jsonvariant/prettyprintto/)
 * [`JsonVariant::measureLength()`]({{site.baseurl}}/api/jsonvariant/measurelength/)

@@ -7,7 +7,7 @@ tags: api
 api-group: class
 ---
 
-##### Description
+### Description
 
 A variable that can hold different type of values:
 
@@ -19,7 +19,7 @@ A variable that can hold different type of values:
 A `JsonVariant` can be any of theses types at a time, but can only hold one value.
 Its type can change at run time.
 
-##### Member functions
+### Member functions
 
 <ul>
 {% assign methods = site.apis | where:"api-group",page.title %}
@@ -28,12 +28,12 @@ Its type can change at run time.
 {% endfor %}
 </ul>
 
-##### See also
+### See also
 
 * [`JsonArray`]({{site.baseurl}}/api/jsonarray/)
 * [`JsonObject`]({{site.baseurl}}/api/jsonobject/)
 
-##### Keep learning
+### Keep learning
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 

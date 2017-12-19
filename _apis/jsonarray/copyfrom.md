@@ -7,11 +7,11 @@ tags: api
 api-group: JsonArray
 ---
 
-##### Description
+### Description
 
 Populates the `JsonArray` with values from a C array.
 
-##### Signatures
+### Signatures
 
 ```c++
 JsonArray::copyFrom(int array[]);
@@ -19,11 +19,11 @@ JsonArray::copyFrom(double array[]);
 JsonArray::copyFrom(const char* array[]);
 ```
 
-##### Return value
+### Return value
 
 `true` if the operation is successful; or `false` if there was not enough room in the `JsonBuffer`.
 
-##### Example
+### Example
 
 ```c++
 int values[] = {1, 2, 3};
@@ -40,6 +40,6 @@ will write
 [1,2,3]
 ```
 
-##### See also
+### See also
 
 * [JsonArray::copyTo()]({{site.baseurl}}/api/jsonarray/copyto/)

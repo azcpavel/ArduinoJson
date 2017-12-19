@@ -7,21 +7,21 @@ tags: api
 api-group: JsonBuffer
 ---
 
-##### Description
+### Description
 
 Allocates an empty `JsonArray`.
 
-##### Signature
+### Signature
 
 ```c++
 JsonArray& createArray();
 ```
 
-##### Return value
+### Return value
 
 Returns a reference to the new `JsonArray` or `JsonArray::invalid()` if the allocation fails.
 
-##### Example
+### Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -30,7 +30,7 @@ array.add("hello");
 array.add("world");
 ```
 
-##### See also
+### See also
 
 * [`JsonBuffer::createObject()`]({{site.baseurl}}/api/jsonbuffer/createobject/)
 * [`JsonArray::createNestedArray()`]({{site.baseurl}}/api/jsonarray/createnestedarray/)

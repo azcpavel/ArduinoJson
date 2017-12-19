@@ -7,23 +7,23 @@ tags: api
 api-group: JsonBuffer
 ---
 
-##### Description
+### Description
 
 Gets the current size (i.e. the number of bytes used) of the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
 This should not be confused with the capacity of the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), which is the total number of bytes that the buffer can hold.
 
-##### Signatures
+### Signatures
 
 ```c++
 size_t size() const;
 ```
 
-##### Return value
+### Return value
 
 The size (ie the number of bytes used) of the `JsonBuffer`.
 
-##### Example
+### Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -42,7 +42,7 @@ would print this on an 8-bit AVR:
 8
 ```
 
-##### See also
+### See also
 
 * [`JsonArray::size()`]({{site.baseurl}}/api/jsonarray/size/)
 * [`JsonObject::size()`]({{site.baseurl}}/api/jsonobject/size/)

@@ -7,12 +7,12 @@ tags: api
 api-group: JsonObject
 ---
 
-##### Description
+### Description
 
 A shortcut for [`JsonObject::get()`]({{site.baseurl}}/api/jsonobject/get/) and
 [`JsonObject::set()`]({{site.baseurl}}/api/jsonobject/set/), with a map-like syntax.
 
-##### Signatures
+### Signatures
 
 ```c++
 JsonVariant& operator[](const char* key);
@@ -26,15 +26,15 @@ const JsonVariant& operator[](const std::string& key) const;
 const JsonVariant& operator[](const __FlashStringHelper* key) const;
 ```
 
-##### Arguments
+### Arguments
 
 `key`: the key that the value will be associated to.
 
-##### Return value
+### Return value
 
 A reference to the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) in the object.
 
-##### Remarks
+### Remarks
 
 When you add a value using a `String`, an `std::string` or a
 `const __FlashStringHelper*` for key, a copy of the string is made, causing the
@@ -43,7 +43,7 @@ The memory allocated for the copy will only be freed when the whole
 [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is discarded.
 To avoid this behavior, use a `const char*` key instead.
 
-##### Example
+### Example
 
 ```c++
 JsonObject& object = jsonBuffer::createObject();
@@ -51,7 +51,7 @@ object["hello"] = "world";
 const char* world = object["hello"];
 ```
 
-##### See also
+### See also
 
 * [`JsonObject::get<T>()`]({{site.baseurl}}/api/jsonobject/get/)
 * [`JsonObject::set()`]({{site.baseurl}}/api/jsonobject/set/)

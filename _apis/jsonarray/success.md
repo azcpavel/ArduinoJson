@@ -7,25 +7,25 @@ tags: api
 api-group: JsonArray
 ---
 
-##### Description
+### Description
 
 Tells if the array is valid, which can be used:
 
 1. to check if the array was successfully parsed, or
 2. to check if the array was successfully allocated.
 
-##### Signatures
+### Signatures
 
 ```c++
 bool success() const;
 ```
 
-##### Return value
+### Return value
 
 `true` if the array was successfully parsed/allocated.
 `false` if the parsing/allocation failed.
 
-##### Examples
+### Examples
 
 Example 1: parsing success:
 
@@ -59,6 +59,6 @@ JsonArray& array = jsonBuffer.createArray();
 Serial.println(array.success()); // false
 ```
 
-##### See also
+### See also
 
 * [`JsonObject::success()`]({{site.baseurl}}/api/jsonobject/success/)

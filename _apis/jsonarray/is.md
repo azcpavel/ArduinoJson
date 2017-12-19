@@ -7,11 +7,11 @@ tags: api
 api-group: JsonArray
 ---
 
-##### Description
+### Description
 
 Tests if the value at specified index has the type `T`.
 
-##### Signature
+### Signature
 
 ```c++
 bool is<bool>              (size_t index) const;
@@ -37,18 +37,18 @@ bool is<JsonArray>         (size_t index) const;
 bool is<JsonObject>        (size_t index) const;
 ```
 
-##### Arguments
+### Arguments
 
 `index`: the index of the value in the array.
 
 `T`: the type to test.
 
-##### Return value
+### Return value
 
 * `true` if value at specified index matches the type `T`,
 * `false` if not
 
-##### Remarks
+### Remarks
 
 Different C++ types can store the same JSON value, so `is<T>()` can return `true` for several `T`s. For example, `is<float>()` always returns the same value as `is<double>()` .
 
@@ -66,7 +66,7 @@ The table below gives the correspondence between the JSON type and the C++ types
 
 Caution: `is<float>()` and `is<double>()` returns `true` for integers too.
 
-##### Example
+### Example
 
 ```c++
 char json[] = "[\"pi\",3.14]";
@@ -81,7 +81,7 @@ firstIsString = array[0].is<char*>(); // <- true
 secondIsFloat = array[1].is<float>(); // <- true
 ```
 
-##### See also
+### See also
 
 * [`JsonVariant::is<T>()`]({{site.baseurl}}/api/jsonvariant/is/)
 * [`JsonObject::is<T>()`]({{site.baseurl}}/api/jsonobject/is/)

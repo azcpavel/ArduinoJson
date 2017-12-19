@@ -7,7 +7,7 @@ tags: api
 api-group: class
 ---
 
-##### Description
+### Description
 
 A collection of [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/)
 
@@ -16,7 +16,7 @@ Instead, you must use  [`JsonBuffer::createArray()`]({{site.baseurl}}/api/jsonbu
 
 Because the memory of a `JsonArray` is located a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), you always manipulate it through reference and you cannot copy it.
 
-##### Example
+### Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -29,7 +29,7 @@ char json[] = "[1,2,3]";
 JsonArray& array2 = jsonBuffer.parseArray(json);
 ```
 
-##### Member functions
+### Member functions
 
 <ul>
 {% assign methods = site.apis | where:"api-group",page.title %}
@@ -38,14 +38,14 @@ JsonArray& array2 = jsonBuffer.parseArray(json);
 {% endfor %}
 </ul>
 
-##### See also
+### See also
 
 * [`JsonObject`]({{site.baseurl}}/api/jsonobject/)
 * [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/)
 * [Serialization tutorial]({{site.baseurl}}/doc/encoding/)
 * [Deserialization tutorial]({{site.baseurl}}/doc/decoding/)
 
-##### Keep learning
+### Keep learning
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 

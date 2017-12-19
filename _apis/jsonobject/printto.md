@@ -7,13 +7,13 @@ tags: api
 api-group: JsonObject
 ---
 
-##### Description
+### Description
 
 Serializes the `JsonObject` to create a *minified* JSON document.
 
 If you want a *prettified* JSON document, use [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/).
 
-##### Signatures
+### Signatures
 
 ```c++
 size_t printTo(char* buffer, size_t size) const;
@@ -23,7 +23,7 @@ size_t printTo(String &) const;
 size_t printTo(std::string &) const;
 ```
 
-##### Arguments
+### Arguments
 
 The destination where the JSON document should be written.
 It can be either:
@@ -32,11 +32,11 @@ It can be either:
 * an implementation of `Print` (like `Serial`, `EthernetClient`...),
 * a `String` or an `std::string`.
 
-##### Return value
+### Return value
 
 The number of bytes written.
 
-##### Example
+### Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -51,7 +51,7 @@ will write the following string to the serial port:
 {"hello":"world"}
 ```
 
-##### See also
+### See also
 
 * [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/)
 * [`JsonObject::measureLength()`]({{site.baseurl}}/api/jsonobject/measurelength/)
