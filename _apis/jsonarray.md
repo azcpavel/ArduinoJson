@@ -38,4 +38,22 @@ JsonArray& array2 = jsonBuffer.parseArray(json);
 {% endfor %}
 </ul>
 
+##### See also
+
+* [`JsonObject`]({{site.baseurl}}/api/jsonobject/)
+* [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/)
+* [Serialization tutorial]({{site.baseurl}}/doc/encoding/)
+* [Deserialization tutorial]({{site.baseurl}}/doc/decoding/)
+
+##### Keep learning
+
+<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+
+The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson.
+
+Chapter 3 is a tutorial on deserialization; it explains the various ways to convert an input JSON document into a `JsonArray`.
+
+Chapter 4 is a tutorial on serialization; it explains the various was to convert a `JsonArray` into a JSON document.
+
+Chapter 5 explains how `JsonArray` is implemented.
 
