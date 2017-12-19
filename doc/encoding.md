@@ -41,7 +41,7 @@ root.printTo(Serial);
 
 ## Step 1: Reserve memory space
 
-Arduino JSON uses a preallocated memory pool to store the object tree; this is done by the `StaticJsonBuffer`.
+ArduinoJson uses a preallocated memory pool to store the object tree; this is done by the `StaticJsonBuffer`.
 
 In the case of a `StaticJsonBuffer`, the memory is reserved on the stack. The template parameter (`200` in the example) is the number of bytes to reserved.
 
@@ -49,7 +49,7 @@ Alternatively, you can use a `DynamicJsonBuffer` that allocates memory on the he
 
 See also:
 
-* [Arduino JSON memory model]({{ site.baseurl }}/doc/memory/)
+* [ArduinoJson memory model]({{ site.baseurl }}/doc/memory/)
 * [FAQ: What are the differences between StaticJsonBuffer and DynamicJsonBuffer?]({{ site.baseurl }}/faq/what-are-the-differences-between-staticjsonbuffer-and-dynamicjsonbuffer)
 * [FAQ: How to determine the buffer size?]({{ site.baseurl }}/faq/how-to-determine-the-buffer-size)
 

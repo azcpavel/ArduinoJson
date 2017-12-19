@@ -10,7 +10,7 @@ tags: doc
 
 ### Introducing `StaticJsonBuffer`
 
-Arduino JSON uses a preallocated memory pool to store the object tree, this is done by the `StaticJsonBuffer` class.
+ArduinoJson uses a preallocated memory pool to store the object tree, this is done by the `StaticJsonBuffer` class.
 
 Before using any function of the library you need to create a `StaticJsonBuffer`. Then you can use this instance to create arrays and objects, or parse a JSON string.
 

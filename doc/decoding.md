@@ -1,10 +1,24 @@
 ---
 layout: doc
 tags: doc
-title: Decoding JSON
+title: Deserialization tutorial
 keywords: ArduinoJson,parse,decode
-description: How to parse JSON on Arduino with ArduinoJson
+description: This page teaches how to deserialize a JSON document using the library ArduinoJson.
 ---
+
+There are several ways to deserialize a JSON document; in this tutorial, we'll only see the simplest.
+
+## The example
+
+For our example, we'll consider the following JSON document:
+
+```json
+{"sensor":"gps","time":1351824120,"data":[48.756080,2.302038]}
+```
+
+## The steps
+
+### 1. Include ArduinoJson
 
 Before writing any code, don't forget to include the header:
 
@@ -12,169 +26,124 @@ Before writing any code, don't forget to include the header:
 #include <ArduinoJson.h>
 ```
 
-## Example
+### 2. Place the JSON document in memory
 
-Here an example that parse the string `{"sensor":"gps","time":1351824120,"data":[48.756080,2.302038]}`:
+In this tutorial, we use ArduinoJson in the zero-copy mode, so the input must be writable.
+
+We'll place the document in stack memory with the following statement:
 
 ```c++
 char json[] = "{\"sensor\":\"gps\",\"time\":1351824120,\"data\":[48.756080,2.302038]}";
+```
 
-//
-// Step 1: Reserve memory space
-//
+### 3. Allocate a JsonBuffer
+
+ArduinoJson uses a preallocated memory pool, the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/)
+
+In this tutorial, we create a 200-byte pool in the stack, with the following statement:
+
+```c++
 StaticJsonBuffer<200> jsonBuffer;
-
-//
-// Step 2: Deserialize the JSON string
-//
-JsonObject& root = jsonBuffer.parseObject(json);
-
-if (!root.success())
-{
-  Serial.println("parseObject() failed");
-  return;
-}
-
-//
-// Step 3: Retrieve the values
-//
-const char* sensor    = root["sensor"];
-long        time      = root["time"];
-double      latitude  = root["data"][0];
-double      longitude = root["data"][1];
 ```
 
-## Step 1: Reserve memory space
+You can learn more on this topic in the page ["ArduinoJson memory model"]({{ site.baseurl }}/doc/memory/).
 
-Arduino JSON uses a preallocated memory pool to store the object tree, this is done by the `StaticJsonBuffer`.
+### 4. Deserialize the JSON document
 
-Before continuing please read the page [Arduino JSON memory model]({{ site.baseurl }}/doc/memory/) that explains everything you need to know about `StaticJsonBuffer`.
-
-## Step 2: Parse the JSON string
-
-You invoke the JSON parser through the instance of `StaticJsonBuffer`.
-It exposes two functions for parsing JSON:
-
-1. `parseArray()` that returns a reference to a `JsonArray`
-2. `parseObject()` that returns a reference to a `JsonObject`
-
-Let's see an example.
-Say we want to parse `{"sensor":"gps","time":1351824120,"data":[48.756080,2.302038]}`, it's an object so we call `parseObject()` as follows:
+To deserialize a JSON object, you need to call [`JsonBuffer::parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/). This function takes the JSON document as input and returns a reference to a [`JsonObject`]({{site.baseurl}}/api/jsonobject/).
 
 ```c++
-char json[] = "{\"sensor\":\"gps\",\"time\":1351824120,\"data\":[48.756080,2.302038]}";
-
 JsonObject& root = jsonBuffer.parseObject(json);
 ```
 
-As you can see `parseObject()` takes a `char*` as a parameter.
-Be careful, it's not a `const char*`, the memory must be writable.
-Indeed, the parser will modify the string in two cases:
+It's important to understand that the [`JsonObject`]({{site.baseurl}}/api/jsonobject/) resides in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) and will be destructed with it.
 
-1. to insert string endings (character `\0`),
-2. to translate escaped characters (like `\n` or `\t`).
+### 5. Check if deserialization succeeded
 
-Another thing that you must keep in mind is that the string (`char json[]` in the example above) must stay in memory during the whole parsing process.
-That is because the in memory object tree will store pointer to chunks of the string, so as to avoid any memory duplication. 
-
-Now, to check if the parsing was successful, you can call `JsonObject::success()`:
+To check if the parsing was successful, you call [`JsonObject::success()`]({{site.baseurl}}/api/jsonobject/success/):
 
 ```c++
-if (!root.success())
-{
-    // Parsing failed
+if (!root.success()) {
+  // Parsing failed :-(
 }
 ```
 
-There are a few reason why parsing can fail.
-Please read [Why parsing fails?]({{site.baseurl}}/faq/why-parsing-fails/) to learn more.
+There are only a few reasons why parsing can fail; please read [Why parsing fails?]({{site.baseurl}}/faq/why-parsing-fails/).
 
-We just saw how to parse an object, there is nothing more to say for arrays, the procedure is exactly the same.
+### 6. Retrieve the values
 
-## Step 3: Retrieve the values
+[`JsonObject`]({{site.baseurl}}/api/jsonobject/) provides an in-memory representation of the JSON document; you can use it to extract values from the document.
 
-Now that the object or array is in memory, you can extract the data very easily.
-
-In this section, we'll see how to do it with a `JsonObject`.
-Once again, there is nothing more to say about arrays, `JsonArray` works exactly the same as `JsonObject`.
-
-#### Subscript operator
-
-The simplest way is to use the subscript operator of `JsonObject`:
+In most case, you can simply use [`JsonObject::operator[]`]({{site.baseurl}}/api/jsonobject/subscript/):
 
 ```c++
 const char* sensor = root["sensor"];
 long time = root["time"];
-```
-
-You can chain the subscript operator if you have nested arrays or objects:
-
-```c++
 double latitude  = root["data"][0];
 double longitude = root["data"][1];
 ```
 
-But alternatively, you can get a reference to the nested array:
+However, if the same array is used many times, it's faster to extract a reference to the [`JsonArray`]({{site.baseurl}}/api/jsonarray/):
 
 ```c++
-JsonArray& nestedArray = root["data"];
+JsonArray& data = root["data"];
+double latitude  = data[0];
+double longitude = data[1];
 ```
 
-#### Casting values
-
-In the previous examples, the values were implicitly casted to the target type.
-You can also do this explicitly
+## Complete source code
 
 ```c++
-const char* sensor = root["sensor"].asString();
-long time = root["time"].as<long>();
-JsonArray& nestedArray = root["data"].asArray();
-```
+// Step 1
+#include <ArduinoJson.h>
 
-If the actual value doesn't match the target type, a default value will be return:
+void setup() {
+  Serial.begin(9600);
+  while (!Serial) continue;
 
-1. `false` for boolean values
-2. `0` for integer values
-3. `NULL` for string values
-4. `JsonArray::invalid()` for nested arrays
-5. `JsonObject::invalid()` for nested object
+  // Step 2
+  char json[] =
+      "{\"sensor\":\"gps\",\"time\":1351824120,\"data\":[48.756080,2.302038]}";
 
-#### Check values
+  // Step 3
+  StaticJsonBuffer<200> jsonBuffer;
 
-If you want to know if some value is present, call `containsKey()`:
+  // Step 4
+  JsonObject& root = jsonBuffer.parseObject(json);
 
-```c++
-if (root.containsKey("extra"))
-{
-    // root["extra"] is valid
+  // Step 5
+  if (!root.success()) {
+    Serial.println("parseObject() failed");
+    return;
+  }
+
+  // Step 6
+  const char* sensor = root["sensor"];
+  long time = root["time"];
+  double latitude = root["data"][0];
+  double longitude = root["data"][1];
+
+  Serial.println(sensor);
+  Serial.println(time);
+  Serial.println(latitude, 6);
+  Serial.println(longitude, 6);
 }
+
+void loop() {}
 ```
 
-If you want to check the type value has a certain type, call `is<T>()`:
+## See also
 
-```c++
-if (root["extra"].is<JsonArray&>())
-{
-    // root["extra"] is an array
-}
-```
+* Example [JsonParserExample.ino]({{site.baseurl}}/example/parser/)
 
-You can also iterate through the key-value pairs of the object:
-
-```c++
-for (JsonPair& pair : someObject)
-{
-  Serial.println(pair.key);
-  Serial.println(pair.value.as<char*>());
-}
-```
-
-## Where to go next?
+## Keep learning
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-In the [ArduinoJson ebook](https://leanpub.com/arduinojson/), there is a step-by-step tutorial to learn how to parse JSON with the library.
+This tutorial was only a quickstart introduction to the library. For a complete course on ArduinoJson, I strongly recommend reading the book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/).
 
-The book also covers the details of memory management. It explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
+Chapter 3 is a much longer tutorial on deserialization. It starts with a simple example, like this one, but then gradually adds complexity to show all the features of the library. At the end of the chapter, we see how to download weather forecast from Yahoo Weather.
 
-If you're not familiar with C++ references, the book also contains a quick C++ course to catch up with those things. For example, this chapter also explains the differences between a `char[]`, a `char*` or a `String`.
+Chapter 2 is a quick C++ course to catch up with concepts like stack and heap memory, pointer, reference... I know from experience that new users of ArduinoJson have more difficulties with the language than with the library; that's why the book starts with this course.
+
+If you want to see what's more in ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/), please check out the Table of Content.
