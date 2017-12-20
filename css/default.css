@@ -6,3 +6,36 @@
 	font-style: italic;
 	color: gray;
 }
+
+h2 {
+	margin-top: 1em;
+}
+
+h3 {
+	margin-top: 0.5em;
+}
+
+h4 {
+	margin-top: 0.3em;
+}
+
+.page-header {
+	background: #00878F;
+	color: #62AEB2;
+	padding: 2em;
+	margin-bottom: 2em;
+}
+
+.page-header h1 {
+	color: white;
+}
+
+.page-footer {
+	background: #343a40;
+	margin-top: 2em;
+}
+
+.breadcrumb {
+	background-color: transparent;
+	margin-bottom: 0;
+}

@@ -8,13 +8,13 @@ tags: doc
 
 Here are the common ways to install ArduinoJson.
 
-# Option 1: Use the Arduino Library manager
+## Option 1: Use the Arduino Library manager
 
 Choose this method if you use Arduino 1.6.x or newer.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GUTpaY1YaXo?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-# Option 2: Download the single header
+## Option 2: Download the single header
 
 You can download ArduinoJson as a single `.h` file.
 

@@ -2,17 +2,23 @@
 layout: default
 ---
 
-<div class="container">
-	<div class="jumbotron">
-		<h1>ArduinoJson: User Manual</h1>
-		<h2>{{ page.title }}</h2>
+<div class="page-header">
+	<div class="container">
+		<p>User Manual</p>
+		<h1>{{ page.title }}</h1>
 	</div>
+</div>
+<div class="container">
   	<div class="clearfix">
    		{{ content }}
    	</div>
-	<ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Home</a></li>
-		<li class="breadcrumb-item"><a href="{{ site.baseurl }}/doc/">Manual</a></li>
-		<li class="breadcrumb-item active">{{ page.title }}</li>
-	</ol>
+</div>
+<div class="page-footer">
+	<div class="container">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Home</a></li>
+			<li class="breadcrumb-item"><a href="{{ site.baseurl }}/doc/">Manual</a></li>
+			<li class="breadcrumb-item active">{{ page.title }}</li>
+		</ol>
+	</div>
 </div>
