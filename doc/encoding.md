@@ -1,10 +1,26 @@
 ---
 layout: doc
 tags: doc
-title: Encoding JSON
+title: Serialization tutorial
 keywords: ArduinoJson,serialize,encode,generate
-description: How to generate JSON on Arduino with ArduinoJson
+description: This page teaches how to serialize a JSON document using the library ArduinoJson.
 ---
+
+There are several ways to serialize a JSON document; in this tutorial, we'll only see the simplest.
+
+Before writing any code, don't forget to include the header:
+
+## The example
+
+For our example, we'll consider the following JSON document:
+
+```json
+{"sensor":"gps","time":1351824120,"data":[48.756080,2.302038]}
+```
+
+## The steps
+
+### 1. Include ArduinoJson
 
 Before writing any code, don't forget to include the header:
 
@@ -12,173 +28,115 @@ Before writing any code, don't forget to include the header:
 #include <ArduinoJson.h>
 ```
 
-## Example
+### 2. Allocate a JsonBuffer
 
-Here is an example to generate `{"sensor":"gps","time":1351824120,"data":[48.756080,2.302038]}`
+ArduinoJson uses a memory pool, the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), to perform all memory allocations.
+
+In this tutorial, we create a 200-byte pool in the stack, with the following statement:
 
 ```c++
-//
-// Step 1: Reserve memory space
-//
 StaticJsonBuffer<200> jsonBuffer;
+```
 
-//
-// Step 2: Build object tree in memory
-//
+You can learn more on this topic in the page ["ArduinoJson memory model"]({{ site.baseurl }}/doc/memory/).
+
+### 3. Create object tree in memory
+
+We'll now create an in-memory representation of the JSON document.
+
+The document contains a JSON object as its root, so we start by creating a [`JsonObject`]({{site.baseurl}}/api/jsonobject/). We do that by calling [`JsonBuffer::createObject()`]({{site.baseurl}}/api/jsonbuffer/createobject/)
+
+```c++
 JsonObject& root = jsonBuffer.createObject();
+```
+
+It's important to understand that the [`JsonObject`]({{site.baseurl}}/api/jsonobject/) resides in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) and will be destructed with it.
+
+Now we can add values to the root object:
+
+```c++
 root["sensor"] = "gps";
 root["time"] = 1351824120;
+```
 
+To create the nested array "data", we need to call [`JsonObject::createNestedArray()`]({{site.baseurl}}/api/jsonobject/createnestedarray/):
+
+```c++
 JsonArray& data = root.createNestedArray("data");
+```
+
+To add the values in the array, we need to call [`JsonArray::add()`]({{site.baseurl}}/api/jsonarray/add/):
+
+```c++
 data.add(48.756080);
 data.add(2.302038);
+```
 
-//
-// Step 3: Generate the JSON string
-//
+### 4. Serialize the document
+
+Now that we have an in-memory representation of the JSON document, we can to convert it into a string; this step is called "serialization".
+
+To serialize a [`JsonObject`]({{site.baseurl}}/api/jsonobject/), we just need to call [`JsonObject::printTo()`]({{site.baseurl}}/api/jsonobject/printto/) and specify the destination.
+
+For example, we can send the JSON document to the serial port:
+
+```c++
 root.printTo(Serial);
 ```
 
-## Step 1: Reserve memory space
+The statement above produces a minified JSON document.
 
-ArduinoJson uses a preallocated memory pool to store the object tree; this is done by the `StaticJsonBuffer`.
-
-In the case of a `StaticJsonBuffer`, the memory is reserved on the stack. The template parameter (`200` in the example) is the number of bytes to reserved.
-
-Alternatively, you can use a `DynamicJsonBuffer` that allocates memory on the heap and grow as required. It is the preferred way for devices with a significant amount of RAM, like the ESP8266.
-
-See also:
-
-* [ArduinoJson memory model]({{ site.baseurl }}/doc/memory/)
-* [FAQ: What are the differences between StaticJsonBuffer and DynamicJsonBuffer?]({{ site.baseurl }}/faq/what-are-the-differences-between-staticjsonbuffer-and-dynamicjsonbuffer)
-* [FAQ: How to determine the buffer size?]({{ site.baseurl }}/faq/how-to-determine-the-buffer-size)
-
-## Step 2: Build object tree in memory
-
-Once the `JsonBuffer` is ready, you can use it to build your in-memory representation of the JSON string.
-
-#### Arrays
-
-You create an array like this:
+To produce a prettified JSON document, we need to call [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/):
 
 ```c++
-JsonArray& array = jsonBuffer.createArray();
+root.prettyPrintTo(Serial);
 ```
 
-Don't forget the `&` after `JsonArray`; it needs to be a reference to the array.
-
-Then you can add strings, integer, booleans, etc:
+## Complete source code
 
 ```c++
-array.add("bazinga!");
-array.add(42);
-array.add(true);
+// Step 1
+#include <ArduinoJson.h>
+
+void setup() {
+  Serial.begin(9600);
+  while (!Serial) continue;
+
+  // Step 2
+  StaticJsonBuffer<200> jsonBuffer;
+
+  // Step 3
+  JsonObject& root = jsonBuffer.createObject();
+  root["sensor"] = "gps";
+  root["time"] = 1351824120;
+  JsonArray& data = root.createNestedArray("data");
+  data.add(48.756080);
+  data.add(2.302038);
+
+  // Step 4
+  root.printTo(Serial);
+  Serial.println();
+  root.prettyPrintTo(Serial);
+}
+
+void loop() {}
 ```
 
-You can add a nested array or object if you have a reference to it.
-Or simpler, you can create nested array or nested objects from the array:
+## See also
 
-```c++
-JsonArray&  nestedArray  = array.createNestedArray();
-JsonObject& nestedObject = array.createNestedObject();
-```
+* [JsonGeneratorExample.ino]({{site.baseurl}}/example/generator/) is the example described in this tutorial.
+* [JsonServer.ino]({{site.baseurl}}/example/http-server/) sends the JSON document in an HTTP response.
+* [JsonUdpBeacon.ino]({{site.baseurl}}/example/udp-beacon/) sends the JSON document in a UDP datagram.
+* [JsonConfigFile.ino]({{site.baseurl}}/example/config/) saves the JSON document on an SD card.
 
-#### Objects
-
-You create an object like this:
-
-```c++
-JsonObject& object = jsonBuffer.createObject();
-```
-
-Again, don't forget the `&` after `JsonObject`, it needs to be a reference to the object.
-
-Then you can add strings, integer, booleans, etc:
-
-```c++
-object["key1"] = "bazinga!";
-object["key2"] = 42;
-object["key3"] = true;
-object["key4"] = 3.1415;
-```
-
-You can add a nested array or object if you have a reference to it.
-Or simpler, you can create nested array or nested objects from the object:
-
-```c++
-JsonArray&  nestedArray  = object.createNestedArray("key5");
-JsonObject& nestedObject = object.createNestedObject("key6");
-```
-
-> ##### Other JsonObject functions
-> * `object.set(key, value)` is a synonym for `object[key] = value`
-> * `object.containsKey(key)` returns `true` is the `key` is present in `object`
-> * `object.remove(key)` removes the `value` associated with `key`
-{: .alert .alert-info }
-
-## Step 3: Generate the JSON string
-
-There are two ways tho get the resulting JSON string.
-
-Depending on your project, you may need to dump the string in a classic `char[]` or send it to a `Print` implementation like `Serial` or `EthernetClient`.
-
-Both ways are the easy way :-)
-
-#### Use a classic `char[]`
-
-Whether you have a `JsonArray&` or a `JsonObject&`, simply call `printTo()` with the destination buffer, like so:
-
-```c++
-char buffer[256];
-array.printTo(buffer, sizeof(buffer));
-```
-
-> ##### Want an indented output?
-> By default the generated JSON is as small as possible. It contains no extra space, nor line break.
-> But if you want an indented, more readable output, you can.
-> Simply call `prettyPrintTo` instead of `printTo()`:
-> 
-> ```c++
-> array.prettyPrintTo(buffer, sizeof(buffer));
-> ```
-{: .alert .alert-info }
-
-#### Send to a `Print` implementation
-
-It is very likely that the generated JSON ends up in a stream like `Serial` or `EthernetClient `, so you can save some time and memory by doing this:
-
-```c++
-array.printTo(Serial);
-```
-
-And, of course if you need an indented JSON string:
-
-```c++
-array.prettyPrintTo(Serial);
-```
-
-> ##### About the Print interface
-> The library is designed to send the JSON string to an implementation of the `Print` interface that is part of Arduino.
-> In the example above we used `Serial`, but they are many other implementations that would work as well, including: `HardwareSerial`,  `SoftwareSerial`, `LiquidCrystal`, `EthernetClient`, `WiFiClient`, `Wire`...
-> When you use this library out of the Arduino environment, it uses its own implementation of `Print` and everything is the same.
-{: .alert .alert-info }
-
-#### Length of the output data
-
-If you need to know the length of the output data beforehand, use the `measureLength()` method:
-
-```c++
-int len = array.measureLength();
-```
-
-That comes in handy when you need to calculate the `Content-Length` when posting JSON data over HTTP.
-
-## Where to go next?
+## Keep learning
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-In the [ArduinoJson ebook](https://leanpub.com/arduinojson/), there is a step-by-step tutorial to learn how to serialize JSON with the library.
+This tutorial was only a quickstart introduction to the library. For a complete course on ArduinoJson, I strongly recommend reading the book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/).
 
-The book contains a brand new tutorial on JSON serialization.
+Chapter 4 is a much longer tutorial on serialization. It starts with a simple example, like this one, but then gradually adds complexity to show all the features of the library. At the end of the chapter, we see how to upload measured data to Adafruit IO.
 
-If you're not familiar with C++ references, the book also contains a quick C++ course to catch up with those things. For example, this chapter also explains the differences between a `char[]`, a `char*` or a `String`.
+Chapter 2 is a quick C++ course to catch up with concepts like stack and heap memory, pointer, reference... I know from experience that new users of ArduinoJson have more difficulties with the language than with the library; that's why the book starts with this course.
+
+If you want to see what's more in ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/), please check out the Table of Content.

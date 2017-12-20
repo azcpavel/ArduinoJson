@@ -38,7 +38,7 @@ char json[] = "{\"sensor\":\"gps\",\"time\":1351824120,\"data\":[48.756080,2.302
 
 ### 3. Allocate a JsonBuffer
 
-ArduinoJson uses a preallocated memory pool, the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/)
+ArduinoJson uses a memory pool, the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), to perform all memory allocations.
 
 In this tutorial, we create a 200-byte pool in the stack, with the following statement:
 
@@ -134,7 +134,9 @@ void loop() {}
 
 ## See also
 
-* Example [JsonParserExample.ino]({{site.baseurl}}/example/parser/)
+* [JsonParserExample.ino]({{site.baseurl}}/example/parser/) is the example described in this tutorial.
+* [JsonHttpClient.ino]({{site.baseurl}}/example/http-client/) deserialize the JSON document from an HTTP response.
+* [JsonConfigFile.ino]({{site.baseurl}}/example/config/) loads the JSON document on an SD card.
 
 ## Keep learning
 
