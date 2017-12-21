@@ -73,8 +73,3 @@ const char* world = root["hello"][0]["new"];
 ```
 
 The [ArduinoJson Assistant]({{site.baseurl}}/assistant/) can generate the program skeleton for you.
-
-See:
-
-* Issues [#187](https://github.com/bblanchon/ArduinoJson/issues/187), [#203](https://github.com/bblanchon/ArduinoJson/issues/203) and [#245](https://github.com/bblanchon/ArduinoJson/issues/245).
-* [ArduinoJson Assistant]({{site.baseurl}}/assistant/)

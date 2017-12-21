@@ -3,7 +3,7 @@ title: Compatible with Flash Strings
 popularity: 50
 ---
 
-ArduinoJson works directly with strings stored in program memory (<code>PROGMEM</code>)
+ArduinoJson works directly with strings stored in program memory (`PROGMEM`)
 
 You can use a Flash String as JSON input
 

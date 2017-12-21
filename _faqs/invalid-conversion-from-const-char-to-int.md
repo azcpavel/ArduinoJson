@@ -36,9 +36,9 @@ const char* name = modules["hello"][0];
 
 You'll get the following compilation error:
 
-<code>
+```text
 error: invalid conversion from 'const char*' to 'size_t {aka unsigned int}' [-fpermissive]
-</code>
+```
 
 This is because `modules` is an array of object, as such it's indexed by an integer, not by a string.
 

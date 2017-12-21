@@ -14,7 +14,7 @@ The parsing functions, [`parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearr
 2. [The `StaticJsonBuffer` is too small](#case-2-the-staticjsonbuffer-is-too-small)
 3. [The `StaticJsonBuffer` is too big (stack overflow)](#case-3-the-staticjsonbuffer-is-too-big)
 4. [The `DynamicJsonBuffer` fails to allocate memory](#case-4-the-dynamicjsonbuffer-fails-to-allocate-memory)
-5. [You called [`parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/) instead of `parseArray()`](#case-5-you-called-parseobject-instead-of-parsearray)
+5. [You called `parseObject()` instead of `parseArray()`](#case-5-you-called-parseobject-instead-of-parsearray)
 6. [The nesting limit is too low](#case-6-the-nesting-limit-is-too-low)
 
 ## Case 1: The input is not a valid JSON

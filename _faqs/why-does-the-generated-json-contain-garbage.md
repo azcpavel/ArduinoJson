@@ -43,4 +43,4 @@ This is wrong because the [`JsonObject`]({{site.baseurl}}/api/jsonobject/) now c
 See also:
 
 * [Avoiding pitfalls: Do not assume that strings are copied](https://github.com/bblanchon/ArduinoJson/wiki/Avoiding-pitfalls#6-do-not-assume-that-strings-are-copied)
-* Issues [#364](https://github.com/bblanchon/ArduinoJson/issues/364), [#366](https://github.com/bblanchon/ArduinoJson/issues/366)
+* [`JsonBuffer::strdup()`]({{site.baseurl}}/api/jsonbuffer/strdup/)

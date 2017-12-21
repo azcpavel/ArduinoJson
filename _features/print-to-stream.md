@@ -3,7 +3,7 @@ title: Print to Stream
 popularity: 40
 ---
 
-ArduinoJson is able to print directly to a <code>Print</code> or <code>std::ostream</code>
+ArduinoJson is able to print directly to a `Print` or `std::ostream`
 
 ```c++
 // Send the JSON to the serial port

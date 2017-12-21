@@ -3,7 +3,7 @@ title: Parse From Stream
 popularity: 60
 ---
 
-ArduinoJson is able to parse directly from an input <code>Stream</code> or <code>std::istream</code>
+ArduinoJson is able to parse directly from an input `Stream` or `std::istream`
 
 Parse input from the serial port:
 

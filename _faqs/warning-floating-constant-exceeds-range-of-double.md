@@ -10,18 +10,18 @@ popularity: 11
 
 NOTE: this is only applicable for ArduinoJson strictly older to 5.11.1
 
-This may happen if you're targetting a platform where `double`s have only 32-bits.
+This may happen if you're targeting a platform where `double`s have only 32-bits.
 
 Usually ArduinoJson can detect this, but when it doesn't you may have the following errors:
 
-```
+```text
 warning: floating constant exceeds range of 'double' [-Woverflow]
 warning: floating constant truncated to zero [-Woverflow]
 ```
 
 or
 
-```
+```text
 Error[Pe030]: floating constant is out of range
 ```
 
