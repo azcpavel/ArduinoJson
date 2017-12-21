@@ -1,5 +1,5 @@
 ---
-title: How to write a function that works with both [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/)?
+title: How to write a function that works with both <code>JsonArray</code> and <code>JsonObject</code>?
 description: To work with both JsonArray and JsonObject, use a JsonVariant
 keywords: ArduinoJson,JsonArray,JsonObject
 layout: faq

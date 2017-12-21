@@ -8,14 +8,14 @@ faq-group: Common
 popularity: 116
 ---
 
-If you try to reassign a `JsonArray&` or a `JsonObject&`, you'll have the following error:
+If you try to reassign a [`JsonArray`]({{site.baseurl}}/api/jsonarray/) or a [`JsonObject`]({{site.baseurl}}/api/jsonobject/), you'll have the following error:
 
 ```
 error: use of deleted function 'ArduinoJson::JsonArray& ArduinoJson::JsonArray::operator=(const ArduinoJson::JsonArray&)'
 error: use of deleted function 'ArduinoJson::JsonObject& ArduinoJson::JsonObject::operator=(const ArduinoJson::JsonObject&)'
 ```
 
-Indeed, you cannot reassign a `JsonObject&`.
+Indeed, [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/) have their assignment operators private, so you cannot reassign them. Moreover, it's impossible to reassign a C++ reference.
 
 One solution is to use a pointer instead.
 
