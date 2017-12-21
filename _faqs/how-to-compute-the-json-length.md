@@ -8,12 +8,11 @@ faq-group: Serialization
 popularity: 58
 ---
 
-Use `measureLength()` to compute the number of characters that will be printed by `printTo()`.
+Use [`measureLength()`]({{site.baseurl}}/api/jsonobject/measurelength/) to compute the number of characters that will be printed by [`printTo()`]({{site.baseurl}}/api/jsonobject/printto/).
 
-Use `measurePrettyLength()` to compute the number of characters that will be printed by `prettyPrintTo()`.
+Use [`measurePrettyLength()`]({{site.baseurl}}/api/jsonobject/measureprettylength/) to compute the number of characters that will be printed by [`prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/).
 
-None of these methods include the zero-terminator.
-So if you need to allocate a buffer, don't forget to add 1 to the size.
+None of these methods includes the zero-terminator; so, if you need to allocate a buffer, don't forget to add 1 to the size.
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -27,4 +26,3 @@ char json[size];
 root.printTo(json, size); // writes {"hello":"world"}
 ```
 
-See issues [#75](https://github.com/bblanchon/ArduinoJson/issues/75), [#94](https://github.com/bblanchon/ArduinoJson/issues/94), [#166](https://github.com/bblanchon/ArduinoJson/issues/166), [#178](https://github.com/bblanchon/ArduinoJson/issues/178) and [#268](https://github.com/bblanchon/ArduinoJson/issues/268).
