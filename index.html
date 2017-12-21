@@ -50,7 +50,7 @@ tags: home
       <div class="card m-4">
         <div class="card-body">
           {%if testimonial.avatar %}
-          <img src="{{testimonial.avatar}}" class="img-thumbnail float-right" style="width: 100px; height: 100px">
+          <img alt="{{testimonial.author}}" src="{{testimonial.avatar}}" class="img-thumbnail float-right" style="width: 100px; height: 100px">
           {% endif %}
           <blockquote class="card-bodyquote">
             <i>{{ testimonial.text }}</i>
@@ -58,9 +58,9 @@ tags: home
         </div>
         <div class="card-footer text-muted text-right">
           {%if testimonial.url %}
-          <a href={{testimonial.url}}>{{ testimonial.source }}</a>
+          <a href={{testimonial.url}}>{{ testimonial.author }} on {{ testimonial.site }}</a>
           {% else %}
-          {{ testimonial.source }}
+          {{ testimonial.author }} on {{ testimonial.site }}
           {% endif %}
         </div>
       </div>
