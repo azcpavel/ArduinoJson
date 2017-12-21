@@ -1,22 +1,26 @@
 <ol class="breadcrumb hidden-sm-down" vocab="http://schema.org/" typeof="BreadcrumbList">
-  {% assign position = 0 %}
-  {% for crumbitem in breadcrumbs %}
-    {% assign position = position  | plus: 1 %}
-
-    {% if forloop.last %}
-      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
-        {% if crumbitem.data["categories"] contains "news" %}{{ crumbitem.data["date"] | date: "%Y-%m-%d - "  }}{% endif %}
-        <span property="name">{{ crumbitem.title }}</span>
-        <meta property="position" content="{{ position }}" />
-      </li>
-      {% continue %}
-    {% endif %}
-
+  {%- assign position = 1 -%}
+  {%- for crumb in site.data.breadcrumbs -%}
+    {%- if (page.url contains crumb.url) and (page.url != crumb.url) -%}
     <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
-      <a property="item" typeof="WebPage" href="{{ crumbitem.url | prepend: site.baseurl }}">
-        <span property="name">{{ crumbitem.title }}</span>
-        <meta property="position" content="{{ position }}" />
+      <a property="item" typeof="WebPage" href="{{ crumb.url | prepend: site.baseurl }}">
+        <span property="name">{{ crumb.title }}</span>
       </a>
+      <meta property="position" content="{{ position }}" />
     </li>
-  {% endfor %}
+    {%- assign position = position | plus: 1 -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+    <a property="item" typeof="WebPage" href="{{ page.url | prepend: site.baseurl }}">
+      <span property="name">
+        {%- if page.categories contains "news" -%}
+        {{ page.date | date: "%Y-%m-%d - " }}
+        {%- endif -%}
+        {{ page.title }}
+      </span>
+    </a>
+    <meta property="position" content="{{ position }}" />
+  </li>
 </ol>
