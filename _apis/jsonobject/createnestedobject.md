@@ -7,11 +7,11 @@ tags: api
 api-group: JsonObject
 ---
 
-### Description
+## Description
 
 Creates a `JsonObject` as a child of the current object.
 
-### Signature
+## Signature
 
 ```c++
 JsonObject& createNestedObject(const char* key) const;
@@ -20,22 +20,22 @@ JsonObject& createNestedObject(const std::string& key) const; // duplicates key
 JsonObject& createNestedObject(const __FlashStringHelper* key) const; // duplicates key
 ```
 
-### Arguments
+## Arguments
 
 `key`: the key of the object in the object, can be a `const char*` or a `const String&`
 
-### Remarks
+## Remarks
 
 When you add a value using a `String` or a `std::string` for key, a copy of the string is made, causing the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) to grow.
 The memory allocated for the copy will only be freed when the whole [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is discarded.
 To avoid this behavior, use a `const char*` key instead.
 
-### Return value
+## Return value
 
 A reference to the new `JsonObject`.
 You can check `JsonObject::success()` to verify that the allocation succeeded.
 
-### Example
+## Example
 
 ```c++
 StaticJsonBuffer<256> jsonBuffer;
@@ -59,7 +59,7 @@ will print
 }
 ```
 
-### See also
+## See also
 
 * [`JsonObject::createNestedArray()`]({{site.baseurl}}/api/jsonobject/createnestedarray/)
 * [`JsonArray::createNestedObject()`]({{site.baseurl}}/api/jsonarray/createnestedobject/)

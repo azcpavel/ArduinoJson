@@ -7,25 +7,25 @@ tags: api
 api-group: JsonObject
 ---
 
-### Description
+## Description
 
 Tells if the object is valid, which can be used:
 
 1. to check if the object was successfully parsed, or
 2. to check if the object was successfully allocated.
 
-### Signatures
+## Signatures
 
 ```c++
 bool success() const;
 ```
 
-### Return value
+## Return value
 
 `true` if the object was successfully parsed/allocated.
 `false` if the parsing/allocation failed.
 
-### Examples
+## Examples
 
 Example 1: parsing success:
 
@@ -59,6 +59,6 @@ JsonObject& object = jsonBuffer.createObject();
 Serial.println(object.success()); // false
 ```
 
-### See also
+## See also
 
 * [`JsonArray::success()`]({{site.baseurl}}/api/jsonarray/success/)

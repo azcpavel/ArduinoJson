@@ -10,7 +10,7 @@ As [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is the corner stone of this 
 
 Make sure you read [ArduinoJson memory model]({{site.baseurl}}/doc/memory/) before going further.
 
-#### 1. Make `StaticJsonBuffer` big enough
+## 1. Make `StaticJsonBuffer` big enough
 
 By design, the library has no way to tell you why `parseArray()` or `parseObject()` failed.
 
@@ -29,7 +29,7 @@ See:
 * [FAQ: How to determine the buffer size?]({{site.baseurl}}/faq/how-to-determine-the-buffer-size/)
 
 
-#### 2. Make sure everything fits in memory
+## 2. Make sure everything fits in memory
 
 You may go into unpredictable trouble if you allocate more memory than your processor really has.
 It's a very common issue in embedded development.
@@ -53,7 +53,7 @@ See:
 * [FAQ: Why does my device crash or reboot?]({{site.baseurl}}/faq/why-does-my-device-crash-or-reboot/)
 
 
-#### 3. Keep the `StaticJsonBuffer` in memory long enough
+## 3. Keep the `StaticJsonBuffer` in memory long enough
 
 Remember that `JsonBuffer`'s functions return references.
 References don't contain data, they are just pointers to the actual.
@@ -71,7 +71,7 @@ JsonArray& getArray(char* json)
 
 because the local variable `buffer` will be *removed* from memory when the function [`parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/) returns, and the `JsonArray&` will point to an invalid location.
 
-#### 4. Don't reuse the same `JsonBuffer`
+## 4. Don't reuse the same `JsonBuffer`
 
 During is lifetime a `JsonBuffer` growth until it's discarded. If you try to reuse the same instance several times, it will rapidly get full. This is true for both `DynamicJsonBuffer` and `StaticJsonBuffer`.
 
@@ -85,7 +85,7 @@ See:
 * [FAQ: The first serialization succeeds, why do the next ones fail?]({{site.baseurl}}/faq/the-first-serialization-succeeds-why-do-the-next-ones-fail/)
 * [FAQ: How to reuse a JsonBuffer?]({{site.baseurl}}/faq/how-to-reuse-a-jsonbuffer/)
 
-#### 5. Keep the JSON string in memory long enough
+## 5. Keep the JSON string in memory long enough
 
 The library never make memory duplication.
 This has an important implication on string values, it means that the library will return pointer to chunks of the string.
@@ -104,7 +104,7 @@ const char* second = array[1];
 In that case, both `first` and `second` are pointers to the content of the original string `json`.
 So this will only work if `json` is still in memory.
 
-#### 6. Do not assume that strings are copied
+## 6. Do not assume that strings are copied
 
 By default, ArduinoJson doesn't make copies of strings, it only stores pointers.
 So, if you declare a `char[]` in a loop, the same pointer will be added several times.
@@ -114,7 +114,7 @@ See:
 
 * [FAQ: Using a loop, why are values all the same?]({{site.baseurl}}/faq/using-a-loop-why-are-values-all-the-same/)
 
-#### 7. Avoid read-only string for input
+## 7. Avoid read-only string for input
 
 ArduinoJson has two parsing modes depending on the type of input
 

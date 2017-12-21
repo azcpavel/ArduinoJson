@@ -46,7 +46,7 @@ As you can see the `StaticJsonBuffer` is kept in memory as short as possible, so
 
 Also you can see that neither `JsonArray` nor `JsonObject` leak out of the serialization code. This maintain a good isolation and reduce the coupling with the library.
 
-### Where to go next?
+## Where to go next?
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 

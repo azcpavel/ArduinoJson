@@ -18,7 +18,7 @@ Similarly, there are two reasons to get garbage in the output:
 1. `JsonBuffer` is not in memory anymore
 2. The string pointed by the `char*` is not in memory anymore.
 
-##### Example 1 of what you should not do:
+#### Example 1 of what you should not do:
 
 ```c++
 JsonObject& myFunction() {
@@ -29,7 +29,7 @@ JsonObject& myFunction() {
 
 This is wrong because it returns a reference (a pointer if you prefer) to a `JsonObject` that is not in memory anymore.
 
-##### Example 2 of what you should not do:
+#### Example 2 of what you should not do:
 
 ```c++
 void myFunction(JsonObject& obj) {

@@ -10,7 +10,7 @@ redirect_from:
  - /faq/why-do-i-have-a-segmentation-fault/
 ---
 
-### Reason 1: Null pointer dereferencing
+## Reason 1: Null pointer dereferencing
 
 Usually, a null pointer dereferencing happens when ArduinoJson returns a null whereas the program expects a string.
 
@@ -50,7 +50,7 @@ else
   strcpy(name, "N/A");
 ```
 
-### Reason 2: Stack-overflow
+## Reason 2: Stack-overflow
 
 A stack overflow happens when you have too many variables in the "stack" memory.
 
@@ -90,7 +90,7 @@ Serial.println(root["name"].asString());
 free(content);
 ```
 
-### Reason 3: Incompatible configurations in compilation units
+## Reason 3: Incompatible configurations in compilation units
 
 If your program behaves unpredictably, it may be because a different configuration is used in each `.ino` or `.cpp` file.
 

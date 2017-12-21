@@ -13,7 +13,7 @@ popularity: 13
 
 Instead, use one of the following solution.
 
-### Option 1: Set include directory
+## Option 1: Set include directory
 
 1. Download (or `git clone`) ArduinoJson where you want.
 2. Right-click on target project and click `Properties`
@@ -24,7 +24,7 @@ Instead, use one of the following solution.
 
 Now the compiler knows where to find `ArduinoJson.h`.
 
-### Option 2: Use "single header" version
+## Option 2: Use "single header" version
 
 1. Download the "single header" from the [Releases](https://github.com/bblanchon/ArduinoJson/releases), for example `ArduinoJson-v5.10.0.h`.
    (you cannot use `git clone` to get the "single header")

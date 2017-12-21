@@ -11,7 +11,7 @@ Enables the support of strings stored in program memory, ie in Flash.
 
 The default is `1` of `PROGMEM` is defined, `0` otherwise.
 
-### How to force the value?
+## How to force the value?
 
 If you need to force the support of PROGMEM strings, add this at the top of your program:
 
@@ -29,7 +29,7 @@ On the other hand, if you need to disable PROGMEM string, do:
 
 This is useful if your platform defines `PROGMEM` but doesn't actually support Flash-stored strings.
 
-### Where a PROGMEM string can be used?
+## Where a PROGMEM string can be used?
 
 Once enabled, you can use a PROGMEM string in many places.
 

@@ -10,7 +10,7 @@ popularity: 216
 
 You wrote a program that works fine for one or more iterations, but then fails?
 
-### Cause 1: reuse of `JsonBuffer`
+## Cause 1: reuse of `JsonBuffer`
 
 First, this can happen if you reuse the same `JsonBuffer`, for example:
 
@@ -50,7 +50,7 @@ for (int i=0; i<10; i++) {
 
 Note that, contrary to common belief, moving a `StaticJsonBuffer` inside of a loop has no negative impact on performance.
 
-### Cause 2: reuse of JSON input
+## Cause 2: reuse of JSON input
 
 This second case only concerns the "zero-copy" mode.
 This mode is selected when the input is writable (`char[]` or a `char*`).
@@ -93,7 +93,7 @@ for (int i=0; i<10; i++) {
 }
 ```
 
-### Where to go next?
+## Where to go next?
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 

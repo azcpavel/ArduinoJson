@@ -7,11 +7,11 @@ tags: api
 api-group: JsonObject
 ---
 
-### Description
+## Description
 
 Gets the value at the specified key.
 
-### Signatures
+## Signatures
 
 ```c++
 bool            get<bool>           (TString key) const;
@@ -31,7 +31,7 @@ unsigned long   get<unsigned long>  (TString key) const;
 unsigned short  get<unsigned short> (TString key) const;
 ```
 
-### Arguments
+## Arguments
 
 `key`: the key of the value in the object, can be a:
 
@@ -40,12 +40,12 @@ unsigned short  get<unsigned short> (TString key) const;
 * `std::string`, or
 * `const __FlashStringHelper*`.
 
-### Return value
+## Return value
 
 The value at the specified key, converted to the specified type.
 In case of an error (key not found or incompatible type), the default value of the specified type is returned.
 
-### Example
+## Example
 
 ```c++
 char json[] = "{\"pi\":3.14}";
@@ -55,7 +55,7 @@ float pi = object.get<float>("pi"); // template version of get()
 const char* value2 = object.get<const char*>("toto"); // returns NULL
 ```
 
-### See also
+## See also
 
 * [`JsonObject::set()`]({{site.baseurl}}/api/jsonobject/set/)
 * [`JsonObject::operator[]`]({{site.baseurl}}/api/jsonobject/subscript/)

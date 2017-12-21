@@ -15,17 +15,16 @@
   {% endif %}
 </head>
 <body>
-    {% include header.html %}
-
-    {{content}}
-
-    {% if page.url != '/' %}
-    {% include footer.html %}
-    {% endif %}
-
-    <a href="https://github.com/bblanchon/ArduinoJson/">
-      <img class="d-none d-lg-block" style="position: absolute; top: 0; right: 0; border: 0;" src="{{ site.baseurl }}/images/forkme_right.png" alt="Fork me on GitHub">
-    </a>
-    {% include bootstrap.tail.html %}
-  </body>
-  </html>
+{% include header.html %}
+<main>
+{{content}}
+</main>
+{% if page.url != '/' %}
+{% include footer.html %}
+{% endif %}
+<a href="https://github.com/bblanchon/ArduinoJson/">
+  <img class="d-none d-lg-block" style="position: absolute; top: 0; right: 0; border: 0;" src="{{ site.baseurl }}/images/forkme_right.png" alt="Fork me on GitHub">
+</a>
+{% include bootstrap.tail.html %}
+</body>
+</html>

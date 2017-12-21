@@ -6,7 +6,7 @@ tags: example
 layout: example
 ---
 
-### Description
+## Description
 
 This example shows how to implement an HTTP server that sends JSON document in the responses.
 
@@ -22,7 +22,7 @@ The JSON document looks like the following:
 }
 ```
 
-### Source code
+## Source code
 
 ```c++
 // ArduinoJson - arduinojson.org
@@ -112,12 +112,12 @@ void loop() {
 }
 ```
 
-### Classes used in this example
+## Classes used in this example
 
 * [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/)
 * [`JsonObject`]({{site.baseurl}}/api/jsonobject/)
 
-### Functions used in this example
+## Functions used in this example
 
 * [`JsonArray::add()`]({{site.baseurl}}/api/jsonarray/add/)
 * [`JsonBuffer::createObject()`]({{site.baseurl}}/api/jsonbuffer/createobject/)
@@ -125,7 +125,7 @@ void loop() {
 * [`JsonObject::prettyPrintTo()`]({{site.baseurl}}/api/jsonobject/prettyprintto/)
 * [`JsonObject::printPrintTo()`]({{site.baseurl}}/api/jsonobject/printprintto/)
 
-### Keep learning
+## Keep learning
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 

@@ -5,7 +5,7 @@ layout: post
 categories: news
 ---
 
-### A new syntax
+## A new syntax
 
 This version adds [`JsonVariant::operator|`]({{site.baseurl}}/api/jsonvariant/or/) that specifies the value to return if the variant is undefined or incompatible.
 In other words, it changes the default values.
@@ -52,11 +52,11 @@ strlcpy(hostname, config["hostname"] | "example.com", sizeof(hostname));
 port = config["port"] | 80;
 ```
 
-### A new example
+## A new example
 
 ArduinoJson 5.12.0 also ships with [a new example]({{site.baseurl}}/example/config/) that shows how to load and save a JSON configuration file. It uses the [SD library](https://www.arduino.cc/en/Reference/SD) but can be easily modified for any other file-system, like [SPIFFS](http://arduino-esp8266.readthedocs.io/en/latest/filesystem.html).
 
-### How to get ArduinoJson 5.12.0?
+## How to get ArduinoJson 5.12.0?
 
 You can download this new version from the [Arduino Library Manager](https://www.arduino.cc/en/Guide/Libraries).
 

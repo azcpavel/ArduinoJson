@@ -14,19 +14,19 @@ It's called "Mastering ArduinoJson", is published on Leanpub and is written by m
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-### Who is this book for?
+## Who is this book for?
 
 If you never used ArduinoJson, you will appreciate this book because it guides you through your learning. It starts with the basic usage of the library and increments the complexity step by step. The last chapter analyzes several example projects and explains the design choices. It is a much better way to learn than blindly copy-pasting the examples.
 
 If you are already using ArduinoJson, you will learn how to get the best performance and the most straightforward code. You will discover that many examples found on the Internet are suboptimal and even dangerous. The sample projects will you a sense of how the library should be used and will give you a new perspective on your projects.
 
-### What knowledge is required?
+## What knowledge is required?
 
 This book is not a course on Arduino or embedded programming. It assumes a small experience with Arduino; you do not need to be a master, just to be able to compile and run a simple sketch.
 
 Many Arduino users lack some of the fundamental principles of C++, that is why this book starts with a quick refresher. However, it does not pretend to teach C++ from scratch; it assumes the knowledge of another object-oriented programming language, such as C# or Java. There is much material to learn how to program with Arduino, but most of them miss essential parts that are crucial in your development career. This chapter covers the holes left by the other Arduino books, that is why I called it "the missing C++ course."
 
-### What is in the book?
+## What is in the book?
 
 This book is not a compilation of resource already available online. All the content is new, and nothing was recycled from existing documents.
 
@@ -91,7 +91,7 @@ Table of content:
     5. Recursive analyzer
 8. Conclusion
 
-### How is the book written?
+## How is the book written?
 
 This book is optimized for fast and easy reading.
 
@@ -105,7 +105,7 @@ The book is designed to be read from cover to cover without a computer, so it is
 
 It is also well segmented, so you can quickly skim when you are looking something in particular.
 
-### Why buy this book?
+## Why buy this book?
 
 By buying this book, you encourage the development of high-quality libraries. By providing a (modest) source of revenue for open-source developers like me, you ensure that the libraries that you rely on are continuously improved and won't be abandoned after a year.
 

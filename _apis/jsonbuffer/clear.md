@@ -7,7 +7,7 @@ tags: api
 api-group: JsonBuffer
 ---
 
-### Description
+## Description
 
 Resets the `JsonBuffer`; size goes back to zero.
 
@@ -15,13 +15,13 @@ Allocated memory is freed in the case of a `DynamicJsonBuffer`.
 
 This allows to reuse the `JsonBuffer`.
 
-### Signature
+## Signature
 
 ```c++
 void clear();
 ```
 
-### Example
+## Example
 
 ```c++
 StaticJsonBuffer<200> jb;

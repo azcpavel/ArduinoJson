@@ -7,11 +7,11 @@ tags: api
 api-group: JsonArray
 ---
 
-### Description
+## Description
 
 Sets the value at specified index.
 
-### Signatures
+## Signatures
 
 ```c++
 bool set(size_t index, bool value);
@@ -34,19 +34,19 @@ bool set(size_t index, JsonObject &object);
 bool set(size_t index, const JsonVariant &value);
 ```
 
-### Arguments
+## Arguments
 
 `index`: the index in the array (starting from 0).
 
 `value`: the value to set.
 
-### Return value
+## Return value
 
 `true` if allocation succeeded.
 
 `false` if there was not enough space left in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), this can only happen when `value` needs to be copied (see below).
 
-### Remarks
+## Remarks
 
 A copy of the string is made when you call this function with one of the following types:
 
@@ -59,7 +59,7 @@ The memory allocated for the copy will only be freed when the whole [`JsonBuffer
 
 To avoid this behavior, use `const char*` to pass the string.
 
-### Example
+## Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -83,7 +83,7 @@ will write
 ["hello",3.14156]
 ```
 
-### See also
+## See also
 
 * [`JsonArray::add()`]({{site.baseurl}}/api/jsonarray/add/)
 * [`JsonArray::get<T>()`]({{site.baseurl}}/api/jsonarray/get/)

@@ -19,7 +19,7 @@ redirect_from:
 
 {% assign groups = site.faqs | group_by: 'faq-group' | sort: 'name' %}
 {% for group in groups %}
-<h3>{{ group.name }}</h3>
+<h2>{{ group.name }}</h2>
 <ul>
 {% assign items = group.items | sort: 'popularity' | reverse %}
 {% for faq in items %}

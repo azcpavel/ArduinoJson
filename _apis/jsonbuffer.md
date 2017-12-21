@@ -7,7 +7,7 @@ tags: api
 api-group: class
 ---
 
-### Description
+## Description
 
 `JsonBuffer` is the entry point for using the library: it handles the memory management and calls the parser.
 
@@ -19,7 +19,7 @@ It implements a speed efficient memory pool and comes in two flavors:
 `JsonBuffer` is optimized of fast allocation, but doesn't allow to free the allocated memory block.
 To free a `JsonBuffer`, you must discard the entire object.
 
-### Member functions
+## Member functions
 
 <ul>
 {% assign methods = site.apis | where:"api-group",page.title %}
@@ -28,7 +28,7 @@ To free a `JsonBuffer`, you must discard the entire object.
 {% endfor %}
 </ul>
 
-### See also
+## See also
 
 * [Serialization tutorial]({{site.baseurl}}/doc/encoding/)
 * [Deserialization tutorial]({{site.baseurl}}/doc/decoding/)
@@ -38,7 +38,7 @@ To free a `JsonBuffer`, you must discard the entire object.
 * [Why shouldn't I use a global JsonBuffer?]({{site.baseurl}}/faq/why-shouldnt-i-use-a-global-jsonbuffer/)
 * [What are the common sizes for JsonBuffer?]({{site.baseurl}}/faq/what-are-the-common-sizes-for-jsonbuffer/)
 
-### Keep learning
+## Keep learning
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 

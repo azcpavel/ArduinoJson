@@ -8,21 +8,21 @@ api-group: JsonArray
 redirect_from: /api/jsonarray/removeat/
 ---
 
-### Description
+## Description
 
 Removes the element at the specified index.
 
-### Signature
+## Signature
 
 ```c++
 void remove(size_t index);
 ```
 
-### Arguments
+## Arguments
 
 `index`: the zero-based position of the element in the array.
 
-### Example
+## Example
 
 ```c++
 JsonArray& array = jsonBuffer.createArray();
@@ -50,6 +50,6 @@ will print the following string to the serial output:
 > Don't try to keep the state of your application in a `JsonArray`, instead use custom structures.
 {: .alert .alert-danger}
 
-### See also
+## See also
 
 * [`JsonObject::remove()`]({{site.baseurl}}/api/jsonobject/remove/)

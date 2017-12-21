@@ -7,26 +7,26 @@ tags: api
 api-group: JsonArray
 ---
 
-### Description
+## Description
 
 A shortcut for [`JsonArray::get()`]({{site.baseurl}}/api/jsonarray/get/) and [`JsonArray::set()`]({{site.baseurl}}/api/jsonarray/set/), with an array-like syntax.
 
-### Signatures
+## Signatures
 
 ```c++
 JsonVariant& operator[](size_t index);
 const JsonVariant& operator[](size_t index) const;
 ```
 
-### Arguments
+## Arguments
 
 `index`: the zero-based position of the value in the array.
 
-### Return value
+## Return value
 
 A reference to the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) in the array.
 
-### Example
+## Example
 
 ```c++
 JsonArray& array = jsonBuffer::createArray();
@@ -35,7 +35,7 @@ int value = array[0];
 array[0] = 666;
 ```
 
-### See also
+## See also
 
 * [`JsonArray::get<T>()`]({{site.baseurl}}/api/jsonarray/get/)
 * [`JsonArray::set()`]({{site.baseurl}}/api/jsonarray/set/)

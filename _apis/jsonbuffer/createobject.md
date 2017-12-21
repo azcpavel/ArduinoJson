@@ -7,21 +7,21 @@ tags: api
 api-group: JsonBuffer
 ---
 
-### Description
+## Description
 
 Allocates an empty `JsonObject`.
 
-### Signature
+## Signature
 
 ```c++
 JsonObject createObject();
 ```
 
-### Return value
+## Return value
 
 Returns a reference to the new `JsonObject` or `JsonObject::invalid()` if the allocation fails.
 
-### Example
+## Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -29,7 +29,7 @@ JsonObject& object = jsonBuffer.createObject();
 object["hello"] = "world";
 ```
 
-### See also
+## See also
 
 * [`JsonBuffer::createArray()`]({{site.baseurl}}/api/jsonbuffer/createarray/)
 * [`JsonArray::createNestedObject()`]({{site.baseurl}}/api/jsonarray/createnestedobject/)

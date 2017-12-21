@@ -7,10 +7,11 @@ tags: api
 api-group: JsonArray
 ---
 
-### Description
+## Description
+
 Returns an iterator that can be used to get all elements of the object.
 
-### Signatures
+## Signatures
 
 ```c++
 JsonArray::iterator begin();
@@ -19,10 +20,10 @@ JsonArray::const_iterator begin() const;
 JsonArray::const_iterator end() const;
 ```
 
-### Return value
+## Return value
 A forward iterator pointing to a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/).
 
-### Example
+## Example
 
 ```c++
 char json[] = "[\"one\",\"two\",\"three\"]";
@@ -48,6 +49,6 @@ two
 three
 ```
 
-### See also
+## See also
 
 * [`JsonObject::begin()` / `JsonObject::end()`]({{site.baseurl}}/api/jsonobject/begin_end/)

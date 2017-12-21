@@ -7,11 +7,11 @@ tags: api
 api-group: JsonObject
 ---
 
-### Description
+## Description
 
 Tests if the value at specified key has the type `T`.
 
-### Signature
+## Signature
 
 ```c++
 bool is<bool>              (TString key) const;
@@ -37,7 +37,7 @@ bool is<JsonArray>         (TString key) const;
 bool is<JsonObject>        (TString key) const;
 ```
 
-### Arguments
+## Arguments
 
 `key`: the key of the value in the object, can be a:
 
@@ -48,12 +48,12 @@ bool is<JsonObject>        (TString key) const;
 
 `T`: the type to test.
 
-### Return value
+## Return value
 
 * `true` if value at specified key matches the type `T`,
 * `false` if not
 
-### Remarks
+## Remarks
 
 Different C++ types can store the same JSON value, so `is<T>()` can return `true` for several `T`s. For example, `is<float>()` always returns the same value as `is<double>()` .
 
@@ -71,7 +71,7 @@ The table below gives the correspondence between the JSON type and the C++ types
 
 Caution: `is<float>()` and `is<double>()` returns `true` for integers too.
 
-### Example
+## Example
 
 ```c++
 char json[] = "{\"name\":\"toto\",\"pi\":3.14}";
@@ -86,7 +86,7 @@ nameIsString = obj["name"].is<char*>(); // <- true
 piIsFloat = obj["pi"].is<float>(); // <- true
 ```
 
-### See also
+## See also
 
 * [`JsonVariant::is<T>()`]({{site.baseurl}}/api/jsonvariant/is/)
 * [`JsonArray::is<T>()`]({{site.baseurl}}/api/jsonarray/is/)

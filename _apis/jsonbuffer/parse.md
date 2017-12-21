@@ -7,7 +7,7 @@ tags: api
 api-group: JsonBuffer
 ---
 
-### Description
+## Description
 
 Parses a JSON input and returns a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) which can contain an array or an object.
 
@@ -17,7 +17,7 @@ By design, the parser needs to alter the string to insert null-terminators and r
 If the JSON string is read-only, it will have to duplicate the input string, this consume more space in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 Therefore, it's recommended to have a JSON input in a `char[]` or a `char*`.
 
-### Signatures
+## Signatures
 
 ```c++
 // The first overload, which accepts a modifiable array of chars, is the most efficient
@@ -36,7 +36,7 @@ JsonVariant parse(Stream& json, uint8_t nestingLimit=10);
 JsonVariant parse(std::istream& json, uint8_t nestingLimit=10);
 ```
 
-### Arguments
+## Arguments
 
 `json` is the input string to be parsed.
 
@@ -46,13 +46,13 @@ If set to `1`, the array or object can contain nested arrays or objects but only
 And bigger values will allow more level of nesting.
 The purpose of this feature is to prevent stack overflow that could lead to a security risk.
 
-### Return value
+## Return value
 
 Returns a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) which contains a reference `JsonArray` or to a `JsonObject`.
 
 Use [`JsonVariant::is<T>()`]({{site.baseurl}}/api/jsonvariant/is/) to check the type of the value.
 
-### Example
+## Example
 
 ```c++
 char json[] = "[\"hello\",\"world\"]";
@@ -69,7 +69,7 @@ if (variant.is<JsonArray>()) // true in this example
 }
 ```
 
-### See also
+## See also
 
 * [`JsonBuffer::parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/)
 * [`JsonBuffer::parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/)

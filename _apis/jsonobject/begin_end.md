@@ -7,11 +7,11 @@ tags: api
 api-group: JsonObject
 ---
 
-### Description
+## Description
 
 Returns an iterator that can be used to get all key-value pairs in the object.
 
-### Signatures
+## Signatures
 
 ```c++
 JsonObject::iterator begin();
@@ -20,11 +20,11 @@ JsonObject::const_iterator begin() const;
 JsonObject::const_iterator end() const;
 ```
 
-### Return value
+## Return value
 
 A forward iterator pointing to a `JsonPair`, which itself contains two members `key` and `value`.
 
-### Example
+## Example
 
 ```c++
 char json[] = "{\"first\":\"hello\",\"second\":\"world\"}";
@@ -53,6 +53,6 @@ second
 world
 ```
 
-### See also
+## See also
 
 * [`JsonArray::begin()` / `JsonArray::end()`]({{site.baseurl}}/api/jsonarray/begin_end/)

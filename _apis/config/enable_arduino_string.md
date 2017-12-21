@@ -12,7 +12,7 @@ Enables support of the type `String` in the library.
 The default is `1` of `ARDUINO` is defined, `0` otherwise.
 In other words, `String` is supported as soon as you work in an Arduino-compatible environment
 
-### How to force the value?
+## How to force the value?
 
 If you need to force the support of `String`, add this at the top of your program:
 
@@ -28,7 +28,7 @@ On the other hand, if you need to disable `String`, do:
 #include <ArduinoJson.h>
 ```
 
-### Where a `String` can be used?
+## Where a `String` can be used?
 
 Once enabled, you can use a `String` in many places.
 
@@ -89,7 +89,7 @@ Once enabled, you can use a `String` in many places.
     root.printTo(output);
     ```
 
-### Where a `String` can **not** be used?
+## Where a `String` can **not** be used?
 
 1. Unfortunately, the following doesn't work (issue #118):
 

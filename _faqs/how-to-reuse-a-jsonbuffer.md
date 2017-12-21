@@ -8,7 +8,7 @@ faq-group: Common
 popularity: 639
 ---
 
-### Disclaimer
+## Disclaimer
 
 Since ArduinoJson 5.11.0, it's possible to reuse a `JsonBuffer` thank to the [`clear()`]({{site.baseurl}}/api/jsonbuffer/clear/) method.
 However, it's very risky and can be avoided most of the time.
@@ -40,7 +40,7 @@ Here is what happens in this buggy program:
 * `outputObject` is created at the same address as `inputObject`
 * `inputObject` is now a dangling pointer and the behavior is undefined.
 
-### How to fix this code?
+## How to fix this code?
 
 To rewrite this code without `clear()`, we have two possibilities.
 
@@ -73,7 +73,7 @@ JsonObject& outputObject = jsonBuffer2.createObject();
 outputObject["hello"] = inputObject["world"];
 ```
 
-### What if I don't reference the memory after clearing?
+## What if I don't reference the memory after clearing?
 
 You mean, like this?
 
@@ -132,13 +132,13 @@ void sendMux()
 }
 ```
 
-### See also
+## See also
 
 * [Avoiding pitfalls: Don't reuse the same JsonBuffer]({{site.baseurl}}/doc/pitfalls/#4-dont-reuse-the-same-jsonbuffer/)
 * [FAQ: Why shouldn't I use a global `JsonBuffer`?]({{site.baseurl}}/faq/why-shouldnt-i-use-a-global-jsonbuffer/).
 * [FAQ: What's the best way to use the library?]({{site.baseurl}}/faq/whats-the-best-way-to-use-the-library/)
 
-### Where to go next?
+## Where to go next?
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 

@@ -6,11 +6,11 @@ tags: example
 layout: example
 ---
 
-### Description
+## Description
 
 This example shows how to deserialize a JSON document with ArduinoJson.
 
-### Source code
+## Source code
 
 ```c++
 // ArduinoJson - arduinojson.org
@@ -79,17 +79,17 @@ void loop() {
 ```
 
 
-### Classes used in this example
+## Classes used in this example
 
 * [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/)
 * [`JsonObject`]({{site.baseurl}}/api/jsonobject/)
 
-### Functions used in this example
+## Functions used in this example
 
 * [`JsonBuffer::parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/)
 * [`JsonObject::operator[]`]({{site.baseurl}}/api/jsonobject/subscript/)
 
-### Keep learning
+## Keep learning
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 

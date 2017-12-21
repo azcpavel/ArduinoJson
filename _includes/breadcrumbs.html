@@ -1,26 +1,28 @@
-<ol class="breadcrumb hidden-sm-down" vocab="http://schema.org/" typeof="BreadcrumbList">
-  {%- assign position = 1 -%}
-  {%- for crumb in site.data.breadcrumbs -%}
-    {%- if (page.url contains crumb.url) and (page.url != crumb.url) -%}
-    <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
-      <a property="item" typeof="WebPage" href="{{ crumb.url | prepend: site.baseurl }}">
-        <span property="name">{{ crumb.title }}</span>
+<nav>
+  <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+    {%- assign position = 1 -%}
+    {%- for crumb in site.data.breadcrumbs -%}
+      {%- if (page.url contains crumb.url) and (page.url != crumb.url) -%}
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage" href="{{ crumb.url | prepend: site.baseurl }}">
+          <span property="name">{{ crumb.title }}</span>
+        </a>
+        <meta property="position" content="{{ position }}" />
+      </li>
+      {%- assign position = position | plus: 1 -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
+      <a property="item" typeof="WebPage" href="{{ page.url | prepend: site.baseurl }}">
+        <span property="name">
+          {%- if page.categories contains "news" -%}
+          {{ page.date | date: "%Y-%m-%d - " }}
+          {%- endif -%}
+          {{ page.title }}
+        </span>
       </a>
       <meta property="position" content="{{ position }}" />
     </li>
-    {%- assign position = position | plus: 1 -%}
-    {%- endif -%}
-  {%- endfor -%}
-
-  <li class="breadcrumb-item active" property="itemListElement" typeof="ListItem">
-    <a property="item" typeof="WebPage" href="{{ page.url | prepend: site.baseurl }}">
-      <span property="name">
-        {%- if page.categories contains "news" -%}
-        {{ page.date | date: "%Y-%m-%d - " }}
-        {%- endif -%}
-        {{ page.title }}
-      </span>
-    </a>
-    <meta property="position" content="{{ position }}" />
-  </li>
-</ol>
+  </ol>
+</nav>

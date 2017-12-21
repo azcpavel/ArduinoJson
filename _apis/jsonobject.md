@@ -7,7 +7,7 @@ tags: api
 api-group: class
 ---
 
-### Description
+## Description
 
 A collection of named [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/).
 
@@ -15,7 +15,7 @@ The constructor is private, you cannot instantiate a `JsonObject` directly, you 
 
 Because the memory of a `JsonObject` is located a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), you always manipulate it through reference and you cannot copy it.
 
-### Example
+## Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -29,7 +29,7 @@ char json[] = "{\"hello\":\"world\"}";
 JsonObject& object2 = jsonBuffer.parseObject(json);
 ```
 
-### Member functions
+## Member functions
 
 <ul>
 {% assign methods = site.apis | where:"api-group",page.title %}
@@ -38,14 +38,14 @@ JsonObject& object2 = jsonBuffer.parseObject(json);
 {% endfor %}
 </ul>
 
-### See also
+## See also
 
 * [`JsonArray`]({{site.baseurl}}/api/jsonarray/)
 * [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/)
 * [Serialization tutorial]({{site.baseurl}}/doc/encoding/)
 * [Deserialization tutorial]({{site.baseurl}}/doc/decoding/)
 
-### Keep learning
+## Keep learning
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 

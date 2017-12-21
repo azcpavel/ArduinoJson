@@ -7,11 +7,11 @@ tags: api
 api-group: JsonVariant
 ---
 
-### Description
+## Description
 
 Tests if the variant is currently holding a value of type `T`.
 
-### Signatures
+## Signatures
 
 ```c++
 bool is<bool>() const;
@@ -37,12 +37,12 @@ bool is<JsonArray>() const;
 bool is<JsonObject>() const;
 ```
 
-### Return value
+## Return value
 
 * `true` if the variant is currently holding a value of type `T`,
 * `false` if not
 
-### Remarks
+## Remarks
 
 Different C++ types can store the same JSON value, so `is<T>()` can return `true` for several `T`s. For example, `is<float>()` always returns the same value as `is<double>()` .
 
@@ -60,7 +60,7 @@ The table below gives the correspondence between the JSON type and the C++ types
 
 Caution: `is<float>()` and `is<double>()` returns `true` for integers too.
 
-### Example
+## Example
 
 ```c++
 JsonVariant variant = 42;
@@ -69,7 +69,7 @@ bool d = variant.is<double>(); // <- d == false
 bool s = variant.is<char*>(); // <- s == false
 ```
 
-### See also
+## See also
 
 * [`JsonVariant::as<T>()`]({{site.baseurl}}/api/jsonvariant/as/)
 * [`JsonArray::is<T>()`]({{site.baseurl}}/api/jsonarray/is/)

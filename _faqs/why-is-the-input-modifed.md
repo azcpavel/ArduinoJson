@@ -10,7 +10,7 @@ popularity: 26
 
 The JSON parser works in two different modes, depending on whether the input is read-only or not.
 
-### Mode 1: read-only input
+## Mode 1: read-only input
 
 The read-only mode is used when the JSON input has one of the following types:
 
@@ -33,7 +33,7 @@ String json = "{\"hello\":\"world\"}";
 jsonBuffer.parseObject(json);
 ```
 
-### Mode 2: zero-copy
+## Mode 2: zero-copy
 
 The zero-copy mode is used when the JSON input has one of the following types:
 

@@ -8,7 +8,7 @@ faq-group: Common
 popularity: 244
 ---
 
-### Why shouldn't I use a global <code>JsonBuffer</code>?
+## Why shouldn't I use a global <code>JsonBuffer</code>?
 
 `StaticJsonBuffer` and `DynamicJsonBuffer` are ultra-fast memory pools.
 But the drawback is that they are throwaways; they are not intended to be reused.
@@ -17,7 +17,7 @@ The only way to release the memory is to destroy the [`JsonBuffer`]({{site.baseu
 
 That's why using a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is always a bad idea!
 
-### Why such a terrible limitation?
+## Why such a terrible limitation?
 
 ArduinoJson is designed to do one thing and to do it well: **the JSON serialization**.
 So before trying to use a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), ask yourself first:
@@ -25,7 +25,7 @@ So before trying to use a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/
 
 In particular, you should not use `JsonObject` and `JsonArray` to store the internal state of your program as this would be terribly inefficient. Instead, write your own data structure and use ArduinoJson only in serialization functions, as shown in [What's the best way to use the library?]({{site.baseurl}}/faq/whats-the-best-way-to-use-the-library/)
 
-### The "global JsonObject configuration" anti-pattern
+## The "global JsonObject configuration" anti-pattern
 
 Many projects use a JSON file to store their configuration: the file is read at startup, and the content is kept in memory during the execution of the program.
 
@@ -45,7 +45,7 @@ Moreover, the JSON object tree consumes memory even if the program doesn't use i
 For example, if someone adds values in the JSON settings that are not actually used by the program, the memory will be used anyway.
 One could even get to a situation where the program is unable to run because all the memory will be consumed by the settings.
 
-### The `.data` segment anti-pattern
+## The `.data` segment anti-pattern
 
 One might think that a legitimate usage of a global buffer is to have a `StaticJsonBuffer` in the `.data` segment so that the compiler will issue an error if there is not enough memory.
 

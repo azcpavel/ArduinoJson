@@ -12,7 +12,7 @@ popularity: 86
 
 This often happens when the JSON contains `[{` or `:[`.
 
-##### Example 1:
+#### Example 1:
 
 ```json
 [{"hello":"world"}]
@@ -32,7 +32,7 @@ JsonArray& root = jsonBuffer.parseArray(json);
 const char* world = root[0]["hello"];
 ```
 
-##### Example 2:
+#### Example 2:
 
 ```json
 {"hello":["world"]}
@@ -52,7 +52,7 @@ JsonArray& root = jsonBuffer.parseArray(json);
 const char* world = root["hello"][0];
 ```
 
-##### Example 3:
+#### Example 3:
 
 ```json
 {"hello":[{"new":"world"}]}

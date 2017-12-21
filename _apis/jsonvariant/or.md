@@ -7,7 +7,7 @@ tags: api
 api-group: JsonVariant
 ---
 
-### Description
+## Description
 
 Changes the value return when the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) is undefined or incompatible.
 
@@ -15,7 +15,7 @@ In other words, it changes the default value.
 
 This feature was introduced in version 5.12.
 
-### Signatures
+## Signatures
 
 ```c++
 bool               operator|(bool defaultValue) const;
@@ -40,25 +40,25 @@ String             operator|(String defaultValue) const;
 std::string        operator|(const std::string& defaultValue) const;
 ```
 
-### Arguments
+## Arguments
 
 `defaultValue`: the value to return is the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) is undefined or incompatible.
 
-### Return value
+## Return value
 
 * The value of the variant, if it can be converted to the type of `defaultValue`.
 * `defaultValue` if not.
 
 Remark: even if `JsonVariant::is<char*>()` returns `true` for `null`, the operator `|` returns `defaultValue` when that happens.
 
-### Example
+## Example
 
 ```c++
 int port = config["port"] | 80;
 strlcpy(hostname, config["hostname"] | "example.com", sizeof(hostname));
 ```
 
-### See also
+## See also
 
 * [`JsonVariant::as<T>()`]({{site.baseurl}}/api/jsonvariant/as/)
 * [`JsonVariant::is<T>()`]({{site.baseurl}}/api/jsonvariant/is/)

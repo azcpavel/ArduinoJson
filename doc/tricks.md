@@ -8,7 +8,7 @@ description: A collection of useful techniques to accomplish unusual things with
 
 This page contains some useful techniques to accomplish unusual things with ArduinoJson.
 
-### Look for a nested key
+## Look for a nested key
 
 Suppose you have the following JSON document:
 
@@ -42,7 +42,7 @@ bool containsNestedKey(const JsonObject& obj, const char* key) {
 }
 ```
 
-### Extract an array of integer
+## Extract an array of integer
 
 Suppose you have an input like this:
 
@@ -63,7 +63,7 @@ int ledCount = root["leds"].as<JsonArray>().copyTo(leds);
 
 See [`JsonArray::copyTo()`]({{site.baseurl}}/api/jsonarray/copyto/)
 
-### Merging JSON objects
+## Merging JSON objects
 
 Suppose you have two JSON objects:
 
@@ -100,7 +100,7 @@ void merge(JsonObject& dest, const JsonObject& src) {
 }
 ```
 
-### Buffered output
+## Buffered output
 
 Here is a proxy that will put bytes in a buffer before actually writing them to the destination:
 
@@ -142,7 +142,7 @@ root.printTo(bufferedPrint);
 
 Use this class if the `Print` implementation sends bytes one-by-one, it will greatly improve the performance of your program.
 
-### Chunked output
+## Chunked output
 
 Here is a proxy that allow to get only part of the output:
 
@@ -179,7 +179,7 @@ root.printTo(chunkPrint);
 
 Use this class when you need to send the JSON document in chunks, i.e., not all at once.
 
-### Compute hash of JSON output
+## Compute hash of JSON output
 
 Here is how you can compute the CRC32 hash of the JSON document without consuming a lot of memory.
 
@@ -216,7 +216,7 @@ Serial.println(hashPrint.hash());
 
 Use this class when you want to compare two JSON documents
 
-### Throw exception when JsonBuffer is too small
+## Throw exception when JsonBuffer is too small
 
 Here is a class that behaves as a `JsonBuffer`, except that it will throw an exception if the allocation fails:
 
@@ -243,7 +243,7 @@ Throwing<StaticJsonBuffer<200> > jsonBuffer;
 Throwing<DynamicJsonBuffer> jsonBuffer;
 ```
 
-### Clone an object or an array
+## Clone an object or an array
 
 Here is a function that makes a deep copy of a `JsonVariant`:
 

@@ -7,11 +7,11 @@ tags: api
 api-group: JsonObject
 ---
 
-### Description
+## Description
 
 Removes the element at the specified key.
 
-### Signatures
+## Signatures
 
 ```c++
 void remove(const char* key);
@@ -20,11 +20,11 @@ void remove(const std::string& key);
 void remove(const __FlashStringHelper* key);
 ```
 
-### Arguments
+## Arguments
 
 `key`: the key to remove from the object.
 
-### Example
+## Example
 
 ```c++
 JsonObject& object = jsonBuffer.createObject();
@@ -41,7 +41,7 @@ will print the following string to the serial output:
 {"A":1,"C":3}
 ```
 
-### See also
+## See also
 
 * [`JsonArray::remove()`]({{site.baseurl}}/api/jsonarray/remove/)
 

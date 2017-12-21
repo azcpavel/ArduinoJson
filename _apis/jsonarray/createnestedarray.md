@@ -6,23 +6,22 @@ layout: api
 tags: api
 api-group: JsonArray
 ---
-
-### Description
+## Description
 
 Adds a new nested array to the end of the array.
 
-### Signature
+## Signature
 
 ```c++
 JsonArray& createNestedArray();
 ```
 
-### Return value
+## Return value
 
 A reference to the new `JsonArray`.
 You can check [`JsonArray::success()`]({{site.baseurl}}/api/jsonarray/success/) to verify that the allocation succeeded.
 
-### Example
+## Example
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -39,7 +38,7 @@ will write
 ["hello",["world"]]
 ```
 
-### See also
+## See also
 
 * [`JsonArray::createNestedObject()`]({{site.baseurl}}/api/jsonarray/createnestedobject/)
 * [`JsonBuffer::createArray()`]({{site.baseurl}}/api/jsonbuffer/createarray/)
