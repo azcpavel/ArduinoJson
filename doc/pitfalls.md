@@ -12,7 +12,7 @@ Make sure you read [ArduinoJson memory model]({{site.baseurl}}/doc/memory/) befo
 
 ## 1. Make `StaticJsonBuffer` big enough
 
-By design, the library has no way to tell you why `parseArray()` or `parseObject()` failed.
+By design, the library has no way to tell you why [`parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/) or [`parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/) failed.
 
 There are basically two reasons why they may fail:
 

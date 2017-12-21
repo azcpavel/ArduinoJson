@@ -8,7 +8,7 @@ faq-group: Deserialization
 popularity: 66
 ---
 
-[`JsonVariant`]({{site.baseurl}}/api/jsonvariant/), which is the type that hold the values in [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/), provides the method `is<T>()` that returns `true` if the value is of type `T`.
+[`JsonVariant`]({{site.baseurl}}/api/jsonvariant/), which is the type that hold the values in [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/), provides the method [`is<T>()`]({{site.baseurl}}/api/jsonvariant/is/) that returns `true` if the value is of type `T`.
 
 Examples:
 
@@ -24,4 +24,4 @@ array[0].is<int>(); // return true
 array[0].is<JsonObject&>(); // return false
 ```
 
-See issues [#148](https://github.com/bblanchon/ArduinoJson/issues/148), [#175](https://github.com/bblanchon/ArduinoJson/issues/175) and [#213](https://github.com/bblanchon/ArduinoJson/issues/213).
+

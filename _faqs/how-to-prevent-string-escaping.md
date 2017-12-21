@@ -41,7 +41,7 @@ which would print:
 ```
 
 **CAUTION**: There is one caveat! Unlike `const char*`, `std::string` and `String`, the `RawJson` string is not duplicated, so you need to make sure it's still in memory when you call [`printTo()`]({{site.baseurl}}/api/jsonobject/printto/).
-You can still duplicate manually by calling `JsonBuffer::strdup()`, like this:
+You can still duplicate manually by calling [`JsonBuffer::strdup()`]({{site.baseurl}}/api/jsonbuffer/strdup/), like this:
 
 ```c++
 DynamicJsonBuffer jsonBuffer;

@@ -55,7 +55,7 @@ Note that, contrary to common belief, moving a `StaticJsonBuffer` inside of a lo
 This second case only concerns the "zero-copy" mode.
 This mode is selected when the input is writable (`char[]` or a `char*`).
 In this mode, ArduinoJson modifies the input string in place: it inserts null terminators and unescapes special characters.
-If you call `parseObject()` twice with the same input buffer, the first will work, but the second will fail because the input buffer doesn't contain a valid JSON document anymore.
+If you call [`parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/) twice with the same input buffer, the first will work, but the second will fail because the input buffer doesn't contain a valid JSON document anymore.
 
 Here is a program that has this problem:
 

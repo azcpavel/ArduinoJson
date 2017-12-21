@@ -11,7 +11,7 @@ popularity: 107
 This is very unlikely. You're probably using the library incorrectly.
 
 The typical problem comes from reusing a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) several time.
-Each time you call `parseArray()`, `parseObject()`, `createArray()` and `createObject()`, you consume memory in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
+Each time you call [`parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/), [`parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/), `createArray()` and `createObject()`, you consume memory in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 To avoid running out of memory, you should discard unused data as soon as possible.
 
 The recommended practice is to do the JSON handling in a dedicated function, with a local [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) that will be automatically reclaimed when the function exits.

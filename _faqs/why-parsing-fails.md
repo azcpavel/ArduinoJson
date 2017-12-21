@@ -8,13 +8,13 @@ faq-group: Deserialization
 popularity: 432
 ---
 
-The parsing functions, `parseArray()` and `parseObject()`, may fail for 6 reasons:
+The parsing functions, [`parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/) and [`parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/), may fail for 6 reasons:
 
 1. [The input is not a valid JSON](#case-1-the-input-is-not-a-valid-json)
 2. [The `StaticJsonBuffer` is too small](#case-2-the-staticjsonbuffer-is-too-small)
 3. [The `StaticJsonBuffer` is too big (stack overflow)](#case-3-the-staticjsonbuffer-is-too-big)
 4. [The `DynamicJsonBuffer` fails to allocate memory](#case-4-the-dynamicjsonbuffer-fails-to-allocate-memory)
-5. [You called `parseObject()` instead of `parseArray()`](#case-5-you-called-parseobject-instead-of-parsearray)
+5. [You called [`parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/) instead of `parseArray()`](#case-5-you-called-parseobject-instead-of-parsearray)
 6. [The nesting limit is too low](#case-6-the-nesting-limit-is-too-low)
 
 ## Case 1: The input is not a valid JSON
@@ -66,7 +66,7 @@ If you are in this situation:
 
 See also: [How to reduce memory usage?]({{site.baseurl}}/faq/how-to-reduce-memory-usage/)
 
-## Case 5: You called `parseObject()` instead of `parseArray()`
+## Case 5: You called [`parseObject()`]({{site.baseurl}}/api/jsonbuffer/parseobject/) instead of [`parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/)
 
 This is a very common question as people are often confused when the JSON input contains mixed arrays and objects.
 

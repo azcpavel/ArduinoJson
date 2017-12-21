@@ -8,8 +8,8 @@ faq-group: Serialization
 popularity: 211
 ---
 
-To create a nested object, call `createNestedObject()`.
-To create a nested array, call `createNestedArray()`.
+To create a nested object, call [`createNestedObject()`]({{site.baseurl}}/api/jsonobject/createnestedobject/).
+To create a nested array, call [`createNestedArray()`]({{site.baseurl}}/api/jsonobject/createnestedarray/).
 
 For example:
 
@@ -47,8 +47,8 @@ The [ArduinoJson Assistant]({{site.baseurl}}/assistant/) can generate the skelet
 
 See:
 
-* [API Reference: JsonArray::createNestedArray()]({{site.baseurl}}/api/jsonarray/createnestedarray)
-* [API Reference: JsonArray::createNestedArray()]({{site.baseurl}}/api/jsonarray/createnestedarray)
-* [API Reference: JsonObject::createNestedArray()]({{site.baseurl}}/api/jsonobject/createnestedarray)
-* [API Reference: JsonObject::createNestedObject()]({{site.baseurl}}/api/jsonobject/createnestedobject)
+* [API Reference: `JsonArray::createNestedArray()`]({{site.baseurl}}/api/jsonarray/createnestedarray)
+* [API Reference: `JsonArray::createNestedArray()`]({{site.baseurl}}/api/jsonarray/createnestedarray)
+* [API Reference: `JsonObject::createNestedArray()`]({{site.baseurl}}/api/jsonobject/createnestedarray)
+* [API Reference: `JsonObject::createNestedObject()`]({{site.baseurl}}/api/jsonobject/createnestedobject)
 * [ArduinoJson Assistant]({{site.baseurl}}/assistant/)

@@ -28,6 +28,3 @@ root["myValue"] = (char*)0; // or (char*)NULL if you prefer
 root.printTo(Serial);
 ```
 
-See:
-
-* issue [#418](https://github.com/bblanchon/ArduinoJson/issues/418)

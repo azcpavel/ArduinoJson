@@ -25,7 +25,7 @@ void sendJson(JsonVariant json) {
 
 But in that case, you loose some specificities of the [`JsonObject`]({{site.baseurl}}/api/jsonobject/) class.
 In particular, you don't have the `containsKey()` method.
-If you need this function, you must cast the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) back to a `JsonObject&`.
+If you need this function, you must cast the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) back to a [`JsonObject&`]({{site.baseurl}}/api/jsonobject/).
 
 For instance:
 
@@ -48,7 +48,3 @@ void myFunction(JsonVariant variant)
     }
 }
 ```
-
-See:
-
-* Issues [#195](https://github.com/bblanchon/ArduinoJson/issues/195) and [#196](https://github.com/bblanchon/ArduinoJson/issues/196)

@@ -53,4 +53,4 @@ array.printTo(Serial);
 
 The same principle applies to key and values of [`JsonObject`]({{site.baseurl}}/api/jsonobject/).
 
-Note: If you use `String` instead of a `const char*`, ArduinoJson calls `JsonBuffer::strdup()` implicitly.
+Note: If you use `String` instead of a `const char*`, ArduinoJson calls [`JsonBuffer::strdup()`]({{site.baseurl}}/api/jsonbuffer/strdup/) implicitly.
