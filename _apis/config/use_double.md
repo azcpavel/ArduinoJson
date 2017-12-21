@@ -1,6 +1,6 @@
 ---
 title: ARDUINOJSON_USE_DOUBLE
-description: ARDUINOJSON_USE_DOUBLE changes the type used to store floating-point values values in `JsonVariant`.
+description: ARDUINOJSON_USE_DOUBLE changes the type used to store floating-point values values in [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/).
 keywords: ArduinoJson,float,double
 layout: api
 tags: api

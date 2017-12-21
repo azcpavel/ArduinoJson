@@ -10,12 +10,12 @@ popularity: 46
 
 There are two key concepts you need to understand to use ArduinoJson:
 
-1. `JsonObject`s and `JsonArray`s are stored in a `JsonBuffer`
+1. [`JsonObject`]({{site.baseurl}}/api/jsonobject/)s and [`JsonArray`]({{site.baseurl}}/api/jsonarray/)s are stored in a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/)
 2. `char*` are not copied
 
 Similarly, there are two reasons to get garbage in the output:
 
-1. `JsonBuffer` is not in memory anymore
+1. [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is not in memory anymore
 2. The string pointed by the `char*` is not in memory anymore.
 
 #### Example 1 of what you should not do:
@@ -27,7 +27,7 @@ JsonObject& myFunction() {
 }
 ```
 
-This is wrong because it returns a reference (a pointer if you prefer) to a `JsonObject` that is not in memory anymore.
+This is wrong because it returns a reference (a pointer if you prefer) to a [`JsonObject`]({{site.baseurl}}/api/jsonobject/) that is not in memory anymore.
 
 #### Example 2 of what you should not do:
 
@@ -38,7 +38,7 @@ void myFunction(JsonObject& obj) {
 }
 ```
 
-This is wrong because the `JsonObject` now contains a pointer to a string that is not in memory anymore.
+This is wrong because the [`JsonObject`]({{site.baseurl}}/api/jsonobject/) now contains a pointer to a string that is not in memory anymore.
 
 See also:
 

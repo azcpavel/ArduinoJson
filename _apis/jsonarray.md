@@ -11,10 +11,10 @@ api-group: class
 
 A collection of [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/)
 
-The constructor is private, you cannot instantiate a `JsonArray` directly.
+The constructor is private, you cannot instantiate a [`JsonArray`]({{site.baseurl}}/api/jsonarray/) directly.
 Instead, you must use  [`JsonBuffer::createArray()`]({{site.baseurl}}/api/jsonbuffer/createarray/).
 
-Because the memory of a `JsonArray` is located a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), you always manipulate it through reference and you cannot copy it.
+Because the memory of a [`JsonArray`]({{site.baseurl}}/api/jsonarray/) is located a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), you always manipulate it through reference and you cannot copy it.
 
 ## Example
 
@@ -51,9 +51,9 @@ JsonArray& array2 = jsonBuffer.parseArray(json);
 
 The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson.
 
-Chapter 3 is a tutorial on deserialization; it explains the various ways to convert an input JSON document into a `JsonArray`.
+Chapter 3 is a tutorial on deserialization; it explains the various ways to convert an input JSON document into a [`JsonArray`]({{site.baseurl}}/api/jsonarray/).
 
-Chapter 4 is a tutorial on serialization; it explains the various was to convert a `JsonArray` into a JSON document.
+Chapter 4 is a tutorial on serialization; it explains the various was to convert a [`JsonArray`]({{site.baseurl}}/api/jsonarray/) into a JSON document.
 
-Chapter 5 explains how `JsonArray` is implemented.
+Chapter 5 explains how [`JsonArray`]({{site.baseurl}}/api/jsonarray/) is implemented.
 

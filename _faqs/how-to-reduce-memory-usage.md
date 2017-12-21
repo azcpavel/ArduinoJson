@@ -8,7 +8,7 @@ faq-group: Deserialization
 popularity: 150
 ---
 
-If the input string is constant, the `JsonBuffer` will have to make a copy of it.
+If the input string is constant, the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) will have to make a copy of it.
 
 ```c++
 // case 1: char array => no duplication => good

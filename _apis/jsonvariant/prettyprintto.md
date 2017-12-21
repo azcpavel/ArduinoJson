@@ -9,7 +9,7 @@ api-group: JsonVariant
 
 ## Description
 
-Serializes the `JsonVariant` to create a prettified JSON document.
+Serializes the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) to create a prettified JSON document.
 
 If you want a "minified" JSON document, use [`JsonVariant::printTo()`]({{site.baseurl}}/api/jsonvariant/printto/)
 

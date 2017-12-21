@@ -21,7 +21,7 @@ size_t size() const;
 
 ## Return value
 
-The size (ie the number of bytes used) of the `JsonBuffer`.
+The size (ie the number of bytes used) of the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
 ## Example
 

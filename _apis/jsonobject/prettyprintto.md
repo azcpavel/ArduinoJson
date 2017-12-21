@@ -9,7 +9,7 @@ api-group: JsonObject
 
 ## Description
 
-Serializes the `JsonObject` to create a prettified JSON document.
+Serializes the [`JsonObject`]({{site.baseurl}}/api/jsonobject/) to create a prettified JSON document.
 
 If you want a "minified" JSON document, use [`JsonObject::printTo()`]({{site.baseurl}}/api/jsonobject/printto/)
 

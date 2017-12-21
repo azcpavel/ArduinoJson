@@ -41,13 +41,13 @@ will print the following string to the serial output:
 
 > ##### Causes memory leaks :warning:
 >
-> This function doesn't free the memory allocated to the element in the `JsonBuffer`.
+> This function doesn't free the memory allocated to the element in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 >
-> This is a conscious design decision made to keep the `JsonBuffer` fast and small, which is a fundamental principle of the library.
+> This is a conscious design decision made to keep the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) fast and small, which is a fundamental principle of the library.
 >
-> As a consequence, you cannot remove and add elements in a loop, otherwise the `JsonBuffer` will overflow.
+> As a consequence, you cannot remove and add elements in a loop, otherwise the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) will overflow.
 >
-> Don't try to keep the state of your application in a `JsonArray`, instead use custom structures.
+> Don't try to keep the state of your application in a [`JsonArray`]({{site.baseurl}}/api/jsonarray/), instead use custom structures.
 {: .alert .alert-danger}
 
 ## See also

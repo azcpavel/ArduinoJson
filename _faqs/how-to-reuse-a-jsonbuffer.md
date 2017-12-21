@@ -10,7 +10,7 @@ popularity: 639
 
 ## Disclaimer
 
-Since ArduinoJson 5.11.0, it's possible to reuse a `JsonBuffer` thank to the [`clear()`]({{site.baseurl}}/api/jsonbuffer/clear/) method.
+Since ArduinoJson 5.11.0, it's possible to reuse a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) thank to the [`clear()`]({{site.baseurl}}/api/jsonbuffer/clear/) method.
 However, it's very risky and can be avoided most of the time.
 
 Please take a second to see this example:
@@ -35,8 +35,8 @@ But most Arduino developers are new to C++ and none of them have a debugger.
 
 Here is what happens in this buggy program:
 
-* `inputObject` is a pointer to an object whose memory is in `jsonBuffer`.
-* `clear()` resets the memory pool in `jsonBuffer`, allowing to reuse the memory of `inputObject`
+* `inputObject` is a pointer to an object whose memory is in [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
+* `clear()` resets the memory pool in [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), allowing to reuse the memory of `inputObject`
 * `outputObject` is created at the same address as `inputObject`
 * `inputObject` is now a dangling pointer and the behavior is undefined.
 
@@ -44,7 +44,7 @@ Here is what happens in this buggy program:
 
 To rewrite this code without `clear()`, we have two possibilities.
 
-Suggestion 1: use a bigger `JsonBuffer`:
+Suggestion 1: use a bigger [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/):
 
 ```c++
 // STEP1: parse input
@@ -58,7 +58,7 @@ JsonObject& outputObject = jsonBuffer.createObject();
 outputObject["hello"] = inputObject["world"];
 ```
 
-Suggestion 2: use a second `JsonBuffer`:
+Suggestion 2: use a second [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/):
 
 ```c++
 // STEP1: parse input
@@ -135,7 +135,7 @@ void sendMux()
 ## See also
 
 * [Avoiding pitfalls: Don't reuse the same JsonBuffer]({{site.baseurl}}/doc/pitfalls/#4-dont-reuse-the-same-jsonbuffer/)
-* [FAQ: Why shouldn't I use a global `JsonBuffer`?]({{site.baseurl}}/faq/why-shouldnt-i-use-a-global-jsonbuffer/).
+* [FAQ: Why shouldn't I use a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/)?]({{site.baseurl}}/faq/why-shouldnt-i-use-a-global-jsonbuffer/).
 * [FAQ: What's the best way to use the library?]({{site.baseurl}}/faq/whats-the-best-way-to-use-the-library/)
 
 ## Where to go next?

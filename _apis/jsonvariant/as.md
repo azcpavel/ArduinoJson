@@ -47,7 +47,7 @@ JsonObject&        as<const JsonObject&>() const;
 
 ## Return value
 
-The value of the specified type or a default value if the `JsonVariant` is not compatible with the specified type.
+The value of the specified type or a default value if the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) is not compatible with the specified type.
 
 The default value is:
 

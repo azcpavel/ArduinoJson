@@ -8,7 +8,7 @@ faq-group: Serialization
 popularity: 61
 ---
 
-This is usually caused by a reused `JsonBuffer`.
-The solution is simply to NOT reuse the `JsonBuffer`.
+This is usually caused by a reused [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
+The solution is simply to NOT reuse the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
 See [The first parsing succeeds, why do the next ones fail?]({{ site.baseurl }}/faq/the-first-parsing-succeeds-why-do-the-next-ones-fail/)

@@ -10,9 +10,9 @@ popularity: 216
 
 You wrote a program that works fine for one or more iterations, but then fails?
 
-## Cause 1: reuse of `JsonBuffer`
+## Cause 1: reuse of [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/)
 
-First, this can happen if you reuse the same `JsonBuffer`, for example:
+First, this can happen if you reuse the same [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), for example:
 
 ```c++
 StaticJsonBuffer<200> jsonBuffer;
@@ -30,7 +30,7 @@ for (int i=0; i<10; i++) {
 }
 ```
 
-The solution is simply to NOT reuse the `JsonBuffer`, like this:
+The solution is simply to NOT reuse the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), like this:
 
 ```c++
 for (int i=0; i<10; i++) {
@@ -99,8 +99,8 @@ for (int i=0; i<10; i++) {
 
 The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson.
 
-It begins with a quick C++ course as reusing a `JsonBuffer` is often requested by developers who are not familiar with C++. This chapter is called "The missing C++ course", because it covers topics that are skipped by other books: heap, stack, globals, RAII...
+It begins with a quick C++ course as reusing a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is often requested by developers who are not familiar with C++. This chapter is called "The missing C++ course", because it covers topics that are skipped by other books: heap, stack, globals, RAII...
 
-The "Case Studies" chapter dissects sample projects that use the best practices. You'll see that reusing a `JsonBuffer` is not required.
+The "Case Studies" chapter dissects sample projects that use the best practices. You'll see that reusing a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is not required.
 
 The chapter "Inside ArduinoJson", explains how `StaticJsonBuffer` and `DynamicJsonBuffer` are implemented. Once you know how they work, you will understand why they cannot be reused.

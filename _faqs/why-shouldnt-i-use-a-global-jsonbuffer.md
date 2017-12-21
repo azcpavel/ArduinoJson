@@ -23,20 +23,20 @@ ArduinoJson is designed to do one thing and to do it well: **the JSON serializat
 So before trying to use a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), ask yourself first:
 *"Am I using ArduinoJson for serialization, or am I pushing it beyond its initial intent?"*
 
-In particular, you should not use `JsonObject` and `JsonArray` to store the internal state of your program as this would be terribly inefficient. Instead, write your own data structure and use ArduinoJson only in serialization functions, as shown in [What's the best way to use the library?]({{site.baseurl}}/faq/whats-the-best-way-to-use-the-library/)
+In particular, you should not use [`JsonObject`]({{site.baseurl}}/api/jsonobject/) and [`JsonArray`]({{site.baseurl}}/api/jsonarray/) to store the internal state of your program as this would be terribly inefficient. Instead, write your own data structure and use ArduinoJson only in serialization functions, as shown in [What's the best way to use the library?]({{site.baseurl}}/faq/whats-the-best-way-to-use-the-library/)
 
 ## The "global JsonObject configuration" anti-pattern
 
 Many projects use a JSON file to store their configuration: the file is read at startup, and the content is kept in memory during the execution of the program.
 
-In that situation, it's tempting to use a global `JsonObject` attached to a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
-In theory, it's OK to use a global read-only `JsonObject`, because the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) won't grow.
+In that situation, it's tempting to use a global [`JsonObject`]({{site.baseurl}}/api/jsonobject/) attached to a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
+In theory, it's OK to use a global read-only [`JsonObject`]({{site.baseurl}}/api/jsonobject/), because the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) won't grow.
 But in practice, it's a huge waste of memory and processor time.
 The best way to deal with this is to use custom data structures as suggested in [What's the best way to use the library?]({{site.baseurl}}/faq/whats-the-best-way-to-use-the-library/).
 
 This is a win on four levels:
 1. Faster code (the object tree is walked only once at boot time)
-2. Smaller RAM footprint (`JsonObject`, `JsonVariant`... have significant overhead)
+2. Smaller RAM footprint ([`JsonObject`]({{site.baseurl}}/api/jsonobject/), [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/)... have significant overhead)
 3. Smaller code
 4. It decouples the memory representation from the file format, which will be very handy when the file format evolves
 

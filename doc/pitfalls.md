@@ -55,7 +55,7 @@ See:
 
 ## 3. Keep the `StaticJsonBuffer` in memory long enough
 
-Remember that `JsonBuffer`'s functions return references.
+Remember that [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/)'s functions return references.
 References don't contain data, they are just pointers to the actual.
 So they can only work if the actual data is in memory.
 
@@ -71,11 +71,11 @@ JsonArray& getArray(char* json)
 
 because the local variable `buffer` will be *removed* from memory when the function [`parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray/) returns, and the `JsonArray&` will point to an invalid location.
 
-## 4. Don't reuse the same `JsonBuffer`
+## 4. Don't reuse the same [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/)
 
-During is lifetime a `JsonBuffer` growth until it's discarded. If you try to reuse the same instance several times, it will rapidly get full. This is true for both `DynamicJsonBuffer` and `StaticJsonBuffer`.
+During is lifetime a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) growth until it's discarded. If you try to reuse the same instance several times, it will rapidly get full. This is true for both `DynamicJsonBuffer` and `StaticJsonBuffer`.
 
-For this reason, **you should not use a global variable** for your `JsonBuffer`. I don't think there is any scenario in which a global `JsonBuffer` would be a valid option.
+For this reason, **you should not use a global variable** for your [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/). I don't think there is any scenario in which a global [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) would be a valid option.
 
 The best practice is to **declare it in a local scope**, so that it's discarded as soon as possible. My advice is to declare it in a function whose unique role is to handle the JSON serialization.
 

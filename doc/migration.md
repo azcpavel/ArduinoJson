@@ -60,7 +60,7 @@ Everything else is compatible
 
 ## Creating arrays and objects
 
-ArduinoJson v3 allowed to create `JsonArray` and `JsonObject` directly:
+ArduinoJson v3 allowed to create [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/) directly:
 
 	JsonArray<4> array;
 	JsonObject<4> object;
@@ -82,4 +82,4 @@ But ArduinoJson v4 doesn't, instead you need to write this:
 
 	array.printTo(Serial);
 
-Note: there was a good reason for removing that feature, and it's reducing the size of `JsonArray` and `JsonObject`.
+Note: there was a good reason for removing that feature, and it's reducing the size of [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/).

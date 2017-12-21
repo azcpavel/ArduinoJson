@@ -30,9 +30,9 @@ See [JsonHttpClient.ino]({{site.baseurl}}/example/http-client/) for a reference 
 
 ## Case 2: The `StaticJsonBuffer` is too small
 
-A `JsonBuffer` is a memory pool where the JSON parser stores the tokens of the parsed object.
+A [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is a memory pool where the JSON parser stores the tokens of the parsed object.
 
-`StaticJsonBuffer` is an implementation of a `JsonBuffer` with fixed memory allocation.
+`StaticJsonBuffer` is an implementation of a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) with fixed memory allocation.
 
 This means that you need to specify the right size for the `StaticJsonBuffer`, otherwise the parser will not be able to allocate the memory it needs, and therefore it will return an error.
 
@@ -49,7 +49,7 @@ If you are in this situation, you can either:
 * Reduce the size of the `StaticJsonBuffer`, use [ArduinoJson Assistant]({{site.baseurl}}/assistant/) to compute the required size.
 * Switch to a `DynamicJsonBuffer` which is allocated on the heap.
 
-For example, a ESP8266 has 4KB of stack memory. This means you only have 4096 bytes to store all your local variables, function parameters and calls return addresses. If the [ArduinoJson Assistant]({{site.baseurl}}/assistant/) says you need more than 1KB of RAM for the `JsonBuffer`, then you should use a `DynamicJsonBuffer`.
+For example, a ESP8266 has 4KB of stack memory. This means you only have 4096 bytes to store all your local variables, function parameters and calls return addresses. If the [ArduinoJson Assistant]({{site.baseurl}}/assistant/) says you need more than 1KB of RAM for the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), then you should use a `DynamicJsonBuffer`.
 
 See also: [How to reduce memory usage?]({{site.baseurl}}/faq/how-to-reduce-memory-usage/)
 
@@ -89,7 +89,7 @@ And, if the input is:
 
 then you must call [`parseArray()`]({{site.baseurl}}/api/jsonbuffer/parsearray) because the root is an array.
 
-Finally, if you cannot know in advance the type of the root, simply use [`JsonBuffer::parse()`]({{site.baseurl}}/api/jsonbuffer/parse/) which returns a `JsonVariant`.
+Finally, if you cannot know in advance the type of the root, simply use [`JsonBuffer::parse()`]({{site.baseurl}}/api/jsonbuffer/parse/) which returns a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/).
 
 See also: [Parsing succeeds but I can't read the values!]({{site.baseurl}}/faq/parsing-succeeds-but-i-cant-read-the-values/)
 

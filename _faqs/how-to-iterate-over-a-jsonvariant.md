@@ -8,9 +8,9 @@ faq-group: Deserialization
 popularity: 0
 ---
 
-There is no iterator on `JsonVariant` because it would be ambiguous.
+There is no iterator on [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) because it would be ambiguous.
 
-Before iterating on a variant, the program must cast it to either a `JsonArray` or `JsonObject`.
+Before iterating on a variant, the program must cast it to either a [`JsonArray`]({{site.baseurl}}/api/jsonarray/) or [`JsonObject`]({{site.baseurl}}/api/jsonobject/).
 
 For instance, for an object:
 

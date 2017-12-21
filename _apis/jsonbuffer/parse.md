@@ -48,7 +48,7 @@ The purpose of this feature is to prevent stack overflow that could lead to a se
 
 ## Return value
 
-Returns a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) which contains a reference `JsonArray` or to a `JsonObject`.
+Returns a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) which contains a reference [`JsonArray`]({{site.baseurl}}/api/jsonarray/) or to a [`JsonObject`]({{site.baseurl}}/api/jsonobject/).
 
 Use [`JsonVariant::is<T>()`]({{site.baseurl}}/api/jsonvariant/is/) to check the type of the value.
 

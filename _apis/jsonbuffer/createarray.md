@@ -9,7 +9,7 @@ api-group: JsonBuffer
 
 ## Description
 
-Allocates an empty `JsonArray`.
+Allocates an empty [`JsonArray`]({{site.baseurl}}/api/jsonarray/).
 
 ## Signature
 
@@ -19,7 +19,7 @@ JsonArray& createArray();
 
 ## Return value
 
-Returns a reference to the new `JsonArray` or `JsonArray::invalid()` if the allocation fails.
+Returns a reference to the new [`JsonArray`]({{site.baseurl}}/api/jsonarray/) or `JsonArray::invalid()` if the allocation fails.
 
 ## Example
 

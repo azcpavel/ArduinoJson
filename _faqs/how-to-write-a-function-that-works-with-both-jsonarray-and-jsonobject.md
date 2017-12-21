@@ -1,5 +1,5 @@
 ---
-title: How to write a function that works with both `JsonArray` and `JsonObject`?
+title: How to write a function that works with both [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/)?
 description: To work with both JsonArray and JsonObject, use a JsonVariant
 keywords: ArduinoJson,JsonArray,JsonObject
 layout: faq
@@ -8,10 +8,10 @@ faq-group: Common
 popularity: 95
 ---
 
-There is no base class for `JsonArray` and `JsonObject`.
+There is no base class for [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/).
 (Back in version 3.0, they used to derive from `Printable`, but this inheritance has been removed to reduce the memory footprint.)
 
-However, both `JsonArray` and `JsonObject` can be "stored" in a `JsonVariant`. (I put "stored" in quotes because the `JsonVariant` only contains a reference, not a copy.)
+However, both [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/) can be "stored" in a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/). (I put "stored" in quotes because the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) only contains a reference, not a copy.)
 
 So here is your function:
 
@@ -23,9 +23,9 @@ void sendJson(JsonVariant json) {
 }
 ```
 
-But in that case, you loose some specificities of the `JsonObject` class.
+But in that case, you loose some specificities of the [`JsonObject`]({{site.baseurl}}/api/jsonobject/) class.
 In particular, you don't have the `containsKey()` method.
-If you need this function, you must cast the `JsonVariant` back to a `JsonObject&`.
+If you need this function, you must cast the [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) back to a `JsonObject&`.
 
 For instance:
 

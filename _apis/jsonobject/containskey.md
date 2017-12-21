@@ -9,7 +9,7 @@ api-group: JsonObject
 
 ## Description
 
-Tests if a key exists in the `JsonObject`.
+Tests if a key exists in the [`JsonObject`]({{site.baseurl}}/api/jsonobject/).
 
 ## Signature
 
@@ -26,7 +26,7 @@ bool containsKey(const __FlashStringHelper& key) const;
 
 ## Return value
 
-`true` if the key is present is the `JsonObject`; `false` if not.
+`true` if the key is present is the [`JsonObject`]({{site.baseurl}}/api/jsonobject/); `false` if not.
 
 ## Example
 

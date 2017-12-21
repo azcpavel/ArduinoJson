@@ -16,7 +16,7 @@ A variable that can hold different type of values:
 * a string (const char*)
 * a reference to a JsonArray or JsonObject
 
-A `JsonVariant` can be any of theses types at a time, but can only hold one value.
+A [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) can be any of theses types at a time, but can only hold one value.
 Its type can change at run time.
 
 ## Member functions
@@ -40,7 +40,7 @@ Its type can change at run time.
 The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson.
 
 Chapter 5 explains how ArduinoJson works from the inside.
-For example, it dissects the class `JsonVariant` and explains how it works.
+For example, it dissects the class [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) and explains how it works.
 
 Chapter 7 presents new sample project and explains how they work.
-For example, the project "Recursive Analyzer" extracts the content of a `JsonVariant` recursively, i.e., it retrieves the content of all its children.
+For example, the project "Recursive Analyzer" extracts the content of a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) recursively, i.e., it retrieves the content of all its children.

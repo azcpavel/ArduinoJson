@@ -9,7 +9,7 @@ api-group: JsonBuffer
 
 ## Description
 
-Allocates an empty `JsonObject`.
+Allocates an empty [`JsonObject`]({{site.baseurl}}/api/jsonobject/).
 
 ## Signature
 
@@ -19,7 +19,7 @@ JsonObject createObject();
 
 ## Return value
 
-Returns a reference to the new `JsonObject` or `JsonObject::invalid()` if the allocation fails.
+Returns a reference to the new [`JsonObject`]({{site.baseurl}}/api/jsonobject/) or `JsonObject::invalid()` if the allocation fails.
 
 ## Example
 

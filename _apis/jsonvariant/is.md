@@ -48,14 +48,14 @@ Different C++ types can store the same JSON value, so `is<T>()` can return `true
 
 The table below gives the correspondence between the JSON type and the C++ types:
 
-| JSON type      | `T`                                 |
-|:---------------|:------------------------------------|
-| Floating point | `float`, `double`                   |
-| Integer        | `int`, `short`, `long`, `long long` |
-| String         | `const char*`, `char*`              |
-| Boolean        | `bool`                              |
-| Array          | `JsonArray`                         |
-| Object         | `JsonObject`                        |
+| JSON type      | `T`                                              |
+|:---------------|:-------------------------------------------------|
+| Floating point | `float`, `double`                                |
+| Integer        | `int`, `short`, `long`, `long long`              |
+| String         | `const char*`, `char*`                           |
+| Boolean        | `bool`                                           |
+| Array          | [`JsonArray`]({{site.baseurl}}/api/jsonarray/)   |
+| Object         | [`JsonObject`]({{site.baseurl}}/api/jsonobject/) |
 {: .table .table-bordered}
 
 Caution: `is<float>()` and `is<double>()` returns `true` for integers too.

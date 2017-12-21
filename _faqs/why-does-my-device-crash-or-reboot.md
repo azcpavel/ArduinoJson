@@ -54,13 +54,13 @@ else
 
 A stack overflow happens when you have too many variables in the "stack" memory.
 
-Before reading further, make sure that your target platform does have enough RAM to store the `JsonBuffer` and possibly the JSON input too:
+Before reading further, make sure that your target platform does have enough RAM to store the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) and possibly the JSON input too:
 
 * Use [ArduinoJson Assistant]({{site.baseurl}}/assistant/) to see how much memory you need.
 * See [How to reduce memory usage?]({{site.baseurl}}/faq/how-to-reduce-memory-usage/).
 * See [Can I parse a JSON input that is too big to fit in memory?]({{site.baseurl}}/faq/can-i-parse-a-json-input-that-is-too-big-to-fit-in-memory/)
 
-Once you're sure that your device has enough RAM, you should move the`JsonBuffer` to the heap. Just replace your `StaticJsonBuffer` with a `DynamicJsonBuffer`.
+Once you're sure that your device has enough RAM, you should move the[`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) to the heap. Just replace your `StaticJsonBuffer` with a `DynamicJsonBuffer`.
 
 If your JSON input is stored in the stack, you should move it to the heap too.
 
@@ -112,8 +112,8 @@ whereas the second starts with:
 #include <ArduinoJson.h>
 ```
 
-In that situation, the two compilation units have different sizes for `JsonVariant`.
-Since the linker is not able to detect this problem, it will create an executable with some functions using a big `JsonVariant` and others using small `JsonVariant`.
+In that situation, the two compilation units have different sizes for [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/).
+Since the linker is not able to detect this problem, it will create an executable with some functions using a big [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) and others using small [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/).
 The executable may work under some conditions but will crash sooner or later.
 
 To fix this bug, you must use the same configuration in all compilation units.

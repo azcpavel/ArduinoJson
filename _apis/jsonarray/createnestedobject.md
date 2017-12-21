@@ -19,7 +19,7 @@ JsonObject& createNestedObject();
 
 ## Return value
 
-A reference to the new `JsonObject`.
+A reference to the new [`JsonObject`]({{site.baseurl}}/api/jsonobject/).
 You can check [`JsonObject::success()`]({{site.baseurl}}/api/jsonobject/success/) to verify that the allocation succeeded.
 
 ## Example

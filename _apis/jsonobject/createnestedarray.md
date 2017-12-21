@@ -9,7 +9,7 @@ api-group: JsonObject
 
 ## Description
 
-Creates a `JsonArray` as a child of the current object.
+Creates a [`JsonArray`]({{site.baseurl}}/api/jsonarray/) as a child of the current object.
 
 ## Signatures
 
@@ -32,7 +32,7 @@ To avoid this behavior, use a `const char*` key instead.
 
 ## Return value
 
-A reference to the new `JsonArray`.
+A reference to the new [`JsonArray`]({{site.baseurl}}/api/jsonarray/).
 You can check `JsonArray::success()` to verify that the allocation succeeded.
 
 ## Example

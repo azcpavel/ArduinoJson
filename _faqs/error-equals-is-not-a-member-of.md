@@ -8,7 +8,7 @@ faq-group: Known problems
 popularity: 0
 ---
 
-This error occurs when you index a `JsonObject` with an integer instead of a string.
+This error occurs when you index a [`JsonObject`]({{site.baseurl}}/api/jsonobject/) with an integer instead of a string.
 
 For example, it happens with the following code:
 
@@ -21,14 +21,14 @@ The compiler generates an error similar to this one:
 
     error: 'equals' is not a member of 'ArduinoJson::Internals::StringTraits<const int&, void>'
 
-Indeed, a `JsonObject` can only be indexed by a string, like this:
+Indeed, a [`JsonObject`]({{site.baseurl}}/api/jsonobject/) can only be indexed by a string, like this:
 
 ```c++
 const char* key = "key";
 auto value = obj[key];
 ```
 
-If you do need to access the members of the `JsonObject` one by one, consider iterating over the key-value pairs:
+If you do need to access the members of the [`JsonObject`]({{site.baseurl}}/api/jsonobject/) one by one, consider iterating over the key-value pairs:
 
 ```c++
 for (JsonPair& kv : obj) {

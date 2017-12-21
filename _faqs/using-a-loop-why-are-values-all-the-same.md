@@ -39,7 +39,7 @@ but the actual result would be:
 
 That is because the program uses the same memory area for each iteration.
 
-The simplest solution is to explicitly duplicate the strings in the `JsonBuffer`:
+The simplest solution is to explicitly duplicate the strings in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/):
 
 ```c++
 JsonArray& array = jsonBuffer.createArray();
@@ -51,6 +51,6 @@ for (int i=0; i<3; i++) {
 array.printTo(Serial);
 ```
 
-The same principle applies to key and values of `JsonObject`.
+The same principle applies to key and values of [`JsonObject`]({{site.baseurl}}/api/jsonobject/).
 
 Note: If you use `String` instead of a `const char*`, ArduinoJson calls `JsonBuffer::strdup()` implicitly.

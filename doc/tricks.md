@@ -218,7 +218,7 @@ Use this class when you want to compare two JSON documents
 
 ## Throw exception when JsonBuffer is too small
 
-Here is a class that behaves as a `JsonBuffer`, except that it will throw an exception if the allocation fails:
+Here is a class that behaves as a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), except that it will throw an exception if the allocation fails:
 
 ```c++
 #include <stdexcept>
@@ -245,7 +245,7 @@ Throwing<DynamicJsonBuffer> jsonBuffer;
 
 ## Clone an object or an array
 
-Here is a function that makes a deep copy of a `JsonVariant`:
+Here is a function that makes a deep copy of a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/):
 
 ```c++
 JsonVariant clone(JsonBuffer& jb, JsonVariant prototype)
@@ -276,4 +276,4 @@ JsonVariant clone(JsonBuffer& jb, JsonVariant prototype)
 }
 ```
 
-This function works with `JsonObject` and `JsonArray`.
+This function works with [`JsonObject`]({{site.baseurl}}/api/jsonobject/) and [`JsonArray`]({{site.baseurl}}/api/jsonarray/).

@@ -9,11 +9,11 @@ api-group: JsonBuffer
 
 ## Description
 
-Resets the `JsonBuffer`; size goes back to zero.
+Resets the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/); size goes back to zero.
 
 Allocated memory is freed in the case of a `DynamicJsonBuffer`.
 
-This allows to reuse the `JsonBuffer`.
+This allows to reuse the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
 ## Signature
 
@@ -42,5 +42,5 @@ JsonObject& obj2 = jb.parseObject(json2);
 >
 > If you try to access such a reference (like the `obj1` in the example above), you're likely to crash your device or at least get very unexpected results.
 >
-> Don't try to keep the state of your application in a `JsonObject`, instead use custom structures.
+> Don't try to keep the state of your application in a [`JsonObject`]({{site.baseurl}}/api/jsonobject/), instead use custom structures.
 {: .alert .alert-danger}

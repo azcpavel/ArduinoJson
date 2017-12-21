@@ -9,7 +9,7 @@ api-group: JsonArray
 
 ## Description
 
-Serializes the `JsonArray` to create a *minified* JSON document.
+Serializes the [`JsonArray`]({{site.baseurl}}/api/jsonarray/) to create a *minified* JSON document.
 
 If you want a pretty JSON with spaces and line breaks, use [`JsonArray::prettyPrintTo()`]({{site.baseurl}}/api/jsonarray/prettyprintto/)
 

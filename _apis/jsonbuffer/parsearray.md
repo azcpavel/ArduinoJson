@@ -9,7 +9,7 @@ api-group: JsonBuffer
 
 ## Description
 
-Allocates and populate a `JsonArray` from a JSON string.
+Allocates and populate a [`JsonArray`]({{site.baseurl}}/api/jsonarray/) from a JSON string.
 
 By design, the parser needs to alter the string to insert null-terminators and replace escaped chars.
 If the JSON string is read-only, it will have to duplicate the input string, this consume more space in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
@@ -46,7 +46,7 @@ The purpose of this feature is to prevent stack overflow that could lead to a se
 
 ## Return value
 
-Returns a reference to the new `JsonArray` or `JsonArray::invalid() if the allocation fails.
+Returns a reference to the new [`JsonArray`]({{site.baseurl}}/api/jsonarray/) or `JsonArray::invalid() if the allocation fails.
 
 ## Example
 

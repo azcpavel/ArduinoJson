@@ -11,9 +11,9 @@ api-group: class
 
 A collection of named [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/).
 
-The constructor is private, you cannot instantiate a `JsonObject` directly, you have to use a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer).
+The constructor is private, you cannot instantiate a [`JsonObject`]({{site.baseurl}}/api/jsonobject/) directly, you have to use a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer).
 
-Because the memory of a `JsonObject` is located a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), you always manipulate it through reference and you cannot copy it.
+Because the memory of a [`JsonObject`]({{site.baseurl}}/api/jsonobject/) is located a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), you always manipulate it through reference and you cannot copy it.
 
 ## Example
 
@@ -51,8 +51,8 @@ JsonObject& object2 = jsonBuffer.parseObject(json);
 
 The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson.
 
-Chapter 3 is a tutorial on deserialization; it explains the various ways to convert an input JSON document into a `JsonObject`.
+Chapter 3 is a tutorial on deserialization; it explains the various ways to convert an input JSON document into a [`JsonObject`]({{site.baseurl}}/api/jsonobject/).
 
-Chapter 4 is a tutorial on serialization; it explains the various was to convert a `JsonObject` into a JSON document.
+Chapter 4 is a tutorial on serialization; it explains the various was to convert a [`JsonObject`]({{site.baseurl}}/api/jsonobject/) into a JSON document.
 
-Chapter 5 explains how `JsonObject` is implemented.
+Chapter 5 explains how [`JsonObject`]({{site.baseurl}}/api/jsonobject/) is implemented.

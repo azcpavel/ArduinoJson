@@ -10,7 +10,7 @@ popularity: 101
 
 Most of the time you can rely on implicit casts.
 
-But there is one notable exception: when you convert a `JsonVariant` to a `String`.
+But there is one notable exception: when you convert a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) to a `String`.
 
 For example:
 

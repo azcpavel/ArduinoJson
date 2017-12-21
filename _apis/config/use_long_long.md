@@ -1,6 +1,6 @@
 ---
 title: ARDUINOJSON_USE_LONG_LONG
-description: ARDUINOJSON_USE_LONG_LONG changes the type used to store integer values in `JsonVariant`.
+description: ARDUINOJSON_USE_LONG_LONG changes the type used to store integer values in [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/).
 keywords: ArduinoJson,long long,64
 layout: api
 tags: api

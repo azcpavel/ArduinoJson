@@ -9,7 +9,7 @@ api-group: JsonArray
 
 ## Description
 
-Populates the `JsonArray` with values from a C array.
+Populates the [`JsonArray`]({{site.baseurl}}/api/jsonarray/) with values from a C array.
 
 ## Signatures
 
@@ -21,7 +21,7 @@ JsonArray::copyFrom(const char* array[]);
 
 ## Return value
 
-`true` if the operation is successful; or `false` if there was not enough room in the `JsonBuffer`.
+`true` if the operation is successful; or `false` if there was not enough room in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
 ## Example
 

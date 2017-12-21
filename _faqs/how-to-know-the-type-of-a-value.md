@@ -8,7 +8,7 @@ faq-group: Deserialization
 popularity: 66
 ---
 
-`JsonVariant`, which is the type that hold the values in `JsonArray` and `JsonObject`, provides the method `is<T>()` that returns `true` if the value is of type `T`.
+[`JsonVariant`]({{site.baseurl}}/api/jsonvariant/), which is the type that hold the values in [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/), provides the method `is<T>()` that returns `true` if the value is of type `T`.
 
 Examples:
 

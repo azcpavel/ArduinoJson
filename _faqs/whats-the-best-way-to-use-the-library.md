@@ -44,7 +44,7 @@ void serialize(const SensorData& data, char* json, size_t maxSize)
 
 As you can see the `StaticJsonBuffer` is kept in memory as short as possible, so that the remain of your program is unaffected by the JSON serialization.
 
-Also you can see that neither `JsonArray` nor `JsonObject` leak out of the serialization code. This maintain a good isolation and reduce the coupling with the library.
+Also you can see that neither [`JsonArray`]({{site.baseurl}}/api/jsonarray/) nor [`JsonObject`]({{site.baseurl}}/api/jsonobject/) leak out of the serialization code. This maintain a good isolation and reduce the coupling with the library.
 
 ## Where to go next?
 

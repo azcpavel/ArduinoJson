@@ -21,7 +21,7 @@ The read-only mode is used when the JSON input has one of the following types:
 5. `Stream`
 6. `const __FlashStringHelper*`
 
-In this mode, the parser copies relevant pieces of the input in the `JsonBuffer`.
+In this mode, the parser copies relevant pieces of the input in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).
 
 Examples:
 

@@ -23,7 +23,7 @@ One solution is to use a pointer instead.
 JsonObject* myObject = &root["myObject"].as<JsonObject>();
 ```
 
-You can also use a `JsonVariant` which will act as a wrapper around the pointer.
+You can also use a [`JsonVariant`]({{site.baseurl}}/api/jsonvariant/) which will act as a wrapper around the pointer.
 
 ```c++
 JsonVariant myObject = root["myObject"];

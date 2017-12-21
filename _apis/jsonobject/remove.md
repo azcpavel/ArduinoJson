@@ -53,5 +53,5 @@ will print the following string to the serial output:
 >
 > As a consequence, you cannot remove and add elements in a loop, otherwise the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) will overflow.
 >
-> Don't try to keep the state of your application in a `JsonObject`, instead use custom structures.
+> Don't try to keep the state of your application in a [`JsonObject`]({{site.baseurl}}/api/jsonobject/), instead use custom structures.
 {: .alert .alert-danger}

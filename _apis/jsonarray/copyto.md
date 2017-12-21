@@ -9,7 +9,7 @@ api-group: JsonArray
 
 ## Description
 
-Extracts a C array from the `JsonArray`.
+Extracts a C array from the [`JsonArray`]({{site.baseurl}}/api/jsonarray/).
 
 ## Signatures
 

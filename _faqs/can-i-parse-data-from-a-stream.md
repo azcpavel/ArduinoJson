@@ -16,7 +16,7 @@ Since ArduinoJson 5.8, `parseArray()` and `parseObject()` accept Arduino's `Stre
 JsonObject& root = jsonObject.parseObject(myStream);
 ```
 
-Parts of the input need to be copied into the `JsonBuffer`, so you need to increase its capacity accordingly (the [Assistant]({{site.baseurl}}/assistant/) gives the required size).
+Parts of the input need to be copied into the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), so you need to increase its capacity accordingly (the [Assistant]({{site.baseurl}}/assistant/) gives the required size).
 
 The parser only copies the relevant part of the input, skipping the spaces and the punctuation.
 This is way more efficient than copying the whole input in a `char[]` and then call `parseObject()`.

@@ -41,11 +41,11 @@ Simply a sample JSON in the [ArduinoJson Assistant]({{ site.baseurl }}/assistant
 > This is the "zero-copy" mode.
 >
 > On the other hand, if the input is read-only (ie a `const char*`, a `String` or a `Stream`), the parse assumes that the input is volatile.<br>
-> In that case, it makes copies of the strings in the `JsonBuffer`.<br>
-> This obviously has an impact on the size of the `JsonBuffer`<br>
-> The string duplication also happens when you construct use `String` while constructing a `JsonObject` (either as a key or as value).
+> In that case, it makes copies of the strings in the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/).<br>
+> This obviously has an impact on the size of the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/)<br>
+> The string duplication also happens when you construct use `String` while constructing a [`JsonObject`]({{site.baseurl}}/api/jsonobject/) (either as a key or as value).
 >
-> So don't forget to take this into consideration when you compute the `JsonBuffer` size.<br>
+> So don't forget to take this into consideration when you compute the [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) size.<br>
 > The [ArduinoJson Assistant]({{ site.baseurl }}/assistant/) shows how much extra bytes are required for the string duplications.
 {: .alert .alert-danger}
 
@@ -59,7 +59,7 @@ The solution here is to determine how much memory is available, or in other word
 
 <a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-The [ArduinoJson ebook](https://leanpub.com/arduinojson/) details how `JsonArray` and `JsonObject` are represented in memory, and therefore how the computation of the size is done.
+The [ArduinoJson ebook](https://leanpub.com/arduinojson/) details how [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/) are represented in memory, and therefore how the computation of the size is done.
 
 The chapter "Inside ArduinoJson" describes `StaticJsonBuffer` and `DynamicJsonBuffer` in detail. It explains how they differ and how to choose between one and the other.
 

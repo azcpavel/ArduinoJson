@@ -18,7 +18,7 @@ JsonArray& createNestedArray();
 
 ## Return value
 
-A reference to the new `JsonArray`.
+A reference to the new [`JsonArray`]({{site.baseurl}}/api/jsonarray/).
 You can check [`JsonArray::success()`]({{site.baseurl}}/api/jsonarray/success/) to verify that the allocation succeeded.
 
 ## Example

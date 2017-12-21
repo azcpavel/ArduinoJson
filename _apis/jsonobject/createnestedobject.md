@@ -9,7 +9,7 @@ api-group: JsonObject
 
 ## Description
 
-Creates a `JsonObject` as a child of the current object.
+Creates a [`JsonObject`]({{site.baseurl}}/api/jsonobject/) as a child of the current object.
 
 ## Signature
 
@@ -32,7 +32,7 @@ To avoid this behavior, use a `const char*` key instead.
 
 ## Return value
 
-A reference to the new `JsonObject`.
+A reference to the new [`JsonObject`]({{site.baseurl}}/api/jsonobject/).
 You can check `JsonObject::success()` to verify that the allocation succeeded.
 
 ## Example
