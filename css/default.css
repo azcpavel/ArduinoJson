@@ -39,3 +39,8 @@ h4 {
 	background-color: transparent;
 	margin-bottom: 0;
 }
+
+.breadcrumb code {
+	background-color: inherit;
+	color: inherit;
+}
