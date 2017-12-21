@@ -2,7 +2,9 @@
   <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
     {%- assign position = 1 -%}
     {%- for crumb in site.data.breadcrumbs -%}
-      {%- if (page.url contains crumb.url) and (page.url != crumb.url) -%}
+      {% assign prefix_len = crumb.url | size }
+      {% assign url_prefix = page.url | slice: 0, prefix_len %}
+      {%- if (url_prefix == crumb.url) and (page.url != crumb.url) -%}
       <li class="breadcrumb-item" property="itemListElement" typeof="ListItem">
         <a property="item" typeof="WebPage" href="{{ crumb.url | prepend: site.baseurl }}">
           <span property="name">{{ crumb.title }}</span>
