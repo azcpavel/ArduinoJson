@@ -35,9 +35,9 @@ Some parts have been simplified to be easier to understand, so if you look at th
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-Although it does not contain an exhaustive list of function like this page, the [ArduinoJson ebook](https://leanpub.com/arduinojson/) is a more convenient and more pleasant way to learn how to use the library.
+Although it does not contain an exhaustive list of function like this page, the [ArduinoJson ebook]({{ site.baseurl }}{% link book/index.md %}) is a more convenient and more pleasant way to learn how to use the library.
 
 It contains step-by-step tutorials to learn how to serialize or parse JSON with ArduinoJson. It also explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
 

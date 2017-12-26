@@ -57,9 +57,9 @@ The solution here is to determine how much memory is available, or in other word
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-The [ArduinoJson ebook](https://leanpub.com/arduinojson/) details how [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/) are represented in memory, and therefore how the computation of the size is done.
+The [ArduinoJson ebook]({{ site.baseurl }}{% link book/index.md %}) details how [`JsonArray`]({{site.baseurl}}/api/jsonarray/) and [`JsonObject`]({{site.baseurl}}/api/jsonobject/) are represented in memory, and therefore how the computation of the size is done.
 
 The chapter "Inside ArduinoJson" describes `StaticJsonBuffer` and `DynamicJsonBuffer` in detail. It explains how they differ and how to choose between one and the other.
 

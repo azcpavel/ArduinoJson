@@ -98,8 +98,8 @@ void loop() {
 
 ## Keep learning
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson, and it's only 15 bucks!
+The book ["Mastering ArduinoJson"]({{ site.baseurl }}{% link book/index.md %}) is the best material to learn how to use ArduinoJson, and it's only 15 bucks!
 
 The chapter "Serialize with ArduinoJson" is a tutorial to learn how to generate JSON documents with the library. It begins with a simple example, like the one above, and then adds more features like serializing directly to a file or an HTTP request.

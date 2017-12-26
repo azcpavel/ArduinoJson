@@ -40,9 +40,9 @@ To free a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/), you must discard the
 
 ## Keep learning
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson.
+The book ["Mastering ArduinoJson"]({{ site.baseurl }}{% link book/index.md %}) is the best material to learn how to use ArduinoJson.
 
 Chapter 5 explains how ArduinoJson works from the inside.
 It explains why the class [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is crucial for the performance of the library.

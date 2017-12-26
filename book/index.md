@@ -1,18 +1,16 @@
 ---
-title: The book "Mastering ArduinoJson" out!
-description: The long awaited book on ArduinoJson is finally out. Let's wee what's inside!
-layout: post
-categories: news
+layout: page
+title: Mastering ArduinoJson
+subtitle: Learn how to use the most popular Arduino library, from the author himself!
+description: "The book Mastering ArduinoJson is the official guide for using ArduinoJson. It is for both beginners and advanced users."
+keywords: ArduinoJson,book
 ---
 
-I announced a ebook on ArduinoJson in October, before it was even completed.
-Many people contacted me about that; please apologies, the writing absorbed all my energy.
+<img src="{{site.baseurl}}/images/cover500.png" class="float-right" alt="Mastering ArduinoJson">
 
-Well, the book is finally out!
-
-It's called "Mastering ArduinoJson", is published on Leanpub and is written by me.
-
-<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+The book "Mastering ArduinoJson"  is the ultimate guide to learn how to use the library efficiently.
+This book explains everything you need to know to serialize and deserialize JSON documents in a deeply embedded environment.
+It is written by Benoit Blanchon, the author of ArduinoJson.
 
 ## Who is this book for?
 
@@ -34,9 +32,11 @@ It contains many new code samples and original illustrations.
 
 Contrary to the documentation on arduinojson.org, which grew organically from the GitHub wiki, this book is the result of several months of continuous work, starting from scratch. The result is a coherent and complete learning material.
 
-Table of content:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iSYXTchIU1I" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-1. Introduction *(included in the free sample)*
+### Table of content:
+
+1. Introduction
     1. About this book
     2. Introduction to JSON
     3. Introduction to ArduinoJson
@@ -47,7 +47,7 @@ Table of content:
     4. Memory management
     5. References
     6. Strings
-3. Deserialize with ArduinoJson *(included in the free sample)*
+3. Deserialize with ArduinoJson
     1. The example of this chapter
     2. Parse a JSON object
     3. Extract values from an object
@@ -91,6 +91,10 @@ Table of content:
     5. Recursive analyzer
 8. Conclusion
 
+Then, of course, you get access to a zip file with all the code samples.
+
+<a href="{{site.baseurl}}{% link images/7zip.png %}"><img class="img-thumbnail" src="{{site.baseurl}}{% link images/7zip.png %}" width="560" alt="Content of the zip file"></a>
+
 ## How is the book written?
 
 This book is optimized for fast and easy reading.
@@ -105,10 +109,32 @@ The book is designed to be read from cover to cover without a computer, so it is
 
 It is also well segmented, so you can quickly skim when you are looking something in particular.
 
+## Which formats are available?
+
+### PDF (DRM-free)
+
+<a href="{{site.baseurl}}{% link images/leanpub.png %}"><img class="img-thumbnail" src="{{site.baseurl}}{% link images/leanpub.png %}" width="560" alt="Mastering ArduinoJson on Leanpub"></a>
+
+### Mobi / ePub (DRM-free)
+
+<a href="{{site.baseurl}}{% link images/tablet.png %}"><img class="img-thumbnail" src="{{site.baseurl}}{% link images/tablet.png %}" width="560" alt="Mastering ArduinoJson on a Tablet"></a>
+
+<a href="{{site.baseurl}}{% link images/kindle.png %}"><img class="img-thumbnail" src="{{site.baseurl}}{% link images/kindle.png %}" width="560" alt="Mastering ArduinoJson on a Kindle"></a>
+
+<a href="{{site.baseurl}}{% link images/phone.png %}"><img class="img-thumbnail" src="{{site.baseurl}}{% link images/phone.png %}" width="560" alt="Mastering ArduinoJson on a Phone"></a>
+
+### Online
+
+<a href="{{site.baseurl}}{% link images/leanpub.png %}"><img class="img-thumbnail" src="{{site.baseurl}}{% link images/leanpub.png %}" width="560" alt="Mastering ArduinoJson on Leanpub"></a>
+
 ## Why buy this book?
 
 By buying this book, you encourage the development of high-quality libraries. By providing a (modest) source of revenue for open-source developers like me, you ensure that the libraries that you rely on are continuously improved and won't be abandoned after a year.
 
 The current version of the book covers ArduinoJson 5.12, but you will have access to newer revisions as soon as they exist. You only have to buy this book once, you won't have to pay for upgrades.
 
-**Interested? Go to [leanpub.com/arduinojson](https://leanpub.com/arduinojson) and download the free sample**
+## Buy now!
+
+[![Buy on Leanpub]({{site.baseurl}}{% link images/buy-on-leanpub.png %})](https://leanpub.com/arduinojson)
+
+<a class="btn btn-primary" href="https://leanpub.com/arduinojson">Buy on Leanpub</a>

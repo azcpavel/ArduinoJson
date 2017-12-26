@@ -131,12 +131,12 @@ void loop() {}
 
 ## Keep learning
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-This tutorial was only a quickstart introduction to the library. For a complete course on ArduinoJson, I strongly recommend reading the book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/).
+This tutorial was only a quickstart introduction to the library. For a complete course on ArduinoJson, I strongly recommend reading the book ["Mastering ArduinoJson"]({{ site.baseurl }}{% link book/index.md %}).
 
 Chapter 4 is a much longer tutorial on serialization. It starts with a simple example, like this one, but then gradually adds complexity to show all the features of the library. At the end of the chapter, we see how to upload measured data to Adafruit IO.
 
 Chapter 2 is a quick C++ course to catch up with concepts like stack and heap memory, pointer, reference... I know from experience that new users of ArduinoJson have more difficulties with the language than with the library; that's why the book starts with this course.
 
-If you want to see what's more in ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/), please check out the Table of Content.
+If you want to see what's more in ["Mastering ArduinoJson"]({{ site.baseurl }}{% link book/index.md %}), please check out the Table of Content.

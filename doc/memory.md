@@ -113,9 +113,9 @@ Use [ArduinoJson Assistant]({{ site.baseurl }}/assistant/) to compute the size r
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-In the [ArduinoJson ebook](https://leanpub.com/arduinojson/), the chapter "Inside ArduinoJson" explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
+In the [ArduinoJson ebook]({{ site.baseurl }}{% link book/index.md %}), the chapter "Inside ArduinoJson" explains how `StaticJsonBuffer` and `DynamicJsonBuffer` work, and how to choose between them.
 
 The book also contains a quick C++ course to catch up with memory management in general. It explains the differences between "stack," "heap" and "global" memories.
 It also debunks wrong assumption that memory management is done by the developer.

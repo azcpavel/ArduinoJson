@@ -30,9 +30,9 @@ popularity: 386
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-The [ArduinoJson ebook](https://leanpub.com/arduinojson/) describes `StaticJsonBuffer` and `DynamicJsonBuffer` in detail and gives guidelines for choosing between one or the other.
+The [ArduinoJson ebook]({{ site.baseurl }}{% link book/index.md %}) describes `StaticJsonBuffer` and `DynamicJsonBuffer` in detail and gives guidelines for choosing between one or the other.
 
 It begin with two complete tutorials, one on deserialization, the other on serialization.
 The last chapter shows the best practices in several sample projects.

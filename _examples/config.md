@@ -162,9 +162,9 @@ void loop() {
 
 ## Keep leaning
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson, and it's only 15 bucks!
+The book ["Mastering ArduinoJson"]({{ site.baseurl }}{% link book/index.md %}) is the best material to learn how to use ArduinoJson, and it's only 15 bucks!
 
 The "Case Studies" chapter dissects a project that has a complex configuration with nested members.
 Contrary to this example, the project in the book uses [the SPIFFS file-system](http://arduino-esp8266.readthedocs.io/en/latest/filesystem.html).

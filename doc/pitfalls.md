@@ -155,8 +155,8 @@ See:
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-The [ArduinoJson ebook](https://leanpub.com/arduinojson/), contains two complete tutorials on serialization and deserialization. It shows every pitfalls on the way. It finishes with an analysis of the best practices in several sample projects.
+The [ArduinoJson ebook]({{ site.baseurl }}{% link book/index.md %}), contains two complete tutorials on serialization and deserialization. It shows every pitfalls on the way. It finishes with an analysis of the best practices in several sample projects.
 
 Most of the time, the problem comes from a poor understanding of basic C++ concepts such as pointers, references and object lifetime. That is why the book also contains a quick C++ course to catch up with those things.

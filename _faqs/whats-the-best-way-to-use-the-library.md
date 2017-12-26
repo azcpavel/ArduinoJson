@@ -48,9 +48,9 @@ Also you can see that neither [`JsonArray`]({{site.baseurl}}/api/jsonarray/) nor
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-If you are interested in writing good code and make the best possible use of the library, be sure to check the [ArduinoJson ebook](https://leanpub.com/arduinojson/).
+If you are interested in writing good code and make the best possible use of the library, be sure to check the [ArduinoJson ebook]({{ site.baseurl }}{% link book/index.md %}).
 
 By understanding how the library is made, you will certainly make a better use of it. In particular, it is essential to prevent useless duplication, as time and memory is precious in an embedded environment.
 

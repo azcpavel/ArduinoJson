@@ -95,9 +95,9 @@ for (int i=0; i<10; i++) {
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-The book ["Mastering ArduinoJson"](https://leanpub.com/arduinojson/) is the best material to learn how to use ArduinoJson.
+The book ["Mastering ArduinoJson"]({{ site.baseurl }}{% link book/index.md %}) is the best material to learn how to use ArduinoJson.
 
 It begins with a quick C++ course as reusing a [`JsonBuffer`]({{site.baseurl}}/api/jsonbuffer/) is often requested by developers who are not familiar with C++. This chapter is called "The missing C++ course", because it covers topics that are skipped by other books: heap, stack, globals, RAII...
 

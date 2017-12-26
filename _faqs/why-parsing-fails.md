@@ -104,8 +104,8 @@ You can solve this in two ways:
 
 ## Where to go next?
 
-<a href="https://leanpub.com/arduinojson/"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
+<a href="{{ site.baseurl }}{% link book/index.md %}"><img src="{{site.baseurl}}/images/cover200.png" class="float-right" alt="Mastering ArduinoJson"></a>
 
-The [ArduinoJson ebook](https://leanpub.com/arduinojson/) has a complete chapter on `StaticJsonBuffer` and `DynamicJsonBuffer`. Indeed, the most common source of error is related to the memory management; it is essential to understand what "stack," "heap" and "global" memories are.
+The [ArduinoJson ebook]({{ site.baseurl }}{% link book/index.md %}) has a complete chapter on `StaticJsonBuffer` and `DynamicJsonBuffer`. Indeed, the most common source of error is related to the memory management; it is essential to understand what "stack," "heap" and "global" memories are.
 
 It contains new examples and explains how to apply the proper patterns and practices to your project. In particular, it shows how to prevent useless memory duplication, as it often causes parsing to fail.
