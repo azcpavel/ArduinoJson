@@ -14,9 +14,18 @@ layout: default
    		{{ content }}
    	</div>
 
+   	{%if page.tags contains "project" %}
+   	<div class="alert alert-info">
+   		<h4>Want to share your project?</h4>
+		<p>You created a project with ArduinoJson?<br>
+		You want to have it featured on arduinojson.org?</p>
+		<p>Please email me at: <a href='&#109;ai&#108;&#116;&#111;&#58;m&#37;79%70r%6Fje&#99;&#116;%&#52;0ar%&#54;4u&#105;&#110;&#111;j&#115;on%&#50;Eor%67'>myprojec&#116;&#64;&#97;rd&#117;inojson&#46;org</a></p>
+	</div>
+	{% else %}
    	<div class="alert alert-info">
 		<h4>Do you want to receive updates from ArduinoJson?</h4>
 		<p>You can <a href="{{site.baseurl}}/feed.xml">subscribe to the Atom feed (similar to RSS)</a>.</p>
 	</div>
+	{% endif %}
 </div>
 
