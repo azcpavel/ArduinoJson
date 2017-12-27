@@ -156,6 +156,8 @@ The current version of the book covers ArduinoJson 5.12, but you will have acces
 <img class="mx-2" alt="Visa" src="{{site.baseurl}}{% link images/visa.png %}">
 <img class="mx-2" alt="Mastercard" src="{{site.baseurl}}{% link images/mastercard.png %}">
 
+<b style="font-size: 120%; color: red">45-day money-back guarantee</b>
+
 ## Buying option 2: Amazon
 
 <div class="row">
