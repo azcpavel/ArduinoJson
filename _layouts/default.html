@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   {% include bootstrap.head.html %}
   {% include analytics.head.html %}
+  {% include algolia.head.html %}
   <link rel="stylesheet" href="{{ site.baseurl }}/css/default.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/home.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/css/highlight.css">
@@ -23,9 +24,7 @@
 {% if page.url != '/' %}
 {% include footer.html %}
 {% endif %}
-<a href="https://github.com/bblanchon/ArduinoJson/">
-  <img class="d-none d-lg-block" style="position: absolute; top: 0; right: 0; border: 0;" src="{{ site.baseurl }}/images/forkme_right.png" alt="Fork me on GitHub">
-</a>
 {% include bootstrap.tail.html %}
+{% include algolia.tail.html %}
 </body>
 </html>
