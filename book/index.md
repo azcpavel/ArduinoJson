@@ -91,7 +91,10 @@ Contrary to the documentation on arduinojson.org, which grew organically from th
     5. Recursive analyzer
 8. Conclusion
 
-Then, of course, you get access to a zip file with all the code samples.
+## Code samples
+
+The book comes with several new sample projects.
+When you buy the book, you get access to a zip file with all the code samples.
 
 <a href="{{site.baseurl}}{% link images/7zip.png %}"><img class="img-thumbnail" src="{{site.baseurl}}{% link images/7zip.png %}" width="560" alt="Content of the zip file"></a>
 
@@ -109,32 +112,65 @@ The book is designed to be read from cover to cover without a computer, so it is
 
 It is also well segmented, so you can quickly skim when you are looking something in particular.
 
-## Which formats are available?
-
-### PDF (DRM-free)
-
-<a href="{{site.baseurl}}{% link images/leanpub.png %}"><img class="img-thumbnail" src="{{site.baseurl}}{% link images/leanpub.png %}" width="560" alt="Mastering ArduinoJson on Leanpub"></a>
-
-### Mobi / ePub (DRM-free)
-
-<a href="{{site.baseurl}}{% link images/tablet.png %}"><img class="img-thumbnail" src="{{site.baseurl}}{% link images/tablet.png %}" width="560" alt="Mastering ArduinoJson on a Tablet"></a>
-
-<a href="{{site.baseurl}}{% link images/kindle.png %}"><img class="img-thumbnail" src="{{site.baseurl}}{% link images/kindle.png %}" width="560" alt="Mastering ArduinoJson on a Kindle"></a>
-
-<a href="{{site.baseurl}}{% link images/phone.png %}"><img class="img-thumbnail" src="{{site.baseurl}}{% link images/phone.png %}" width="560" alt="Mastering ArduinoJson on a Phone"></a>
-
-### Online
-
-<a href="{{site.baseurl}}{% link images/leanpub.png %}"><img class="img-thumbnail" src="{{site.baseurl}}{% link images/leanpub.png %}" width="560" alt="Mastering ArduinoJson on Leanpub"></a>
-
 ## Why buy this book?
 
 By buying this book, you encourage the development of high-quality libraries. By providing a (modest) source of revenue for open-source developers like me, you ensure that the libraries that you rely on are continuously improved and won't be abandoned after a year.
 
 The current version of the book covers ArduinoJson 5.12, but you will have access to newer revisions as soon as they exist. You only have to buy this book once, you won't have to pay for upgrades.
 
-## Buy now!
+## Buying option 1: Leanpub
 
-[![Buy on Leanpub]({{site.baseurl}}{% link images/buy-on-leanpub.png %})](https://leanpub.com/arduinojson)
+<div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-2">
+        <h4>PDF</h4>
+        <a href="{{site.baseurl}}{% link images/acrobat.png %}">
+        <img src="{{site.baseurl}}{% link images/acrobat-thumb.png %}" alt="Mastering ArduinoJson on Adobe Reader">
+        </a>
+    </div>
+    <div class="col-2">
+        <h4>ePub</h4>
+        <a href="{{site.baseurl}}{% link images/tablet.png %}">
+        <img src="{{site.baseurl}}{% link images/tablet-thumb.png %}" alt="Mastering ArduinoJson on Tablet">
+        </a>
+    </div>
+    <div class="col-2">
+        <h4>Kindle</h4>
+        <a href="{{site.baseurl}}{% link images/kindle.png %}">
+        <img src="{{site.baseurl}}{% link images/kindle-thumb.png %}" alt="Mastering ArduinoJson on Kindle">
+        </a>
+    </div>
+    <div class="col-2">
+        <h4>Online</h4>
+        <a href="{{site.baseurl}}{% link images/leanpub-online.png %}">
+        <img src="{{site.baseurl}}{% link images/leanpub-online-thumb.png %}" alt="Mastering ArduinoJson on Leanpub">
+        </a>
+    </div>
+</div>
 
-<a class="btn btn-primary" href="https://leanpub.com/arduinojson">Buy on Leanpub</a>
+<b style="font-size: 160%; color: red">All formats, DRM-free, for only $14.99 ! ! !</b>
+
+<a class="btn btn-primary btn-lg" href="https://leanpub.com/arduinojson">Buy on <img alt="Leanpub" src="{{site.baseurl}}{% link images/leanpub-20.png %}"></a>
+<img class="mx-2" alt="PayPal" src="{{site.baseurl}}{% link images/paypal.png %}">
+<img class="mx-2" alt="Visa" src="{{site.baseurl}}{% link images/visa.png %}">
+<img class="mx-2" alt="Mastercard" src="{{site.baseurl}}{% link images/mastercard.png %}">
+
+## Buying option 2: Amazon
+
+<div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-2">
+        <h4>Kindle</h4>
+        <a href="{{site.baseurl}}{% link images/kindle.png %}">
+        <img src="{{site.baseurl}}{% link images/kindle-thumb.png %}" alt="Mastering ArduinoJson on Kindle">
+        </a>
+    </div>
+</div>
+
+<b style="font-size: 160%; color: red">Kindle only, $9.99</b>
+
+<a class="btn btn-warning btn-lg" href="https://www.amazon.com/dp/B078NB88G3">Buy on <img alt="Amazon" src="{{site.baseurl}}{% link images/amazon-20.png %}"></a>
+<img class="mx-2" alt="Visa" src="{{site.baseurl}}{% link images/visa.png %}">
+<img class="mx-2" alt="Mastercard" src="{{site.baseurl}}{% link images/mastercard.png %}">
