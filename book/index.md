@@ -169,7 +169,7 @@ The current version of the book covers ArduinoJson 5.12, but you will have acces
     </div>
 </div>
 
-<b style="font-size: 160%; color: red">Kindle only, $9.99</b>
+<b style="font-size: 160%; color: red">Kindle only</b>
 
 <a class="btn btn-warning btn-lg" href="https://www.amazon.com/dp/B078NB88G3">Buy on <img alt="Amazon" src="{{site.baseurl}}{% link images/amazon-20.png %}"></a>
 <img class="mx-2" alt="Visa" src="{{site.baseurl}}{% link images/visa.png %}">
